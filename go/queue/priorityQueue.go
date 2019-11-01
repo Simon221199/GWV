@@ -1,4 +1,5 @@
 // This example demonstrates a Priority queue built using the heap interface.
+// Source https://golang.org/pkg/container/heap/
 package queue
 
 import (

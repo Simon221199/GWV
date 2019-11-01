@@ -1,8 +1,8 @@
 package main
 
 import (
-	"../queue"
 	"../simple"
+	"../queue"
 	"container/heap"
 	"fmt"
 	"io/ioutil"
@@ -11,21 +11,24 @@ import (
 	"strings"
 )
 
+// Cell in the field
 type cell struct {
-	inx      int
-	iny      int
-	blocked  bool
-	priority int
-	symbol   string
+	inx         int
+	iny         int
+	blocked     bool
+	priority    int
+	symbol      string
 	predecessor *cell
 }
 
+// String representation of cell coordinates
 func (cell cell) coordinates() string {
-
 	return fmt.Sprintf("(%d, %d)", cell.inx, cell.iny)
 }
 
-func DistanceEuclidean(goal, node *cell) int {
+// Euclidean Distance for two points
+// Source https://en.wikipedia.org/wiki/Euclidean_distance
+func distanceEuclidean(goal, node *cell) int {
 
 	tmp := math.Pow(float64(node.inx-goal.inx), 2) +
 		math.Pow(float64(node.iny-goal.iny), 2)
@@ -35,6 +38,7 @@ func DistanceEuclidean(goal, node *cell) int {
 	return -int(math.Round(h))
 }
 
+// Wrapper struct for environment
 type field struct {
 	cells       [][]*cell
 	coordinates map[string]*cell
@@ -42,23 +46,28 @@ type field struct {
 	goal        *cell
 }
 
-func (grid field) findNeighbours(node *cell) []*cell {
+// Get neighbours for a cell
+func (env field) getNeighbours(node *cell) []*cell {
 
-	startX := simple.Max(0, node.inx-1)
-	endX := simple.Min(len(grid.cells[ 0 ]), node.inx+1)
-
+	// Calculate coordinate range/vector for y
 	startY := simple.Max(0, node.iny-1)
-	endY := simple.Min(len(grid.cells), node.iny+1)
+	endY := simple.Min(len(env.cells), node.iny+1)
+
+	// Calculate coordinate range/vector for x
+	startX := simple.Max(0, node.inx-1)
+	endX := simple.Min(len(env.cells[ 0 ]), node.inx+1)
 
 	neighbours := make([]*cell, 0)
 
 	for iny := startY; iny <= endY; iny++ {
 		for inx := startX; inx <= endX; inx++ {
+
+			// Exclude source node form neighbours
 			if iny == node.iny && inx == node.inx {
 				continue
 			}
 
-			cell := grid.cells[ iny ][ inx ]
+			cell := env.cells[ iny ][ inx ]
 
 			if ! cell.blocked {
 				neighbours = append(neighbours, cell)
@@ -69,26 +78,27 @@ func (grid field) findNeighbours(node *cell) []*cell {
 	return neighbours
 }
 
-func (grid *field) calculateDistances() {
+// Calculates/sets distances for each cell to goal cell
+func (env *field) calculateDistances() {
 
-	for iny := range grid.cells {
-		for inx := range grid.cells[ iny ] {
+	for iny := range env.cells {
+		for inx := range env.cells[ iny ] {
 
-			cell := grid.cells[ iny ][ inx ]
-			// cell.priority = DistanceManhattan(goal, cell)
-			cell.priority = DistanceEuclidean(grid.goal, cell)
+			cell := env.cells[ iny ][ inx ]
+			cell.priority = distanceEuclidean(env.goal, cell)
 		}
 	}
 }
 
-func (grid field) priorityMatrix() string {
+// Prints the field as matrix of distances to goal cell
+func (env field) priorityMatrix() string {
 
 	matrix := ""
 
-	for iny := range grid.cells {
-		for inx := range grid.cells[ iny ] {
+	for iny := range env.cells {
+		for inx := range env.cells[ iny ] {
 
-			cell := grid.cells[ iny ][ inx ]
+			cell := env.cells[ iny ][ inx ]
 
 			if cell.blocked {
 				matrix += fmt.Sprintf("%3s", "X")
@@ -103,49 +113,124 @@ func (grid field) priorityMatrix() string {
 	return matrix
 }
 
-func (grid field) printFieldPath(path []*cell) {
+// Prints field with path in it
+func (env field) printFieldWithPath(path []*cell) {
 
+	tmp := make(map[string]bool)
 	for _, cell := range path {
-		cell.symbol = "*"
+		tmp[ cell.coordinates() ] = true
 	}
 
-	for iny := range grid.cells {
-		for inx := range grid.cells[ iny ] {
-			fmt.Printf("%s", grid.cells[ iny ][ inx ].symbol)
+	for iny := range env.cells {
+		for inx := range env.cells[ iny ] {
+
+			cell := env.cells[ iny ][ inx ]
+
+			if tmp[ cell.coordinates() ] {
+				fmt.Printf("*")
+			} else {
+				fmt.Printf("%s", cell.symbol)
+			}
 		}
 
 		fmt.Println()
 	}
 }
 
-func (grid field) printPathToGoal() {
+// Prints the field
+func (env field) printField() {
+	env.printFieldWithPath(nil)
+}
 
-	node := grid.goal
+// Get calculated path form ....
+func (env field) getPathToGoal() []*cell {
+	node := env.goal
 
 	path := make([]*cell, 0)
-	path = append(path, grid.goal)
+	path = append(path, env.goal)
 
 	for node != nil {
 		path = append(path, node)
 		node = node.predecessor
 	}
 
-	// path = append(path, grid.start)
+	// path = append(path, env.start)
 
 	// Reverse order
-	for i := len(path)/2-1; i >= 0; i-- {
-		opp := len(path)-1-i
+	for i := len(path)/2 - 1; i >= 0; i-- {
+		opp := len(path) - 1 - i
 		path[i], path[opp] = path[opp], path[i]
 	}
 
-	fmt.Printf("######## Path form %s to %s ########\n", grid.start.coordinates(), grid.goal.coordinates())
+	return path
+}
+
+// Print path from start to goal
+func (env field) printPathToGoal() {
+
+	path := env.getPathToGoal()
+
 	fmt.Printf("Steps: %d\n", len(path))
+	fmt.Printf("Coordinates:\n")
 
 	for _, cell := range path {
 		fmt.Printf("%s\n", cell.coordinates())
 	}
+}
 
-	grid.printFieldPath(path)
+// Prints field with path to goal
+func (env field) printFieldWithPathToGoal() {
+	env.printFieldWithPath(env.getPathToGoal())
+}
+
+// Calculate path form start to goal
+// Here happens the important stuff
+func (env field) calculatePath() {
+
+	pq := make(queue.PriorityQueue, 0)
+	pq.Push(&queue.Item{
+		Value:    env.start.coordinates(),
+		Priority: 1,
+	})
+	heap.Init(&pq)
+
+	done := make(map[string]bool)
+
+	fmt.Printf("######## Finding path form %s to %s ########\n", env.start.coordinates(), env.goal.coordinates())
+
+	for pq.Len() > 0 {
+
+		item := heap.Pop(&pq).(*queue.Item)
+		cell := env.coordinates[ item.Value ]
+
+		fmt.Printf("cell: %s --> %d\n", cell.coordinates(), cell.priority)
+		// fmt.Printf("queue size: %d\n", pq.Len())
+
+		done[ item.Value ] = true
+
+		if cell.coordinates() == env.goal.coordinates() {
+			break
+		}
+
+		neighbours := env.getNeighbours(cell)
+
+		for _, neighbour := range neighbours {
+
+			if done[ neighbour.coordinates() ] {
+				continue
+			}
+
+			done[ neighbour.coordinates() ] = true
+
+			neighbour.predecessor = cell
+			// fmt.Printf("    neighbour (%d) >> %s\n", neighbour.priority, neighbour.coordinates())
+
+			heap.Push(&pq, &queue.Item{
+				Value:    neighbour.coordinates(),
+				Priority: neighbour.priority,
+			})
+		}
+	}
 }
 
 func Init(path string) (*field, error) {
@@ -195,7 +280,7 @@ func Init(path string) (*field, error) {
 			}
 		}
 
-		fmt.Println(strings.Split(line, ""))
+		//fmt.Println(strings.Split(line, ""))
 	}
 
 	if start == nil || goal == nil {
@@ -203,10 +288,10 @@ func Init(path string) (*field, error) {
 	}
 
 	grid := &field{
-		cells: cells,
+		cells:       cells,
 		coordinates: coordinates,
-		start: start,
-		goal:  goal,
+		start:       start,
+		goal:        goal,
 	}
 
 	grid.calculateDistances()
@@ -225,56 +310,16 @@ func main() {
 
 	fmt.Printf("sourcing %s\n", path)
 
-	grid, err := Init(path)
+	env, err := Init(path)
 	if err != nil {
 		panic(err)
 	}
 
-	pq := make(queue.PriorityQueue, 0)
-	pq.Push(&queue.Item{
-		Value:    grid.start.coordinates(),
-		Priority: 1,
-	})
-	heap.Init(&pq)
-
-	done := make(map[string]bool)
-
-	fmt.Printf("######## Finding path form %s to %s ########\n", grid.start.coordinates(), grid.goal.coordinates())
-
-	for pq.Len() > 0 {
-
-		item := heap.Pop(&pq).(*queue.Item)
-		cell := grid.coordinates[ item.Value ]
-
-		fmt.Printf("cell: %s --> %d\n", cell.coordinates(), cell.priority)
-		// fmt.Printf("queue size: %d\n", pq.Len())
-
-		done[ item.Value ] = true
-
-		if cell.coordinates() == grid.goal.coordinates() {
-			break
-		}
-
-		neighbours := grid.findNeighbours(cell)
-
-		for _, neighbour := range neighbours {
-
-			if done[ neighbour.coordinates() ] {
-				continue
-			}
-
-			done[ neighbour.coordinates() ] = true
-
-			neighbour.predecessor = cell
-			// fmt.Printf("    neighbour (%d) >> %s\n", neighbour.priority, neighbour.coordinates())
-
-			heap.Push(&pq, &queue.Item{
-				Value:    neighbour.coordinates(),
-				Priority: neighbour.priority,
-			})
-		}
-	}
-
+	env.calculatePath()
 	// grid.printPath(pathCells)
-	grid.printPathToGoal()
+
+	fmt.Printf("######## Path form %s to %s ########\n", env.start.coordinates(), env.goal.coordinates())
+	env.printPathToGoal()
+	env.printField()
+	env.printFieldWithPathToGoal()
 }
