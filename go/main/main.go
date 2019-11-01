@@ -194,9 +194,7 @@ func (env field) calculatePath() {
 	})
 	heap.Init(&pq)
 
-	done := make(map[string]bool)
-
-	fmt.Printf("######## Finding path form %s to %s ########\n", env.start.coordinates(), env.goal.coordinates())
+	visited := make(map[string]bool)
 
 	for pq.Len() > 0 {
 
@@ -206,7 +204,7 @@ func (env field) calculatePath() {
 		fmt.Printf("cell: %s --> %d\n", cell.coordinates(), cell.priority)
 		// fmt.Printf("queue size: %d\n", pq.Len())
 
-		done[ item.Value ] = true
+		visited[ item.Value ] = true
 
 		if cell.coordinates() == env.goal.coordinates() {
 			break
@@ -216,11 +214,11 @@ func (env field) calculatePath() {
 
 		for _, neighbour := range neighbours {
 
-			if done[ neighbour.coordinates() ] {
+			if visited[ neighbour.coordinates() ] {
 				continue
 			}
 
-			done[ neighbour.coordinates() ] = true
+			visited[ neighbour.coordinates() ] = true
 
 			neighbour.predecessor = cell
 			// fmt.Printf("    neighbour (%d) >> %s\n", neighbour.priority, neighbour.coordinates())
@@ -279,8 +277,6 @@ func Init(path string) (*field, error) {
 				start = cell
 			}
 		}
-
-		//fmt.Println(strings.Split(line, ""))
 	}
 
 	if start == nil || goal == nil {
@@ -315,10 +311,11 @@ func main() {
 		panic(err)
 	}
 
+	fmt.Printf("######## Finding path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
 	env.calculatePath()
 	// grid.printPath(pathCells)
 
-	fmt.Printf("######## Path form %s to %s ########\n", env.start.coordinates(), env.goal.coordinates())
+	fmt.Printf("######## Path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
 	env.printPathToGoal()
 	env.printField()
 	env.printFieldWithPathToGoal()
