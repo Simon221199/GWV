@@ -5,7 +5,6 @@ import (
 	"../simple"
 	"container/heap"
 	"fmt"
-	"github.com/golang-collections/collections/stack"
 	"io/ioutil"
 	"math"
 	"os"
@@ -18,6 +17,7 @@ type cell struct {
 	blocked  bool
 	priority int
 	symbol   string
+	predecessor *cell
 }
 
 func (cell cell) coordinates() string {
@@ -110,60 +110,38 @@ func (grid field) priorityMatrix() string {
 	return matrix
 }
 
-// func (grid field) coordinatesMap() map[string]*cell {
-//
-// 	hashMap := make(map[string]*cell)
-//
-// 	for iny := range grid.cells {
-// 		for inx := range grid.cells[ iny ] {
-// 			cell := grid.cells[ iny ][ inx ]
-//
-// 			if ! cell.blocked {
-// 				hashMap[ cell.coordinates() ] = cell
-// 			}
-// 		}
-// 	}
-//
-// 	return hashMap
-// }
+func (grid field) printFieldPath(path []*cell) {
 
-// func printPath(field field, path []*cell) {
-func (grid field) printPath(path *stack.Stack) {
+	for _, cell := range path {
+		cell.symbol = "*"
+	}
 
-	// for _, point := range path {
-	//
-	// 	tmp := field[ point.iny ][ point.inx ].symbol + ""
-	// 	// field[ point.iny ][ point.inx ].symbol = "*"
-	//
-	// 	for iny := range field {
-	// 		for inx := range field[ iny ] {
-	// 			fmt.Printf("%s", field[ iny ][ inx ].symbol)
-	// 		}
-	//
-	// 		fmt.Println()
-	// 	}
-	//
-	// 	field[ point.iny ][ point.inx ].symbol = tmp
-	// }
-
-	fmt.Printf("path length: %d\n", path.Len())
-
-	for path.Len() > 0 {
-
-		point := path.Pop().(*cell)
-		// tmp := field[ point.iny ][ point.inx ].symbol + ""
-		grid.cells[ point.iny ][ point.inx ].symbol = "*"
-
-		for iny := range grid.cells {
-			for inx := range grid.cells[ iny ] {
-				fmt.Printf("%s", grid.cells[ iny ][ inx ].symbol)
-			}
-
-			fmt.Println()
+	for iny := range grid.cells {
+		for inx := range grid.cells[ iny ] {
+			fmt.Printf("%s", grid.cells[ iny ][ inx ].symbol)
 		}
 
-		// field[ point.iny ][ point.inx ].symbol = tmp
+		fmt.Println()
 	}
+}
+
+func (grid field) printPathFromGoal() {
+
+	steps := 0
+	node := grid.goal
+
+	path := make([]*cell, 0)
+
+	for node != nil {
+		fmt.Println(node.coordinates())
+		path = append(path, node)
+		node = node.predecessor
+		steps++
+	}
+
+	fmt.Printf("Steps: %d\n", steps)
+
+	grid.printFieldPath(path)
 }
 
 func Init(path string) (*field, error) {
@@ -234,7 +212,8 @@ func Init(path string) (*field, error) {
 
 func main() {
 
-	path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
+	// path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
+	path := "/Users/patrick/Desktop/GWV/blatt3_environment-2.txt"
 
 	if len(os.Args) > 2 {
 		path = os.Args[ 1 ]
@@ -257,7 +236,7 @@ func main() {
 	done := make(map[string]bool)
 
 	// path := make([]*cell, 0)
-	pathCells := stack.New()
+	// pathCells := stack.New()
 
 	for pq.Len() > 0 {
 
@@ -268,7 +247,7 @@ func main() {
 
 		done[ item.Value ] = true
 		// path = append(path, cell)
-		pathCells.Push(cell)
+		// pathCells.Push(cell)
 
 		if cell.coordinates() == grid.goal.coordinates() {
 			fmt.Println("Done")
@@ -287,6 +266,7 @@ func main() {
 
 			done[ neighbour.coordinates() ] = true
 
+			neighbour.predecessor = cell
 			// fmt.Printf("    neighbour (%d) >> %s\n", neighbour.priority, neighbour.coordinates())
 
 			heap.Push(&pq, &queue.Item{
@@ -298,9 +278,10 @@ func main() {
 		}
 
 		if pop {
-			pathCells.Pop()
+			// pathCells.Pop()
 		}
 	}
 
-	grid.printPath(pathCells)
+	// grid.printPath(pathCells)
+	grid.printPathFromGoal()
 }
