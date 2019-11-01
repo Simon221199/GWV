@@ -1,12 +1,17 @@
 # GWV
 
-### Gruppe XYZ
+### Group XYZ
 
 | Name | Matrikel nummer |
 | :---: | :-------------: |
 |Patrick Zierahn | 7065799 |
 |Simon ... | ... |
 |Pascal ... | ... |
+
+### Sources
+
+* [A*_search_algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm)
+* [a-search-algorithm](https://www.geeksforgeeks.org/a-search-algorithm/)
 
 ### How to use
 
