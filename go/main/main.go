@@ -52,15 +52,8 @@ func (grid field) findNeighbours(node *cell) []*cell {
 
 	neighbours := make([]*cell, 0)
 
-	// fmt.Printf("start: %s\n", node.coordinates())
-	// fmt.Printf("startY: %d\n", startY)
-	// fmt.Printf("endY: %d\n", endY)
-
 	for iny := startY; iny <= endY; iny++ {
 		for inx := startX; inx <= endX; inx++ {
-
-			// fmt.Printf("(%d, %d)\n", iny, inx)
-
 			if iny == node.iny && inx == node.inx {
 				continue
 			}
@@ -235,9 +228,6 @@ func main() {
 
 	done := make(map[string]bool)
 
-	// path := make([]*cell, 0)
-	// pathCells := stack.New()
-
 	for pq.Len() > 0 {
 
 		item := heap.Pop(&pq).(*queue.Item)
@@ -246,8 +236,6 @@ func main() {
 		fmt.Printf("cell (%d) >> %s\n", cell.priority, cell.coordinates())
 
 		done[ item.Value ] = true
-		// path = append(path, cell)
-		// pathCells.Push(cell)
 
 		if cell.coordinates() == grid.goal.coordinates() {
 			fmt.Println("Done")
@@ -255,8 +243,6 @@ func main() {
 		}
 
 		neighbours := grid.findNeighbours(cell)
-
-		pop := true
 
 		for _, neighbour := range neighbours {
 
@@ -273,12 +259,6 @@ func main() {
 				Value:    neighbour.coordinates(),
 				Priority: neighbour.priority,
 			})
-
-			pop = false
-		}
-
-		if pop {
-			// pathCells.Pop()
 		}
 	}
 
