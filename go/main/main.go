@@ -118,21 +118,32 @@ func (grid field) printFieldPath(path []*cell) {
 	}
 }
 
-func (grid field) printPathFromGoal() {
+func (grid field) printPathToGoal() {
 
-	steps := 0
 	node := grid.goal
 
 	path := make([]*cell, 0)
+	path = append(path, grid.goal)
 
 	for node != nil {
-		fmt.Println(node.coordinates())
 		path = append(path, node)
 		node = node.predecessor
-		steps++
 	}
 
-	fmt.Printf("Steps: %d\n", steps)
+	// path = append(path, grid.start)
+
+	// Reverse order
+	for i := len(path)/2-1; i >= 0; i-- {
+		opp := len(path)-1-i
+		path[i], path[opp] = path[opp], path[i]
+	}
+
+	fmt.Printf("######## Path form %s to %s ########\n", grid.start.coordinates(), grid.goal.coordinates())
+	fmt.Printf("Steps: %d\n", len(path))
+
+	for _, cell := range path {
+		fmt.Printf("%s\n", cell.coordinates())
+	}
 
 	grid.printFieldPath(path)
 }
@@ -228,17 +239,19 @@ func main() {
 
 	done := make(map[string]bool)
 
+	fmt.Printf("######## Finding path form %s to %s ########\n", grid.start.coordinates(), grid.goal.coordinates())
+
 	for pq.Len() > 0 {
 
 		item := heap.Pop(&pq).(*queue.Item)
 		cell := grid.coordinates[ item.Value ]
 
-		fmt.Printf("cell (%d) >> %s\n", cell.priority, cell.coordinates())
+		fmt.Printf("cell: %s --> %d\n", cell.coordinates(), cell.priority)
+		// fmt.Printf("queue size: %d\n", pq.Len())
 
 		done[ item.Value ] = true
 
 		if cell.coordinates() == grid.goal.coordinates() {
-			fmt.Println("Done")
 			break
 		}
 
@@ -263,5 +276,5 @@ func main() {
 	}
 
 	// grid.printPath(pathCells)
-	grid.printPathFromGoal()
+	grid.printPathToGoal()
 }
