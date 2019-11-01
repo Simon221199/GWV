@@ -147,7 +147,7 @@ func (env field) getPathToGoal() []*cell {
 	node := env.goal
 
 	path := make([]*cell, 0)
-	path = append(path, env.goal)
+	// path = append(path, env.goal)
 
 	for node != nil {
 		path = append(path, node)
@@ -300,7 +300,7 @@ func main() {
 	// path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
 	path := "/Users/patrick/Desktop/GWV/blatt3_environment-2.txt"
 
-	if len(os.Args) > 2 {
+	if len(os.Args) > 1 {
 		path = os.Args[ 1 ]
 	}
 
