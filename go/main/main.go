@@ -1,8 +1,8 @@
 package main
 
 import (
-	"../simple"
 	"../queue"
+	"../simple"
 	"container/heap"
 	"container/list"
 	"fmt"
@@ -11,6 +11,8 @@ import (
 	"os"
 	"strings"
 )
+
+const usePortals = true
 
 // Cell in the field
 type cell struct {
@@ -47,8 +49,28 @@ type field struct {
 	goal        *cell
 }
 
+func (env field) getPortalCell(cell1 *cell) *cell {
+
+	for iny := range env.cells {
+		for inx := range env.cells[ iny ] {
+
+			cell2 := env.cells[ iny ][ inx ]
+
+			if cell1 != cell2 && cell1.symbol == cell2.symbol {
+				return cell2
+			}
+		}
+	}
+
+	return nil
+}
+
 // Get neighbours for a cell
 func (env field) getNeighbours(node *cell) []*cell {
+
+	if node == nil {
+		return nil
+	}
 
 	// Calculate coordinate range/vector for y
 	startY := simple.Max(0, node.iny-1)
@@ -70,8 +92,16 @@ func (env field) getNeighbours(node *cell) []*cell {
 
 			cell := env.cells[ iny ][ inx ]
 
-			if ! cell.blocked {
-				neighbours = append(neighbours, cell)
+			if cell.blocked {
+				continue
+			}
+
+			neighbours = append(neighbours, cell)
+
+			if usePortals && simple.IsNumber(cell.symbol) {
+				
+				portal := env.getPortalCell(cell)
+				neighbours = append(neighbours, env.getNeighbours(portal)...)
 			}
 		}
 	}
@@ -389,6 +419,7 @@ func Init(path string) (*field, error) {
 func main() {
 
 	path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
+	// path := "/Users/patrick/Desktop/GWV/blatt3_environment_portal.txt"
 	// path := "/Users/patrick/Desktop/GWV/blatt3_environment-2.txt"
 
 	if len(os.Args) > 1 {
@@ -404,8 +435,8 @@ func main() {
 
 	fmt.Printf("######## Finding path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
 	// env.knowledgeSearch()
-	// env.breadthFirstSearch()
-	env.depthFirstSearch()
+	env.breadthFirstSearch()
+	// env.depthFirstSearch()
 
 	fmt.Printf("######## Path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
 	env.printPathToGoal()
