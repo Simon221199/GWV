@@ -4,6 +4,7 @@ import (
 	"../simple"
 	"../queue"
 	"container/heap"
+	"container/list"
 	"fmt"
 	"io/ioutil"
 	"math"
@@ -188,7 +189,9 @@ func (env field) printFieldWithPathToGoal() {
 
 // Calculate path form start to goal
 // Here happens the important stuff
-func (env field) calculatePath() {
+func (env field) knowledgeSearch() {
+
+	env.resetPredecessors()
 
 	pq := make(queue.PriorityQueue, 0)
 	pq.Push(&queue.Item{
@@ -230,6 +233,91 @@ func (env field) calculatePath() {
 				Value:    neighbour.coordinates(),
 				Priority: neighbour.priority,
 			})
+		}
+	}
+}
+
+func (env *field) resetPredecessors() {
+
+	for iny := range env.cells {
+		for inx := range env.cells {
+			env.cells[ iny ][ inx ].predecessor = nil
+		}
+	}
+}
+
+func (env *field) breadthFirstSearch() {
+
+	env.resetPredecessors()
+
+	cellQueue := list.New()
+	cellQueue.PushBack(env.start)
+
+	for cellQueue.Len() > 0 {
+
+		elem := cellQueue.Front()
+		cellQueue.Remove(elem)
+
+		cell := elem.Value.(*cell)
+
+		fmt.Printf("Cell: %s\n", cell.coordinates())
+
+		neighbours := env.getNeighbours(cell)
+
+		for _, neighbour := range neighbours {
+
+			if neighbour.predecessor != nil {
+				continue
+			}
+
+			if neighbour == env.start {
+				continue
+			}
+
+			neighbour.predecessor = cell
+			cellQueue.PushBack(neighbour)
+
+			if neighbour == env.goal {
+				break
+			}
+		}
+	}
+}
+
+func (env *field) depthFirstSearch() {
+
+	env.resetPredecessors()
+
+	cellQueue := list.New()
+	cellQueue.PushFront(env.start)
+
+	for cellQueue.Len() > 0 {
+
+		elem := cellQueue.Front()
+		cellQueue.Remove(elem)
+
+		cell := elem.Value.(*cell)
+
+		fmt.Printf("Cell: %s\n", cell.coordinates())
+
+		neighbours := env.getNeighbours(cell)
+
+		for _, neighbour := range neighbours {
+
+			if neighbour.predecessor != nil {
+				continue
+			}
+
+			if neighbour == env.start {
+				continue
+			}
+
+			neighbour.predecessor = cell
+			cellQueue.PushFront(neighbour)
+
+			if neighbour == env.goal {
+				break
+			}
 		}
 	}
 }
@@ -300,8 +388,8 @@ func Init(path string) (*field, error) {
 
 func main() {
 
-	// path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
-	path := "/Users/patrick/Desktop/GWV/blatt3_environment-2.txt"
+	path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
+	// path := "/Users/patrick/Desktop/GWV/blatt3_environment-2.txt"
 
 	if len(os.Args) > 1 {
 		path = os.Args[ 1 ]
@@ -315,8 +403,9 @@ func main() {
 	}
 
 	fmt.Printf("######## Finding path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
-	env.calculatePath()
-	// grid.printPath(pathCells)
+	// env.knowledgeSearch()
+	// env.breadthFirstSearch()
+	env.depthFirstSearch()
 
 	fmt.Printf("######## Path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
 	env.printPathToGoal()
