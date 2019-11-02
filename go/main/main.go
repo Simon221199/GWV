@@ -19,7 +19,7 @@ type cell struct {
 	inx         int
 	iny         int
 	blocked     bool
-	priority    int
+	distance    float64
 	symbol      string
 	predecessor *cell
 }
@@ -29,16 +29,20 @@ func (cell cell) coordinates() string {
 	return fmt.Sprintf("(%d, %d)", cell.inx, cell.iny)
 }
 
+func (cell cell) isPortal() bool {
+	return simple.IsNumber(cell.symbol)
+}
+
 // Euclidean Distance for two points
 // Source https://en.wikipedia.org/wiki/Euclidean_distance
-func distanceEuclidean(goal, node *cell) int {
+func distanceEuclidean(goal, node *cell) float64 {
 
 	tmp := math.Pow(float64(node.inx-goal.inx), 2) +
 		math.Pow(float64(node.iny-goal.iny), 2)
 
 	h := math.Sqrt(tmp)
 
-	return int(math.Round(h))
+	return h
 }
 
 // Wrapper struct for environment
@@ -98,7 +102,7 @@ func (env field) getNeighbours(node *cell) []*cell {
 
 			neighbours = append(neighbours, cell)
 
-			if usePortals && simple.IsNumber(cell.symbol) {
+			if usePortals && cell.isPortal() {
 				
 				portal := env.getPortalCell(cell)
 				neighbours = append(neighbours, env.getNeighbours(portal)...)
@@ -109,7 +113,90 @@ func (env field) getNeighbours(node *cell) []*cell {
 	return neighbours
 }
 
+func (env field) portalsDistance2Goal() map[*cell]float64 {
+
+	values := make(map[*cell]float64)
+
+	if ! usePortals {
+		return values
+	}
+
+	for iny := range env.cells {
+		for inx := range env.cells[ iny ] {
+
+			cell := env.cells[ iny ][ inx ]
+
+			if cell.isPortal() {
+
+				portalCell := env.getPortalCell(cell)
+				values[ cell ] = distanceEuclidean(env.goal, portalCell)
+			}
+		}
+	}
+
+	return values
+}
+
 // Calculates/sets distances for each cell to goal cell
+func (env *field) calculateDistancesPortal() {
+
+	distancesPortals := env.portalsDistance2Goal()
+
+	for iny := range env.cells {
+		for inx := range env.cells[ iny ] {
+
+			cell := env.cells[ iny ][ inx ]
+			distance := distanceEuclidean(env.goal, cell)
+
+			if ! usePortals {
+				cell.distance = distance
+				continue
+			}
+
+			for portal, portalDistance := range distancesPortals {
+
+				portalDistance := distanceEuclidean(portal, cell) + portalDistance
+
+				if distance > portalDistance {
+					distance = portalDistance
+				}
+			}
+
+			cell.distance = distance
+		}
+	}
+
+	// visited := make(map[*cell]*cell)
+	// visited[ env.goal ] = env.goal
+	// env.goal.distance = 0
+	//
+	// cellQueue := list.New()
+	// cellQueue.PushBack(env.goal)
+	//
+	// for cellQueue.Len() > 0 {
+	//
+	// 	elem := cellQueue.Front()
+	// 	cellQueue.Remove(elem)
+	//
+	// 	cell := elem.Value.(*cell)
+	// 	cell.distance = -distanceEuclidean(cell, visited[ cell ]) + visited[ cell ].distance
+	//
+	// 	fmt.Printf("Cell: %s\n", cell.coordinates())
+	//
+	// 	neighbours := env.getNeighbours(cell)
+	//
+	// 	for _, neighbour := range neighbours {
+	//
+	// 		if visited[ neighbour ] != nil {
+	// 			continue
+	// 		}
+	//
+	// 		visited[ neighbour ] = cell
+	// 		cellQueue.PushBack(neighbour)
+	// 	}
+	// }
+}
+
 func (env *field) calculateDistances() {
 
 	for iny := range env.cells {
@@ -117,15 +204,15 @@ func (env *field) calculateDistances() {
 
 			cell := env.cells[ iny ][ inx ]
 
-			// distance is negative, because the priority queue
-			// pops the highest priority
-			cell.priority = -distanceEuclidean(env.goal, cell)
+			// distance is negative, because the distance queue
+			// pops the highest distance
+			cell.distance = distanceEuclidean(env.goal, cell)
 		}
 	}
 }
 
 // Prints the field as matrix of distances to goal cell
-func (env field) priorityMatrix() string {
+func (env field) printPriorityMatrix() {
 
 	matrix := ""
 
@@ -135,16 +222,16 @@ func (env field) priorityMatrix() string {
 			cell := env.cells[ iny ][ inx ]
 
 			if cell.blocked {
-				matrix += fmt.Sprintf("%3s", "X")
+				matrix += fmt.Sprintf("%4s", "X")
 			} else {
-				matrix += fmt.Sprintf("%3d", cell.priority)
+				matrix += fmt.Sprintf("%4d", int(math.Round(cell.distance)))
 			}
 		}
 
 		matrix += "\n"
 	}
 
-	return matrix
+	fmt.Println(matrix)
 }
 
 // Prints field with path in it
@@ -237,7 +324,7 @@ func (env field) knowledgeSearch() {
 		item := heap.Pop(&pq).(*queue.Item)
 		cell := env.coordinates[ item.Value ]
 
-		fmt.Printf("cell: %s --> %d\n", cell.coordinates(), cell.priority)
+		fmt.Printf("cell: %s --> %1.f\n", cell.coordinates(), cell.distance)
 		// fmt.Printf("queue size: %d\n", pq.Len())
 
 		visited[ item.Value ] = true
@@ -257,11 +344,11 @@ func (env field) knowledgeSearch() {
 			visited[ neighbour.coordinates() ] = true
 
 			neighbour.predecessor = cell
-			// fmt.Printf("    neighbour (%d) >> %s\n", neighbour.priority, neighbour.coordinates())
+			// fmt.Printf("    neighbour (%d) >> %s\n", neighbour.distance, neighbour.coordinates())
 
 			heap.Push(&pq, &queue.Item{
 				Value:    neighbour.coordinates(),
-				Priority: neighbour.priority,
+				Priority: -neighbour.distance,
 			})
 		}
 	}
@@ -411,22 +498,20 @@ func Init(path string) (*field, error) {
 		goal:        goal,
 	}
 
-	grid.calculateDistances()
-
 	return grid, nil
 }
 
 func main() {
 
-	path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
-	// path := "/Users/patrick/Desktop/GWV/blatt3_environment_portal.txt"
+	// path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
+	path := "/Users/patrick/Desktop/GWV/blatt3_environment_portal.txt"
 	// path := "/Users/patrick/Desktop/GWV/blatt3_environment-2.txt"
 
 	if len(os.Args) > 1 {
 		path = os.Args[ 1 ]
 	}
 
-	fmt.Printf("sourcing %s\n", path)
+	fmt.Printf("sourcing  %s\n", path)
 
 	env, err := Init(path)
 	if err != nil {
@@ -434,8 +519,11 @@ func main() {
 	}
 
 	fmt.Printf("######## Finding path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
-	// env.knowledgeSearch()
-	env.breadthFirstSearch()
+	// env.calculateDistances()
+	env.calculateDistancesPortal()
+	env.printPriorityMatrix()
+	env.knowledgeSearch()
+	// env.breadthFirstSearch()
 	// env.depthFirstSearch()
 
 	fmt.Printf("######## Path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
