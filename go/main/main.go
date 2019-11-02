@@ -35,7 +35,7 @@ func distanceEuclidean(goal, node *cell) int {
 
 	h := math.Sqrt(tmp)
 
-	return -int(math.Round(h))
+	return int(math.Round(h))
 }
 
 // Wrapper struct for environment
@@ -85,7 +85,10 @@ func (env *field) calculateDistances() {
 		for inx := range env.cells[ iny ] {
 
 			cell := env.cells[ iny ][ inx ]
-			cell.priority = distanceEuclidean(env.goal, cell)
+
+			// distance is negative, because the priority queue
+			// pops the highest priority
+			cell.priority = -distanceEuclidean(env.goal, cell)
 		}
 	}
 }
