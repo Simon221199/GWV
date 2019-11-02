@@ -472,8 +472,13 @@ func Init(path string) (*field, error) {
 
 func main() {
 
+	// envcreate.New(60, 30)
+	// os.Exit(0)
+
 	// path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
-	path := "/Users/patrick/Desktop/GWV/blatt3_environment_portal.txt"
+	// path := "/Users/patrick/Desktop/GWV/blatt3_environment_portal.txt"
+	// path := "/Users/patrick/Desktop/GWV/test_env.txt"
+	path := "/Users/patrick/Desktop/GWV/test_env_2.txt"
 	// path := "/Users/patrick/Desktop/GWV/blatt3_environment-2.txt"
 
 	if len(os.Args) > 1 {
