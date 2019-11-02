@@ -165,36 +165,6 @@ func (env *field) calculateDistancesPortal() {
 			cell.distance = distance
 		}
 	}
-
-	// visited := make(map[*cell]*cell)
-	// visited[ env.goal ] = env.goal
-	// env.goal.distance = 0
-	//
-	// cellQueue := list.New()
-	// cellQueue.PushBack(env.goal)
-	//
-	// for cellQueue.Len() > 0 {
-	//
-	// 	elem := cellQueue.Front()
-	// 	cellQueue.Remove(elem)
-	//
-	// 	cell := elem.Value.(*cell)
-	// 	cell.distance = -distanceEuclidean(cell, visited[ cell ]) + visited[ cell ].distance
-	//
-	// 	fmt.Printf("Cell: %s\n", cell.coordinates())
-	//
-	// 	neighbours := env.getNeighbours(cell)
-	//
-	// 	for _, neighbour := range neighbours {
-	//
-	// 		if visited[ neighbour ] != nil {
-	// 			continue
-	// 		}
-	//
-	// 		visited[ neighbour ] = cell
-	// 		cellQueue.PushBack(neighbour)
-	// 	}
-	// }
 }
 
 func (env *field) calculateDistances() {
@@ -203,9 +173,6 @@ func (env *field) calculateDistances() {
 		for inx := range env.cells[ iny ] {
 
 			cell := env.cells[ iny ][ inx ]
-
-			// distance is negative, because the distance queue
-			// pops the highest distance
 			cell.distance = distanceEuclidean(env.goal, cell)
 		}
 	}
@@ -346,6 +313,8 @@ func (env field) knowledgeSearch() {
 			neighbour.predecessor = cell
 			// fmt.Printf("    neighbour (%d) >> %s\n", neighbour.distance, neighbour.coordinates())
 
+			// Priority is negative, because the distance queue
+			// pops the highest Priority
 			heap.Push(&pq, &queue.Item{
 				Value:    neighbour.coordinates(),
 				Priority: -neighbour.distance,
