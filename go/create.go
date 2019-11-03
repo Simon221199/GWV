@@ -1,10 +1,10 @@
-package envcreate
+package main
 
 import (
 	"fmt"
 )
 
-func New(width, height int) {
+func createEnv(width, height int) {
 
 	env := ""
 

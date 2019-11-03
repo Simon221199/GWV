@@ -1,22 +1,22 @@
-package simple
+package main
 
 import "strconv"
 
-func Min(x, y int) int {
+func min(x, y int) int {
 	if x < y {
 		return x
 	}
 	return y
 }
 
-func Max(x, y int) int {
+func max(x, y int) int {
 	if x > y {
 		return x
 	}
 	return y
 }
 
-func IsNumber(str string) bool {
+func isNumber(str string) bool {
 
 	if _, err := strconv.Atoi(str); err == nil {
 		return true

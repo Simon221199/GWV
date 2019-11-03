@@ -1,8 +1,6 @@
 package main
 
 import (
-	"../queue"
-	"../simple"
 	"container/heap"
 	"container/list"
 	"fmt"
@@ -30,7 +28,7 @@ func (cell cell) coordinates() string {
 }
 
 func (cell cell) isPortal() bool {
-	return simple.IsNumber(cell.symbol)
+	return isNumber(cell.symbol)
 }
 
 // Euclidean Distance for two points
@@ -77,12 +75,12 @@ func (env field) getNeighbours(node *cell) []*cell {
 	}
 
 	// Calculate coordinate range/vector for y
-	startY := simple.Max(0, node.iny-1)
-	endY := simple.Min(len(env.cells), node.iny+1)
+	startY := max(0, node.iny-1)
+	endY := min(len(env.cells), node.iny+1)
 
 	// Calculate coordinate range/vector for x
-	startX := simple.Max(0, node.inx-1)
-	endX := simple.Min(len(env.cells[ 0 ]), node.inx+1)
+	startX := max(0, node.inx-1)
+	endX := min(len(env.cells[ 0 ]), node.inx+1)
 
 	neighbours := make([]*cell, 0)
 
@@ -277,8 +275,8 @@ func (env field) knowledgeSearch() {
 
 	env.resetPredecessors()
 
-	pq := make(queue.PriorityQueue, 0)
-	pq.Push(&queue.Item{
+	pq := make(priorityQueue, 0)
+	pq.Push(&item{
 		Value:    env.start.coordinates(),
 		Priority: 1,
 	})
@@ -288,13 +286,13 @@ func (env field) knowledgeSearch() {
 
 	for pq.Len() > 0 {
 
-		item := heap.Pop(&pq).(*queue.Item)
-		cell := env.coordinates[ item.Value ]
+		popItem := heap.Pop(&pq).(*item)
+		cell := env.coordinates[ popItem.Value ]
 
 		fmt.Printf("cell: %s --> %1.f\n", cell.coordinates(), cell.distance)
 		// fmt.Printf("queue size: %d\n", pq.Len())
 
-		visited[ item.Value ] = true
+		visited[ popItem.Value ] = true
 
 		if cell.coordinates() == env.goal.coordinates() {
 			break
@@ -315,7 +313,7 @@ func (env field) knowledgeSearch() {
 
 			// Priority is negative, because the distance queue
 			// pops the highest Priority
-			heap.Push(&pq, &queue.Item{
+			heap.Push(&pq, &item{
 				Value:    neighbour.coordinates(),
 				Priority: -neighbour.distance,
 			})
@@ -472,14 +470,14 @@ func Init(path string) (*field, error) {
 
 func main() {
 
-	// envcreate.New(60, 30)
+	// createEnv(60, 30)
 	// os.Exit(0)
 
-	// path := "/Users/patrick/Desktop/GWV/blatt3_environment.txt"
-	// path := "/Users/patrick/Desktop/GWV/blatt3_environment_portal.txt"
-	// path := "/Users/patrick/Desktop/GWV/test_env.txt"
-	path := "/Users/patrick/Desktop/GWV/test_env_2.txt"
-	// path := "/Users/patrick/Desktop/GWV/blatt3_environment-2.txt"
+	// path := "./environment/blatt3_environment.txt"
+	// path := "./environment/blatt3_environment_portal.txt"
+	// path := "./environment/test_env.txt"
+	path := "./environment/test_env_2.txt"
+	// path := "./environment/blatt3_environment-2.txt"
 
 	if len(os.Args) > 1 {
 		path = os.Args[ 1 ]

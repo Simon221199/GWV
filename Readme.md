@@ -15,15 +15,19 @@
 
 ### How to use
 
-Simple run ```go run go/main/main.go PATH_TO_ENVIOMENT_TXT```
+Simple run ```go run ./go PATH_TO_ENVIOMENT_TXT```
 
 or
 
 Use binary ```./bin/find_mac PATH_TO_ENVIOMENT_TXT```
 
+or
+
+Docker ```docker-compose run --rm gwv environment/test_env_3.txt```
+
 ### Output
 
-Output for ```go run go/main/main.go blatt3_environment.txt```
+Output for ```go run ./go ./environment/blatt3_environment.txt```
 
 ```
 sourcing blatt3_environment.txt
