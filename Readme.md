@@ -25,6 +25,10 @@ or
 
 Docker ```docker-compose run --rm gwv environment/test_env_3.txt```
 
+### How to compile
+
+```go build -o main ./go```
+
 ### Output
 
 Output for ```go run ./go ./environment/blatt3_environment.txt```
