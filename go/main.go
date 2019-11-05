@@ -271,7 +271,7 @@ func (env field) printFieldWithPathToGoal() {
 
 // Calculate path form start to goal
 // Here happens the important stuff
-func (env field) knowledgeSearch() {
+func (env field) searchBestfirst() {
 
 	env.resetPredecessors()
 
@@ -330,7 +330,7 @@ func (env *field) resetPredecessors() {
 	}
 }
 
-func (env *field) breadthFirstSearch() {
+func (env *field) searchBreadthFirst() {
 
 	env.resetPredecessors()
 
@@ -368,7 +368,7 @@ func (env *field) breadthFirstSearch() {
 	}
 }
 
-func (env *field) depthFirstSearch() {
+func (env *field) searchDepthFirst() {
 
 	env.resetPredecessors()
 
@@ -494,9 +494,9 @@ func main() {
 	// env.calculateDistances()
 	env.calculateDistancesPortal()
 	env.printPriorityMatrix()
-	env.knowledgeSearch()
-	// env.breadthFirstSearch()
-	// env.depthFirstSearch()
+	env.searchBestfirst()
+	env.searchBreadthFirst()
+	env.searchDepthFirst()
 
 	fmt.Printf("######## Path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
 	env.printPathToGoal()
