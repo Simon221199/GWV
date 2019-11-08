@@ -11,11 +11,11 @@ import (
 
 // Cell in the field
 type cell struct {
-	inx         int
-	iny         int
-	blocked     bool
-	distance    float64
-	symbol      string
+	inx      int
+	iny      int
+	blocked  bool
+	distance float64
+	symbol   string
 }
 
 // String representation of cell coordinates
@@ -88,7 +88,7 @@ func (env field) getNeighbours(node *cell) []*cell {
 
 	neighbours := make([]*cell, 0)
 
-	findNeighbours := func (inx, iny int) {
+	findNeighbours := func(inx, iny int) {
 
 		// Exclude source node form neighbours
 		if inx == node.inx && iny == node.iny {
@@ -263,7 +263,7 @@ func (env field) genericSearch(priority func(path) float64) *path {
 
 		env.printFieldWithPath(path.cells)
 
-		lastCell := path.cells[ len(path.cells) - 1 ]
+		lastCell := path.cells[ len(path.cells)-1 ]
 
 		if lastCell == env.goal {
 			return &path
@@ -298,7 +298,7 @@ func (env field) searchBestFirst() *path {
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
 
-		last := path.cells[ len(path.cells) - 1 ]
+		last := path.cells[ len(path.cells)-1 ]
 		return -last.distance
 	}
 
@@ -311,8 +311,8 @@ func (env *field) searchAStar() *path {
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
 
-		last := path.cells[ len(path.cells) - 1 ]
-		return -(float64(len(path.cells) - 1) + last.distance)
+		last := path.cells[ len(path.cells)-1 ]
+		return -(float64(len(path.cells)-1) + last.distance)
 		// return -(float64(len(path.cells)) + last.distance)
 	}
 

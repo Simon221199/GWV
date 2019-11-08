@@ -3,12 +3,10 @@ package main
 import "fmt"
 
 type path struct {
-	cells    []*cell
-	// cellsMap map[*cell]bool
+	cells []*cell
 }
 
 func (pathObj path) contains(cell *cell) bool {
-	// return pathObj.cellsMap[ cell ]
 
 	for _, elem := range pathObj.cells {
 		if elem.coordinates() == cell.coordinates() {
@@ -23,14 +21,10 @@ func (pathObj path) append(cel *cell) path {
 
 	newPath := path{
 		cells: make([]*cell, 0),
-		// cells:    append(pathObj.cells, cell),
-		// cellsMap: pathObj.cellsMap,
 	}
 
 	newPath.cells = append(newPath.cells, pathObj.cells...)
 	newPath.cells = append(newPath.cells, cel)
-	// newPath.cells = append(newPath.cells, cell)
-	// newPath.cellsMap[ cell ] = true
 
 	return newPath
 }
@@ -49,13 +43,11 @@ func (pathObj path) toString() string {
 func newPath(cells ...*cell) path {
 
 	path := path{
-		cells:    make([]*cell, 0),
-		// cellsMap: make(map[*cell]bool),
+		cells: make([]*cell, 0),
 	}
 
 	for _, cell := range cells {
 		path.cells = append(path.cells, cell)
-		// path.cellsMap[ cell ] = true
 	}
 
 	return path
