@@ -439,7 +439,7 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Printf("Finding (%s) path form %s to %s\n", search, env.start.coordinates(), env.goal.coordinates())
+	fmt.Printf("Searching (%s) path form %s to %s\n", search, env.start.coordinates(), env.goal.coordinates())
 	// env.calculateDistances()
 	env.calculateDistancesPortal()
 	env.printPriorityMatrix()
