@@ -8,7 +8,7 @@ import (
 
 // An item is something we manage in a Priority queue.
 type item struct {
-	Value    string  // The Value of the item; arbitrary.
+	Value    path  // The Value of the item; arbitrary.
 	Priority float64 // The Priority of the item in the queue.
 	// The index is needed by update and is maintained by the heap.Interface methods.
 	index int // The index of the item in the heap.
@@ -48,7 +48,7 @@ func (pq *priorityQueue) Pop() interface{} {
 }
 
 // update modifies the Priority and Value of an item in the queue.
-func (pq *priorityQueue) update(item *item, value string, priority float64) {
+func (pq *priorityQueue) update(item *item, value path, priority float64) {
 	item.Value = value
 	item.Priority = priority
 	heap.Fix(pq, item.index)

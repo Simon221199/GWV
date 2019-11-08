@@ -1,6 +1,10 @@
 package main
 
-import "strconv"
+import (
+	"crypto/rand"
+	"fmt"
+	"strconv"
+)
 
 func min(x, y int) int {
 	if x < y {
@@ -23,4 +27,15 @@ func isNumber(str string) bool {
 	}
 
 	return false
+}
+
+func Uuid() string {
+
+	bytes := make([]byte, 16)
+	_, err := rand.Read(bytes)
+	if err != nil {
+		panic(err)
+	}
+
+	return fmt.Sprintf("%X-%X-%X-%X-%X", bytes[0:4], bytes[4:6], bytes[6:8], bytes[8:10], bytes[10:])
 }

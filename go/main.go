@@ -10,8 +10,6 @@ import (
 	"strings"
 )
 
-const usePortals = true
-
 // Cell in the field
 type cell struct {
 	inx         int
@@ -19,7 +17,6 @@ type cell struct {
 	blocked     bool
 	distance    float64
 	symbol      string
-	predecessor *cell
 }
 
 // String representation of cell coordinates
@@ -41,6 +38,22 @@ func distanceEuclidean(goal, node *cell) float64 {
 	h := math.Sqrt(tmp)
 
 	return h
+}
+
+// Manhattan Distance for two points
+// Source https://en.wikipedia.org/wiki/Euclidean_distance
+func distanceManhattan(goal, node *cell) float64 {
+
+	h := math.Abs(float64(node.inx-goal.inx)) +
+		math.Abs(float64(node.iny-goal.iny))
+
+	return h
+}
+
+func calculateDistance(goal, node *cell) float64 {
+
+	// return distanceEuclidean(goal, node)
+	return distanceManhattan(goal, node)
 }
 
 // Wrapper struct for environment
@@ -74,6 +87,30 @@ func (env field) getNeighbours(node *cell) []*cell {
 		return nil
 	}
 
+	neighbours := make([]*cell, 0)
+
+	findNeighbours := func (inx, iny int) {
+
+		// Exclude source node form neighbours
+		if inx == node.inx && iny == node.iny {
+			return
+		}
+
+		cell := env.cells[ iny ][ inx ]
+
+		if cell.blocked {
+			return
+		}
+
+		neighbours = append(neighbours, cell)
+
+		if cell.isPortal() {
+
+			portal := env.getPortalCell(cell)
+			neighbours = append(neighbours, env.getNeighbours(portal)...)
+		}
+	}
+
 	// Calculate coordinate range/vector for y
 	startY := max(0, node.iny-1)
 	endY := min(len(env.cells), node.iny+1)
@@ -82,30 +119,12 @@ func (env field) getNeighbours(node *cell) []*cell {
 	startX := max(0, node.inx-1)
 	endX := min(len(env.cells[ 0 ]), node.inx+1)
 
-	neighbours := make([]*cell, 0)
-
 	for iny := startY; iny <= endY; iny++ {
-		for inx := startX; inx <= endX; inx++ {
+		findNeighbours(node.inx, iny)
+	}
 
-			// Exclude source node form neighbours
-			if iny == node.iny && inx == node.inx {
-				continue
-			}
-
-			cell := env.cells[ iny ][ inx ]
-
-			if cell.blocked {
-				continue
-			}
-
-			neighbours = append(neighbours, cell)
-
-			if usePortals && cell.isPortal() {
-				
-				portal := env.getPortalCell(cell)
-				neighbours = append(neighbours, env.getNeighbours(portal)...)
-			}
-		}
+	for inx := startX; inx <= endX; inx++ {
+		findNeighbours(inx, node.iny)
 	}
 
 	return neighbours
@@ -115,10 +134,6 @@ func (env field) portalsDistance2Goal() map[*cell]float64 {
 
 	values := make(map[*cell]float64)
 
-	if ! usePortals {
-		return values
-	}
-
 	for iny := range env.cells {
 		for inx := range env.cells[ iny ] {
 
@@ -127,7 +142,7 @@ func (env field) portalsDistance2Goal() map[*cell]float64 {
 			if cell.isPortal() {
 
 				portalCell := env.getPortalCell(cell)
-				values[ cell ] = distanceEuclidean(env.goal, portalCell)
+				values[ cell ] = calculateDistance(env.goal, portalCell)
 			}
 		}
 	}
@@ -144,16 +159,11 @@ func (env *field) calculateDistancesPortal() {
 		for inx := range env.cells[ iny ] {
 
 			cell := env.cells[ iny ][ inx ]
-			distance := distanceEuclidean(env.goal, cell)
-
-			if ! usePortals {
-				cell.distance = distance
-				continue
-			}
+			distance := calculateDistance(env.goal, cell)
 
 			for portal, portalDistance := range distancesPortals {
 
-				portalDistance := distanceEuclidean(portal, cell) + portalDistance
+				portalDistance := calculateDistance(portal, cell) + portalDistance
 
 				if distance > portalDistance {
 					distance = portalDistance
@@ -171,7 +181,7 @@ func (env *field) calculateDistances() {
 		for inx := range env.cells[ iny ] {
 
 			cell := env.cells[ iny ][ inx ]
-			cell.distance = distanceEuclidean(env.goal, cell)
+			cell.distance = calculateDistance(env.goal, cell)
 		}
 	}
 }
@@ -237,7 +247,7 @@ func (env field) getPathToGoal() []*cell {
 
 	for node != nil {
 		path = append(path, node)
-		node = node.predecessor
+		// node = node.predecessor
 	}
 
 	// path = append(path, env.start)
@@ -271,68 +281,58 @@ func (env field) printFieldWithPathToGoal() {
 
 // Calculate path form start to goal
 // Here happens the important stuff
-func (env field) searchBestfirst() {
-
-	env.resetPredecessors()
+func (env field) searchBestFirst() []*cell {
 
 	pq := make(priorityQueue, 0)
 	pq.Push(&item{
-		Value:    env.start.coordinates(),
-		Priority: 1,
+		Value:    newPath(env.start),
+		Priority: -env.start.distance,
 	})
 	heap.Init(&pq)
-
-	visited := make(map[string]bool)
 
 	for pq.Len() > 0 {
 
 		popItem := heap.Pop(&pq).(*item)
-		cell := env.coordinates[ popItem.Value ]
+		path := popItem.Value
 
-		fmt.Printf("cell: %s --> %1.f\n", cell.coordinates(), cell.distance)
+		// fmt.Printf("cell: %s --> %1.f\n", cell.coordinates(), cell.distance)
+		fmt.Print("path: ")
+
+		for _, cell := range path.cells {
+			fmt.Print(cell.coordinates() + " ")
+		}
+		fmt.Println()
 		// fmt.Printf("queue size: %d\n", pq.Len())
+		env.printFieldWithPath(path.cells)
 
-		visited[ popItem.Value ] = true
+		lastCell := path.cells[ len(path.cells) - 1 ]
 
-		if cell.coordinates() == env.goal.coordinates() {
-			break
+		if lastCell == env.goal {
+			return path.cells
 		}
 
-		neighbours := env.getNeighbours(cell)
+		neighbours := env.getNeighbours(lastCell)
+		fmt.Printf("neighbours: %d\n", len(neighbours))
 
 		for _, neighbour := range neighbours {
 
-			if visited[ neighbour.coordinates() ] {
+			if path.contains(neighbour) {
 				continue
 			}
 
-			visited[ neighbour.coordinates() ] = true
-
-			neighbour.predecessor = cell
-			// fmt.Printf("    neighbour (%d) >> %s\n", neighbour.distance, neighbour.coordinates())
-
-			// Priority is negative, because the distance queue
+			// Priority is negative, because the calculateDistance queue
 			// pops the highest Priority
 			heap.Push(&pq, &item{
-				Value:    neighbour.coordinates(),
+				Value:    path.append(neighbour),
 				Priority: -neighbour.distance,
 			})
 		}
 	}
-}
 
-func (env *field) resetPredecessors() {
-
-	for iny := range env.cells {
-		for inx := range env.cells {
-			env.cells[ iny ][ inx ].predecessor = nil
-		}
-	}
+	return nil
 }
 
 func (env *field) searchBreadthFirst() {
-
-	env.resetPredecessors()
 
 	cellQueue := list.New()
 	cellQueue.PushBack(env.start)
@@ -350,15 +350,15 @@ func (env *field) searchBreadthFirst() {
 
 		for _, neighbour := range neighbours {
 
-			if neighbour.predecessor != nil {
-				continue
-			}
+			// if neighbour.predecessor != nil {
+			// 	continue
+			// }
 
 			if neighbour == env.start {
 				continue
 			}
 
-			neighbour.predecessor = cell
+			// neighbour.predecessor = cell
 			cellQueue.PushBack(neighbour)
 
 			if neighbour == env.goal {
@@ -369,8 +369,6 @@ func (env *field) searchBreadthFirst() {
 }
 
 func (env *field) searchDepthFirst() {
-
-	env.resetPredecessors()
 
 	cellQueue := list.New()
 	cellQueue.PushFront(env.start)
@@ -388,15 +386,15 @@ func (env *field) searchDepthFirst() {
 
 		for _, neighbour := range neighbours {
 
-			if neighbour.predecessor != nil {
-				continue
-			}
+			// if neighbour.predecessor != nil {
+			// 	continue
+			// }
 
 			if neighbour == env.start {
 				continue
 			}
 
-			neighbour.predecessor = cell
+			// neighbour.predecessor = cell
 			cellQueue.PushFront(neighbour)
 
 			if neighbour == env.goal {
@@ -473,10 +471,11 @@ func main() {
 	// createEnv(60, 30)
 	// os.Exit(0)
 
-	// path := "./environment/blatt3_environment.txt"
+	// path := "./environment/stupid.txt"
+	path := "./environment/blatt3_environment.txt"
 	// path := "./environment/blatt3_environment_portal.txt"
 	// path := "./environment/test_env.txt"
-	path := "./environment/test_env_2.txt"
+	// path := "./environment/test_env_2.txt"
 	// path := "./environment/blatt3_environment-2.txt"
 
 	if len(os.Args) > 1 {
@@ -494,12 +493,14 @@ func main() {
 	// env.calculateDistances()
 	env.calculateDistancesPortal()
 	env.printPriorityMatrix()
-	env.searchBestfirst()
+	// pathToGoal := env.searchBestFirst()
+	pathToGoal := env.searchAStar()
 	env.searchBreadthFirst()
-	env.searchDepthFirst()
+	// env.searchDepthFirst()
 
 	fmt.Printf("######## Path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
-	env.printPathToGoal()
+	env.printFieldWithPath(pathToGoal)
+	// env.printPathToGoal()
 	env.printField()
-	env.printFieldWithPathToGoal()
+	// env.printFieldWithPathToGoal()
 }
