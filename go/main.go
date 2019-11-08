@@ -305,6 +305,20 @@ func (env field) searchBestFirst() *path {
 	return env.genericSearch(h)
 }
 
+// A* Search
+func (env *field) searchAStar() *path {
+
+	// return negative value, because prioQuere picks highest value
+	h := func(path path) float64 {
+
+		last := path.cells[ len(path.cells) - 1 ]
+		return -(float64(len(path.cells) - 1) + last.distance)
+		// return -(float64(len(path.cells)) + last.distance)
+	}
+
+	return env.genericSearch(h)
+}
+
 // Breadth-First-Search
 func (env *field) searchBreadthFirst() *path {
 
@@ -324,20 +338,6 @@ func (env *field) searchDepthFirst() *path {
 	h := func(path path) float64 {
 
 		return float64(len(path.cells))
-	}
-
-	return env.genericSearch(h)
-}
-
-// A* Search
-func (env *field) searchAStar() *path {
-
-	// return negative value, because prioQuere picks highest value
-	h := func(path path) float64 {
-
-		last := path.cells[ len(path.cells) - 1 ]
-		return -(float64(len(path.cells) - 1) + last.distance)
-		// return -(float64(len(path.cells)) + last.distance)
 	}
 
 	return env.genericSearch(h)
@@ -410,32 +410,61 @@ func main() {
 	// createEnv(60, 30)
 	// os.Exit(0)
 
-	// path := "./environment/stupid.txt"
-	// path := "./environment/blatt3_environment.txt"
-	path := "./environment/blatt3_environment_portal.txt"
-	// path := "./environment/test_env.txt"
-	// path := "./environment/test_env_2.txt"
-	// path := "./environment/blatt3_environment-2.txt"
+	// src := "./environment/stupid.txt"
+	// src := "./environment/blatt3_environment.txt"
+	src := "./environment/blatt3_environment_portal.txt"
+	// src := "./environment/test_env.txt"
+	// src := "./environment/test_env_2.txt"
+	// src := "./environment/blatt3_environment-2.txt"
 
-	if len(os.Args) > 1 {
-		path = os.Args[ 1 ]
+	bestFirst := "best-first"
+	aStar := "aStar"
+	breadthFirst := "breadth-first"
+	depthFirst := "depth-first"
+
+	search := bestFirst
+
+	if len(os.Args) > 2 {
+		search = os.Args[ 1 ]
+		src = os.Args[ 2 ]
+	} else {
+		fmt.Printf("How to use: go run ./go [%s, %s, %s, %s] PATH_TO_ENV_TXT\n", bestFirst, aStar, breadthFirst, depthFirst)
+		return
 	}
 
-	fmt.Printf("sourcing  %s\n", path)
+	fmt.Printf("sourcing  %s\n", src)
 
-	env, err := Init(path)
+	env, err := Init(src)
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Printf("Finding path form %s to %s ....\n", env.start.coordinates(), env.goal.coordinates())
+	fmt.Printf("Finding (%s) path form %s to %s\n", search, env.start.coordinates(), env.goal.coordinates())
 	// env.calculateDistances()
 	env.calculateDistancesPortal()
 	env.printPriorityMatrix()
-	// pathToGoal := env.searchAStar()
-	pathToGoal := env.searchBestFirst()
-	// pathToGoal := env.searchBreadthFirst()
-	// pathToGoal := env.searchDepthFirst()
+
+	var pathToGoal *path
+
+	if search == bestFirst {
+		pathToGoal = env.searchBestFirst()
+	}
+
+	if search == aStar {
+		pathToGoal = env.searchAStar()
+	}
+
+	if search == breadthFirst {
+		pathToGoal = env.searchBreadthFirst()
+	}
+
+	if search == depthFirst {
+		pathToGoal = env.searchDepthFirst()
+	}
+
+	if pathToGoal == nil {
+		return
+	}
 
 	fmt.Printf("\n############ Path form %s to %s ############\n", env.start.coordinates(), env.goal.coordinates())
 	fmt.Printf("Path length: %d\n", len(pathToGoal.cells))
