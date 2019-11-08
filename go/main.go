@@ -2,7 +2,6 @@ package main
 
 import (
 	"container/heap"
-	"container/list"
 	"fmt"
 	"io/ioutil"
 	"math"
@@ -41,7 +40,6 @@ func distanceEuclidean(goal, node *cell) float64 {
 }
 
 // Manhattan Distance for two points
-// Source https://en.wikipedia.org/wiki/Euclidean_distance
 func distanceManhattan(goal, node *cell) float64 {
 
 	h := math.Abs(float64(node.inx-goal.inx)) +
@@ -50,6 +48,7 @@ func distanceManhattan(goal, node *cell) float64 {
 	return h
 }
 
+// Helper function to easily switch between distances functions
 func calculateDistance(goal, node *cell) float64 {
 
 	// return distanceEuclidean(goal, node)
@@ -279,14 +278,14 @@ func (env field) printFieldWithPathToGoal() {
 	env.printFieldWithPath(env.getPathToGoal())
 }
 
-// Calculate path form start to goal
-// Here happens the important stuff
-func (env field) searchBestFirst() []*cell {
+func (env field) genericSearch(priority func(path) float64) []*cell {
+
+	startPath := newPath(env.start)
 
 	pq := make(priorityQueue, 0)
 	pq.Push(&item{
-		Value:    newPath(env.start),
-		Priority: -env.start.distance,
+		Value:    startPath,
+		Priority: priority(startPath),
 	})
 	heap.Init(&pq)
 
@@ -295,14 +294,14 @@ func (env field) searchBestFirst() []*cell {
 		popItem := heap.Pop(&pq).(*item)
 		path := popItem.Value
 
-		// fmt.Printf("cell: %s --> %1.f\n", cell.coordinates(), cell.distance)
+		fmt.Printf("queue size: %d\n", pq.Len())
+		fmt.Printf("priority: %.f\n", popItem.Priority)
 		fmt.Print("path: ")
 
 		for _, cell := range path.cells {
 			fmt.Print(cell.coordinates() + " ")
 		}
 		fmt.Println()
-		// fmt.Printf("queue size: %d\n", pq.Len())
 		env.printFieldWithPath(path.cells)
 
 		lastCell := path.cells[ len(path.cells) - 1 ]
@@ -320,11 +319,13 @@ func (env field) searchBestFirst() []*cell {
 				continue
 			}
 
+			newPath := path.append(neighbour)
+
 			// Priority is negative, because the calculateDistance queue
 			// pops the highest Priority
 			heap.Push(&pq, &item{
-				Value:    path.append(neighbour),
-				Priority: -neighbour.distance,
+				Value:    newPath,
+				Priority: priority(newPath),
 			})
 		}
 	}
@@ -332,76 +333,53 @@ func (env field) searchBestFirst() []*cell {
 	return nil
 }
 
-func (env *field) searchBreadthFirst() {
+// Calculate path form start to goal
+// Here happens the important stuff
+func (env field) searchBestFirst() []*cell {
 
-	cellQueue := list.New()
-	cellQueue.PushBack(env.start)
+	// return negative value, because prioQuere picks highest value
+	h := func(path path) float64 {
 
-	for cellQueue.Len() > 0 {
-
-		elem := cellQueue.Front()
-		cellQueue.Remove(elem)
-
-		cell := elem.Value.(*cell)
-
-		fmt.Printf("Cell: %s\n", cell.coordinates())
-
-		neighbours := env.getNeighbours(cell)
-
-		for _, neighbour := range neighbours {
-
-			// if neighbour.predecessor != nil {
-			// 	continue
-			// }
-
-			if neighbour == env.start {
-				continue
-			}
-
-			// neighbour.predecessor = cell
-			cellQueue.PushBack(neighbour)
-
-			if neighbour == env.goal {
-				break
-			}
-		}
+		last := path.cells[ len(path.cells) - 1 ]
+		return -last.distance
 	}
+
+	return env.genericSearch(h)
 }
 
-func (env *field) searchDepthFirst() {
+func (env *field) searchBreadthFirst() []*cell {
 
-	cellQueue := list.New()
-	cellQueue.PushFront(env.start)
+	// return negative value, because prioQuere picks highest value
+	h := func(path path) float64 {
 
-	for cellQueue.Len() > 0 {
-
-		elem := cellQueue.Front()
-		cellQueue.Remove(elem)
-
-		cell := elem.Value.(*cell)
-
-		fmt.Printf("Cell: %s\n", cell.coordinates())
-
-		neighbours := env.getNeighbours(cell)
-
-		for _, neighbour := range neighbours {
-
-			// if neighbour.predecessor != nil {
-			// 	continue
-			// }
-
-			if neighbour == env.start {
-				continue
-			}
-
-			// neighbour.predecessor = cell
-			cellQueue.PushFront(neighbour)
-
-			if neighbour == env.goal {
-				break
-			}
-		}
+		return -float64(len(path.cells))
 	}
+
+	return env.genericSearch(h)
+}
+
+func (env *field) searchDepthFirst() []*cell {
+
+	// return negative value, because prioQuere picks highest value
+	h := func(path path) float64 {
+
+		return float64(len(path.cells))
+	}
+
+	return env.genericSearch(h)
+}
+
+func (env *field) searchAStar() []*cell {
+
+	// return negative value, because prioQuere picks highest value
+	h := func(path path) float64 {
+
+		last := path.cells[ len(path.cells) - 1 ]
+		return -(float64(len(path.cells) - 1) + last.distance)
+		// return -(float64(len(path.cells)) + last.distance)
+	}
+
+	return env.genericSearch(h)
 }
 
 func Init(path string) (*field, error) {
@@ -493,10 +471,10 @@ func main() {
 	// env.calculateDistances()
 	env.calculateDistancesPortal()
 	env.printPriorityMatrix()
-	// pathToGoal := env.searchBestFirst()
 	pathToGoal := env.searchAStar()
-	env.searchBreadthFirst()
-	// env.searchDepthFirst()
+	// pathToGoal := env.searchBestFirst()
+	// pathToGoal := env.searchBreadthFirst()
+	// pathToGoal := env.searchDepthFirst()
 
 	fmt.Printf("######## Path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
 	env.printFieldWithPath(pathToGoal)
