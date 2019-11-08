@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type path struct {
 	cells    []*cell
 	// cellsMap map[*cell]bool
@@ -31,6 +33,17 @@ func (pathObj path) append(cel *cell) path {
 	// newPath.cellsMap[ cell ] = true
 
 	return newPath
+}
+
+func (pathObj path) toString() string {
+
+	str := ""
+
+	for _, cell := range pathObj.cells {
+		str += fmt.Sprint(cell.coordinates() + " ")
+	}
+
+	return str
 }
 
 func newPath(cells ...*cell) path {

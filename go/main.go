@@ -101,6 +101,7 @@ func (env field) getNeighbours(node *cell) []*cell {
 			return
 		}
 
+		// Question: Is to use portal mandatory?
 		neighbours = append(neighbours, cell)
 
 		if cell.isPortal() {
@@ -129,6 +130,7 @@ func (env field) getNeighbours(node *cell) []*cell {
 	return neighbours
 }
 
+// Calculate distance for one portals counterpart to goal
 func (env field) portalsDistance2Goal() map[*cell]float64 {
 
 	values := make(map[*cell]float64)
@@ -160,6 +162,7 @@ func (env *field) calculateDistancesPortal() {
 			cell := env.cells[ iny ][ inx ]
 			distance := calculateDistance(env.goal, cell)
 
+			// find shortest path to goal with portals as possible shortcuts
 			for portal, portalDistance := range distancesPortals {
 
 				portalDistance := calculateDistance(portal, cell) + portalDistance
@@ -174,6 +177,7 @@ func (env *field) calculateDistancesPortal() {
 	}
 }
 
+// Calculate distances to goal for each cell
 func (env *field) calculateDistances() {
 
 	for iny := range env.cells {
@@ -237,48 +241,7 @@ func (env field) printField() {
 	env.printFieldWithPath(nil)
 }
 
-// Get calculated path form ....
-func (env field) getPathToGoal() []*cell {
-	node := env.goal
-
-	path := make([]*cell, 0)
-	// path = append(path, env.goal)
-
-	for node != nil {
-		path = append(path, node)
-		// node = node.predecessor
-	}
-
-	// path = append(path, env.start)
-
-	// Reverse order
-	for i := len(path)/2 - 1; i >= 0; i-- {
-		opp := len(path) - 1 - i
-		path[i], path[opp] = path[opp], path[i]
-	}
-
-	return path
-}
-
-// Print path from start to goal
-func (env field) printPathToGoal() {
-
-	path := env.getPathToGoal()
-
-	fmt.Printf("Steps: %d\n", len(path))
-	fmt.Printf("Coordinates:\n")
-
-	for _, cell := range path {
-		fmt.Printf("%s\n", cell.coordinates())
-	}
-}
-
-// Prints field with path to goal
-func (env field) printFieldWithPathToGoal() {
-	env.printFieldWithPath(env.getPathToGoal())
-}
-
-func (env field) genericSearch(priority func(path) float64) []*cell {
+func (env field) genericSearch(priority func(path) float64) *path {
 
 	startPath := newPath(env.start)
 
@@ -296,22 +259,18 @@ func (env field) genericSearch(priority func(path) float64) []*cell {
 
 		fmt.Printf("queue size: %d\n", pq.Len())
 		fmt.Printf("priority: %.f\n", popItem.Priority)
-		fmt.Print("path: ")
+		fmt.Printf("path: %s\n", path.toString())
 
-		for _, cell := range path.cells {
-			fmt.Print(cell.coordinates() + " ")
-		}
-		fmt.Println()
 		env.printFieldWithPath(path.cells)
 
 		lastCell := path.cells[ len(path.cells) - 1 ]
 
 		if lastCell == env.goal {
-			return path.cells
+			return &path
 		}
 
 		neighbours := env.getNeighbours(lastCell)
-		fmt.Printf("neighbours: %d\n", len(neighbours))
+		// fmt.Printf("neighbours: %d\n", len(neighbours))
 
 		for _, neighbour := range neighbours {
 
@@ -333,9 +292,8 @@ func (env field) genericSearch(priority func(path) float64) []*cell {
 	return nil
 }
 
-// Calculate path form start to goal
-// Here happens the important stuff
-func (env field) searchBestFirst() []*cell {
+// Best-First-Search
+func (env field) searchBestFirst() *path {
 
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
@@ -347,7 +305,8 @@ func (env field) searchBestFirst() []*cell {
 	return env.genericSearch(h)
 }
 
-func (env *field) searchBreadthFirst() []*cell {
+// Breadth-First-Search
+func (env *field) searchBreadthFirst() *path {
 
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
@@ -358,7 +317,8 @@ func (env *field) searchBreadthFirst() []*cell {
 	return env.genericSearch(h)
 }
 
-func (env *field) searchDepthFirst() []*cell {
+// Depth-First-Search
+func (env *field) searchDepthFirst() *path {
 
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
@@ -369,7 +329,8 @@ func (env *field) searchDepthFirst() []*cell {
 	return env.genericSearch(h)
 }
 
-func (env *field) searchAStar() []*cell {
+// A* Search
+func (env *field) searchAStar() *path {
 
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
@@ -450,8 +411,8 @@ func main() {
 	// os.Exit(0)
 
 	// path := "./environment/stupid.txt"
-	path := "./environment/blatt3_environment.txt"
-	// path := "./environment/blatt3_environment_portal.txt"
+	// path := "./environment/blatt3_environment.txt"
+	path := "./environment/blatt3_environment_portal.txt"
 	// path := "./environment/test_env.txt"
 	// path := "./environment/test_env_2.txt"
 	// path := "./environment/blatt3_environment-2.txt"
@@ -467,18 +428,20 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Printf("######## Finding path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
+	fmt.Printf("Finding path form %s to %s ....\n", env.start.coordinates(), env.goal.coordinates())
 	// env.calculateDistances()
 	env.calculateDistancesPortal()
 	env.printPriorityMatrix()
-	pathToGoal := env.searchAStar()
-	// pathToGoal := env.searchBestFirst()
+	// pathToGoal := env.searchAStar()
+	pathToGoal := env.searchBestFirst()
 	// pathToGoal := env.searchBreadthFirst()
 	// pathToGoal := env.searchDepthFirst()
 
-	fmt.Printf("######## Path form %s to %s\n", env.start.coordinates(), env.goal.coordinates())
-	env.printFieldWithPath(pathToGoal)
-	// env.printPathToGoal()
+	fmt.Printf("\n############ Path form %s to %s ############\n", env.start.coordinates(), env.goal.coordinates())
+	fmt.Printf("Path length: %d\n", len(pathToGoal.cells))
+	fmt.Printf("Path: %s\n", pathToGoal.toString())
 	env.printField()
+	env.printFieldWithPath(pathToGoal.cells)
+	// env.printPathToGoal()
 	// env.printFieldWithPathToGoal()
 }
