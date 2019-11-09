@@ -1,0 +1,6928 @@
+sourcing  environment/blatt4-obstacle.txt
+Searching (aStar) path form (6, 1) to (6, 5)
+   X   X   X   X   X   X   X   X   X   X   X   X   X
+   X   9   8   7   6   5   4   5   6   7   8   9   X
+   X   8   7   6   5   4   3   4   5   6   7   8   X
+   X   7   X   5   4   3   2   3   4   5   X   7   X
+   X   6   X   X   X   X   X   X   X   X   X   6   X
+   X   5   4   3   2   1   0   1   2   3   4   5   X
+   X   X   X   X   X   X   X   X   X   X   X   X   X
+
+queue size: 0
+priority: -4
+path: (6, 1) 
+xxxxxxxxxxxxx
+x     *     x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 2
+priority: -4
+path: (6, 1) (6, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     *     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 4
+priority: -4
+path: (6, 1) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     *     x
+x x   *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 5
+priority: -6
+path: (6, 1) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     **    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 7
+priority: -6
+path: (6, 1) (6, 2) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     *     x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 8
+priority: -6
+path: (6, 1) (5, 1) 
+xxxxxxxxxxxxx
+x    **     x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 9
+priority: -6
+path: (6, 1) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x    **     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 11
+priority: -6
+path: (6, 1) (6, 2) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     *     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 12
+priority: -6
+path: (6, 1) (5, 1) (5, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    *      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 14
+priority: -6
+path: (6, 1) (6, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x    **     x
+x x  *    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 15
+priority: -6
+path: (6, 1) (5, 1) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 16
+priority: -6
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x    **     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 16
+priority: -6
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x   *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 17
+priority: -6
+path: (6, 1) (7, 1) 
+xxxxxxxxxxxxx
+x     **    x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 18
+priority: -6
+path: (6, 1) (5, 1) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *      x
+x x  *    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 19
+priority: -6
+path: (6, 1) (7, 1) (7, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      *    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 21
+priority: -6
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *      x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 22
+priority: -6
+path: (6, 1) (7, 1) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      *    x
+x x    *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 23
+priority: -6
+path: (6, 1) (7, 1) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 24
+priority: -6
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      *    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 25
+priority: -6
+path: (6, 1) (6, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     **    x
+x x    *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 26
+priority: -6
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x   *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 27
+priority: -6
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     **    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 27
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 27
+priority: -8
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     **    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 28
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      *    x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 29
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 31
+priority: -8
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     *     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 32
+priority: -8
+path: (6, 1) (5, 1) (4, 1) 
+xxxxxxxxxxxxx
+x   ***     x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 33
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 33
+priority: -8
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     **    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 34
+priority: -8
+path: (6, 1) (6, 2) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 36
+priority: -8
+path: (6, 1) (5, 1) (4, 1) (4, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *       x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 38
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *      x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 39
+priority: -8
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 40
+priority: -8
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *       x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 41
+priority: -8
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 42
+priority: -8
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *       x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 43
+priority: -8
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 44
+priority: -8
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *       x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 45
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *      x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 46
+priority: -8
+path: (6, 1) (6, 2) (5, 2) (5, 1) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 46
+priority: -8
+path: (6, 1) (6, 2) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 48
+priority: -8
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 48
+priority: -8
+path: (6, 1) (7, 1) (8, 1) 
+xxxxxxxxxxxxx
+x     ***   x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 49
+priority: -8
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 49
+priority: -8
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x  *    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 50
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      **   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 52
+priority: -8
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 53
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 53
+priority: -8
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x   *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 54
+priority: -8
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     *     x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 55
+priority: -8
+path: (6, 1) (6, 2) (7, 2) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     **    x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 56
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      *    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 57
+priority: -8
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x    **     x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 58
+priority: -8
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x    **     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 59
+priority: -8
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 60
+priority: -8
+path: (6, 1) (7, 1) (8, 1) (8, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x       *   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 62
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 62
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 64
+priority: -8
+path: (6, 1) (6, 2) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 64
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x  *    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 65
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      **   x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 66
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 66
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      **   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 66
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 67
+priority: -8
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      **   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 68
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 69
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x   **      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 71
+priority: -8
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x    **     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 72
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x   **      x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 73
+priority: -8
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 73
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x   **      x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 73
+priority: -8
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 73
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x   **      x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 74
+priority: -8
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       *   x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 75
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x    *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 76
+priority: -8
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       *   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 77
+priority: -8
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 77
+priority: -8
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       *   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 78
+priority: -8
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 79
+priority: -8
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x    *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 80
+priority: -8
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 81
+priority: -8
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 82
+priority: -8
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 83
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 84
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 84
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 86
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (5, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x   **      x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 87
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      **   x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 87
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 89
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (7, 3) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      *    x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 89
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x   * *     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 91
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 92
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 92
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 94
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) 
+xxxxxxxxxxxxx
+x  ****     x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 95
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 96
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 97
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 97
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 97
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 98
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     **    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 99
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 1) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 99
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 1) 
+xxxxxxxxxxxxx
+x     * *   x
+x     ***   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 100
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 101
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 102
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 104
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 105
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x   **      x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 105
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 107
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 107
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (5, 3) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 107
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       *   x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 107
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 109
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x  **       x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 111
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 111
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     *     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 111
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 112
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     * *   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 113
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 115
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 115
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 115
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       *   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 116
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 117
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 119
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) 
+xxxxxxxxxxxxx
+x   ***     x
+x    **     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 120
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *       x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 120
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 120
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 121
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *      x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 122
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *       x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 123
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 123
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x  *    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 124
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 125
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 125
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 127
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) 
+xxxxxxxxxxxxx
+x     ****  x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 128
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 130
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 131
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x        *  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 133
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 133
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 133
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x        *  x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 133
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x       **  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 134
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 134
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 134
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x        *  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 135
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x       **  x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 136
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 137
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 137
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x        *  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 138
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x       **  x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 139
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x    *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 140
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 141
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 141
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x        *  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 142
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x       **  x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 143
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 144
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x   *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 145
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   * *     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 146
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 147
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    * *    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 149
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 1) 
+xxxxxxxxxxxxx
+x   * *     x
+x   ***     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 150
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (6, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 150
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 149
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 1) (5, 1) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 148
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *        x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 150
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 150
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *        x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 150
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  **       x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 151
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *        x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 152
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  **       x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 153
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 154
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *        x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 155
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  **       x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 156
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x  *    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 157
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 158
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *        x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 159
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  **       x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 160
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 161
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x   *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 162
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) 
+xxxxxxxxxxxxx
+x     ***   x
+x     **    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 163
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x    **     x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 164
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 165
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (7, 3) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     **    x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 165
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 166
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 167
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 167
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     *     x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 167
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 167
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      *    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 168
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 168
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 1) (7, 1) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 167
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 1) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 167
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 169
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x    ***    x
+x    ***    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 169
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (6, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 169
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 171
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 172
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 172
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 172
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 172
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 172
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 172
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x       **  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 174
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 174
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       **  x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 174
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 174
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       **  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 174
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 175
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       **  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 176
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 176
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       **  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 177
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 177
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     * *   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 179
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 179
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 179
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 179
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  **       x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 179
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 179
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  **       x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 179
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x   **      x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 180
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  **       x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 181
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 181
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  **       x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 182
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 183
+priority: -10
+path: (6, 1) (6, 2) (7, 2) (7, 3) (8, 3) (8, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 184
+priority: -10
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (7, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 184
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x    * *    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 186
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 186
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 185
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (7, 3) (8, 3) (8, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      **   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 186
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 187
+priority: -10
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (5, 1) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 187
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x    *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 188
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 189
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 189
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      **   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 190
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 190
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 191
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 192
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 193
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x    **     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 193
+priority: -10
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 194
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 194
+priority: -10
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (5, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 194
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 1) 
+xxxxxxxxxxxxx
+x    ***    x
+x    ***    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 194
+priority: -10
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 194
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 194
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 194
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 194
+priority: -10
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 195
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       **  x
+x x  *****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 196
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x  *****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 197
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x  ****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 199
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *        x
+x x*****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 200
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x*****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 201
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x *****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 202
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x    ****   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 204
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x   *****   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 206
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 207
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (3, 1) 
+xxxxxxxxxxxxx
+x  *  *     x
+x  ****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 208
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (8, 3) (9, 3) (9, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      * *  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 210
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (3, 1) (4, 1) 
+xxxxxxxxxxxxx
+x  ** *     x
+x  ****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 210
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 210
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (3, 1) (4, 1) (5, 1) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 209
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 209
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (8, 3) (9, 3) (9, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 209
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (9, 3) (9, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 210
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) 
+xxxxxxxxxxxxx
+x     ***** x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 211
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x  *****    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 213
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (3, 3) (3, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  *  *     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 215
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (4, 3) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 217
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (3, 3) (3, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  ** *     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 218
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (10, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x        ** x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 219
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (3, 3) (3, 2) (4, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 219
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (8, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x       **  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 219
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x    *****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 221
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 222
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 3) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 222
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (8, 2) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 223
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 223
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (6, 2) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 225
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (7, 1) (8, 1) 
+xxxxxxxxxxxxx
+x     ***   x
+x     **    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 226
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) (5, 2) (5, 1) 
+xxxxxxxxxxxxx
+x    **     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 226
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x      * *  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 227
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 227
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 227
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (7, 3) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 228
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) 
+xxxxxxxxxxxxx
+x *****     x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 229
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (7, 3) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 229
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x       **  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 228
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 230
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) 
+xxxxxxxxxxxxx
+x *****     x
+x *         x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 231
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x     *  *  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 232
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) 
+xxxxxxxxxxxxx
+x *****     x
+x **        x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 233
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (7, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x     * **  x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 234
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (4, 2) 
+xxxxxxxxxxxxx
+x *****     x
+x ***       x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 235
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *****    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 237
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (4, 2) (5, 2) 
+xxxxxxxxxxxxx
+x *****     x
+x ****      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 238
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    *****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 240
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (4, 2) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x *****     x
+x *****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 241
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 1) (3, 1) 
+xxxxxxxxxxxxx
+x  ****     x
+x   **      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 242
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 244
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (7, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 244
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (6, 2) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 245
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     **    x
+x x*****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 245
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 244
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x    ****   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 245
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 1) (3, 1) 
+xxxxxxxxxxxxx
+x  ** *     x
+x   ***     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 246
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (2, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x ***       x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 247
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x    ***    x
+x    * *    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 247
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (5, 3) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 247
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 3) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 247
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (2, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x **        x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 248
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    * **   x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 250
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (4, 3) (3, 3) (3, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x  * *      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 252
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) (2, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x ****      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 253
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (4, 3) (3, 3) (3, 2) (4, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 253
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) (10, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***** x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 254
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  **       x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 254
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  **       x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 253
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) (5, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 254
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 256
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 257
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 258
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  * *      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 259
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) (4, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 258
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) (5, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x** *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 259
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (9, 3) (9, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x       **  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 260
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  * **     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 261
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (3, 3) (3, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 262
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 262
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 262
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (5, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  * **     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 262
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x   ****    x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 264
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 265
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x        *  x
+x x  *****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 266
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *  *     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 267
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 267
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) (5, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 267
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 268
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 270
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  **       x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 271
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 272
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x* **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 272
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (7, 2) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 274
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ** *     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 275
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 274
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (7, 2) (6, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x  * ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 275
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (5, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 275
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 277
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (7, 2) (6, 2) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 276
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (6, 2) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 276
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x   ** *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 276
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 275
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (6, 2) (7, 2) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 276
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 275
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       *   x
+x x ***** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 276
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) (8, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x    ** *   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 278
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 278
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 279
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x    ****   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 279
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 3) (9, 3) (9, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 280
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (6, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 281
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (6, 2) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 283
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 285
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (6, 3) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 287
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (6, 2) (5, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x * **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 288
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 288
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (6, 3) (6, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 288
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 287
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 287
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (6, 2) (5, 2) (5, 1) 
+xxxxxxxxxxxxx
+x    ***    x
+x    ***    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 287
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *****   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 289
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 289
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) 
+xxxxxxxxxxxxx
+x     ****  x
+x     **    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 290
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *****   x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 291
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 291
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) (9, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ** *  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 293
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *****   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 293
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) (4, 1) 
+xxxxxxxxxxxxx
+x   * *     x
+x   ***     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 294
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ** *  x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 294
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 294
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *****   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 294
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) (4, 1) (5, 1) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 293
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ** *  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 294
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 295
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (5, 1) 
+xxxxxxxxxxxxx
+x    ****   x
+x    ****   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 295
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ** *  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 295
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 295
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (10, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x       *** x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 296
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ** *  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 296
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 296
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x    * **   x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 298
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) 
+xxxxxxxxxxxxx
+x  ****     x
+x    **     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 299
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 1) 
+xxxxxxxxxxxxx
+x     ****  x
+x       **  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 299
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 298
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) (3, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  * **     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 300
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 300
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (4, 3) (4, 2) (4, 1) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 300
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  * **     x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 300
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 300
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x  ****     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 300
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  * **     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 301
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 302
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (6, 2) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x    ***    x
+x    ***    x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 302
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  * **     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 302
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 302
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (5, 2) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 304
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  * **     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 304
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 304
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (5, 2) (6, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x ** *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 305
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 305
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *       x
+x x ***** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 306
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (5, 2) (6, 2) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 305
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x      ***  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 305
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     * **  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 306
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x ***** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 307
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 308
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) (8, 1) 
+xxxxxxxxxxxxx
+x     * *   x
+x     * *   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 309
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 309
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (7, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 309
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) (8, 1) (7, 1) 
+xxxxxxxxxxxxx
+x     ***   x
+x     * *   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 309
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) (4, 1) 
+xxxxxxxxxxxxx
+x   * *     x
+x   * *     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 310
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *      x
+x x  *****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 310
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) (8, 1) (7, 1) (7, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 309
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) (4, 1) (5, 1) 
+xxxxxxxxxxxxx
+x   ***     x
+x   * *     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 309
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x   ** *    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 311
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x  ***      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 311
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) (4, 1) (5, 1) (5, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 310
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 309
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x  ****     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 310
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     * **  x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 312
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x  ** *     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 313
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (5, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  ****     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 313
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     * **  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 312
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) (5, 1) 
+xxxxxxxxxxxxx
+x    **     x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 312
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  ** *     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 314
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   * **    x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 316
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 317
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x  ** *     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 316
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   * **    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 316
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (8, 3) (8, 2) (8, 1) 
+xxxxxxxxxxxxx
+x     * *   x
+x     ***   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 317
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) (5, 1) 
+xxxxxxxxxxxxx
+x    ***    x
+x    * *    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 317
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (10, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      **** x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 318
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (8, 3) (8, 2) (8, 1) (7, 1) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 317
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (8, 3) (8, 2) (8, 1) 
+xxxxxxxxxxxxx
+x     ***   x
+x      **   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 317
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 317
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (4, 1) 
+xxxxxxxxxxxxx
+x   * **    x
+x   ****    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 318
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (6, 2) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 318
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x       **  x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 319
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (4, 1) (5, 1) 
+xxxxxxxxxxxxx
+x   ****    x
+x   ****    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 318
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 319
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (3, 3) (3, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x  **       x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 320
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x    * **   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 322
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 323
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x    ****   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 322
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 323
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (6, 2) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 324
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 325
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 1) (4, 1) 
+xxxxxxxxxxxxx
+x   ****    x
+x    ***    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 326
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 1) (9, 1) 
+xxxxxxxxxxxxx
+x     * **  x
+x     ***   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 327
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) 
+xxxxxxxxxxxxx
+x   ****    x
+x   ****    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 328
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) 
+xxxxxxxxxxxxx
+x     * **  x
+x     ****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 329
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x   ****    x
+x   ****    x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 330
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     * **  x
+x     ****  x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 330
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x   ****    x
+x   ****    x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 330
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     * **  x
+x     ****  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 330
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x   ****    x
+x   ****    x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 330
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     * **  x
+x     ****  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 330
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (5, 3) (5, 2) (5, 1) 
+xxxxxxxxxxxxx
+x    ***    x
+x    ***    x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 330
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     * **  x
+x     ****  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 330
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   * **    x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 332
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 332
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 332
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 333
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ** *   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 335
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) (6, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x     ****  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 335
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 335
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 336
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (7, 3) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x    ***    x
+x    ***    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 336
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x   * **    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 338
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  ****     x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 338
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) (4, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 338
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  ****     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 338
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (9, 3) (9, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     *  *  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 340
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  ****     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 340
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (9, 3) (9, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     * **  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 341
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  ****     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 341
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (9, 3) (9, 2) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 341
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (8, 3) (9, 3) (9, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ** *  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 343
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x    **     x
+x x  *****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 343
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (8, 3) (9, 3) (9, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 343
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 3) (8, 3) (8, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 344
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 345
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (5, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 346
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (6, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x    ****   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 346
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (8, 1) 
+xxxxxxxxxxxxx
+x    ** *   x
+x    ****   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 347
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x   *****   x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 348
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (8, 1) (7, 1) 
+xxxxxxxxxxxxx
+x    ****   x
+x    ****   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 347
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x   *****   x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 347
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 347
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x   *****   x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 347
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 1) (8, 1) 
+xxxxxxxxxxxxx
+x    ****   x
+x    ***    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 348
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   **      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 348
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) 
+xxxxxxxxxxxxx
+x    ****   x
+x    ****   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 349
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      *    x
+x x*****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 349
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x    ****   x
+x    ****   x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 350
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) (4, 2) (4, 1) 
+xxxxxxxxxxxxx
+x   * *     x
+x   ***     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 351
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x    ****   x
+x    ****   x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 351
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) (4, 2) (4, 1) (5, 1) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 350
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x    ****   x
+x    ****   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 350
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) 
+xxxxxxxxxxxxx
+x     ***** x
+x         * x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 351
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 1) (9, 1) 
+xxxxxxxxxxxxx
+x     ****  x
+x      **   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 352
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     ***** x
+x        ** x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 353
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 354
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x        ** x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 354
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     ***** x
+x       *** x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 355
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 355
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x        ** x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 356
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x       *** x
+x x     * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 357
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     ***** x
+x      **** x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 358
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 358
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x        ** x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 359
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x       *** x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 360
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (8, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x      **** x
+x x    *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 361
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (8, 2) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ***** x
+x     ***** x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 362
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 362
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x        ** x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 363
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (8, 2) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x       *** x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 364
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (8, 2) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x      **** x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 365
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (10, 2) (9, 2) (8, 2) (7, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     ***** x
+x     ***** x
+x x   *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 366
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 367
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) (3, 1) 
+xxxxxxxxxxxxx
+x  * **     x
+x  ***      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 368
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x  *****    x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 368
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) (3, 1) (4, 1) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 367
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x  *****    x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 367
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   *  *    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 369
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x  *****    x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 369
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) (4, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   ** *    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 370
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x  *****    x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 370
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) (4, 2) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 369
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x*****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 370
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 370
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) (9, 1) 
+xxxxxxxxxxxxx
+x     *  *  x
+x     ****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 371
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (4, 3) (4, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x  ***      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 370
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) (9, 1) (8, 1) 
+xxxxxxxxxxxxx
+x     * **  x
+x     ****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 370
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (6, 2) (5, 2) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 371
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) (9, 1) (8, 1) (7, 1) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 370
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 370
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 1) 
+xxxxxxxxxxxxx
+x  ****     x
+x  **       x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 370
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (6, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x    *****  x
+x x  *    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 371
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (6, 3) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 373
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (7, 2) (6, 2) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x    *****  x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 373
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (6, 3) (6, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 373
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (8, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 373
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (8, 2) (7, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x   * **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 374
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (8, 2) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 375
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (5, 2) (6, 2) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 376
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   ** *    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 378
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x  **       x
+x x*****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 379
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x   ** *    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 379
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x  *****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 380
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (8, 3) (8, 2) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x     **    x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 380
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (6, 2) (7, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x  ** * x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 381
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) (6, 2) (5, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ** *   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 383
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (6, 2) (7, 2) (8, 2) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 382
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) (6, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ** *   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 382
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (7, 1) (8, 1) (8, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 383
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ** *  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 384
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (7, 1) (8, 1) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 384
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x    ***    x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 385
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (9, 3) (8, 3) (7, 3) (7, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ** *  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 385
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) (8, 1) 
+xxxxxxxxxxxxx
+x     * *   x
+x     ***   x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 386
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (9, 1) (9, 2) (8, 2) (8, 3) (7, 3) (7, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x     ****  x
+x     ****  x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 386
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x   **      x
+x x ***** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 387
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) (8, 1) (7, 1) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 386
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (5, 3) (5, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x   ****    x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 386
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ***   x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 386
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x   ****    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 388
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x    *  *   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 390
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x **        x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 390
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (5, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 390
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) (5, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ** *   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 390
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x **        x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 391
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ** *    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 393
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x ***       x
+x x *     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 394
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x **        x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 395
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 394
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (4, 2) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x ***       x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 395
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x **        x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 396
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (7, 3) (7, 2) (6, 2) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 397
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (4, 2) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x ***       x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 398
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x   ****    x
+x   ****    x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 398
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (6, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *****    x
+x x    *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 399
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (8, 3) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 401
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (4, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x ****      x
+x x  *    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 402
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (5, 2) (6, 2) (7, 2) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *****    x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 402
+priority: -12
+path: (6, 1) (6, 2) (7, 2) (7, 3) (8, 3) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x     ****  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 401
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (4, 2) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x ****      x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 402
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (7, 3) (8, 3) (9, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    **     x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 402
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x   ***     x
+x x ***** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 403
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x    ****   x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 405
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (8, 3) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x    ** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 407
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *****  x
+x x      *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 407
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x    ****   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 407
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (7, 3) (8, 3) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 406
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *****  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 406
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (2, 1) (2, 2) (3, 2) (4, 2) (5, 2) (6, 2) (6, 3) 
+xxxxxxxxxxxxx
+x *****     x
+x *****     x
+x x   *   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 407
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (6, 3) (5, 3) (5, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 408
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *****  x
+x x    ***x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 408
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 409
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (5, 1) (4, 1) 
+xxxxxxxxxxxxx
+x   ***     x
+x    **     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 410
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    *****  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 410
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 410
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (5, 1) (4, 1) (4, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x  **   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 411
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) (8, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    *  *   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 413
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 413
+priority: -12
+path: (6, 1) (6, 2) (6, 3) (5, 3) (5, 2) (5, 1) (4, 1) (4, 2) (4, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ***     x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 413
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    * **   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 414
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 414
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (6, 2) (6, 3) (7, 3) (7, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 414
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (8, 3) (8, 2) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x    ****   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 413
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 414
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) (7, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   *  *    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 416
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) 
+xxxxxxxxxxxxx
+x  ** *     x
+x  ****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 417
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) (3, 3) (3, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  * **     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 419
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (4, 3) (5, 3) (6, 3) (7, 3) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x   * **    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 419
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) (3, 3) 
+xxxxxxxxxxxxx
+x  ** *     x
+x  ****     x
+x x*      x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 419
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) (3, 3) (3, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 419
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      **   x
+x x ***** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 420
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) 
+xxxxxxxxxxxxx
+x  ** *     x
+x  ****     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 420
+priority: -12
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x    ****   x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 421
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (4, 2) (5, 2) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x   ***     x
+x   ****    x
+x x  ***  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 421
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) 
+xxxxxxxxxxxxx
+x  ** *     x
+x  ****     x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 421
+priority: -12
+path: (6, 1) (5, 1) (5, 2) (5, 3) (6, 3) (7, 3) (7, 2) (8, 2) (8, 3) 
+xxxxxxxxxxxxx
+x    **     x
+x    * **   x
+x x  **** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 421
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (5, 3) (4, 3) (3, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x     **    x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 421
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x  ** *     x
+x  ****     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 421
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (9, 1) 
+xxxxxxxxxxxxx
+x     ** *  x
+x      ***  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 422
+priority: -12
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (3, 3) (3, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x  ****     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 423
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) (5, 2) (5, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 423
+priority: -12
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (9, 1) (8, 1) 
+xxxxxxxxxxxxx
+x     ****  x
+x      ***  x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 422
+priority: -12
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) (5, 2) (5, 3) (6, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 423
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (3, 3) (3, 2) (3, 1) 
+xxxxxxxxxxxxx
+x  *  *     x
+x  ****     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 424
+priority: -14
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) (5, 2) (5, 3) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x*****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 425
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (3, 3) (3, 2) (3, 1) (4, 1) 
+xxxxxxxxxxxxx
+x  ** *     x
+x  ****     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 425
+priority: -14
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (7, 1) (8, 1) (8, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x   **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 427
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (4, 3) (3, 3) (3, 2) (3, 1) (4, 1) (5, 1) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 426
+priority: -14
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) (5, 2) (6, 2) (6, 3) (7, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x** **  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 427
+priority: -14
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x   ** *x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 427
+priority: -14
+path: (6, 1) (6, 2) (7, 2) (7, 1) (8, 1) (8, 2) (9, 2) (10, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ***** x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 428
+priority: -14
+path: (6, 1) (6, 2) (6, 3) (7, 3) (7, 2) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x     ****  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 427
+priority: -14
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (4, 2) (4, 3) (5, 3) (5, 2) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *****    x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 429
+priority: -14
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (6, 3) (7, 3) (8, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *        x
+x x****** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 430
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (11, 1) 
+xxxxxxxxxxxxx
+x     ******x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 430
+priority: -14
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (7, 3) (6, 3) (6, 2) (5, 2) (4, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x   *****   x
+x x   *** x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 432
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (11, 1) (11, 2) 
+xxxxxxxxxxxxx
+x     ******x
+x          *x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 433
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     ***   x
+x       **  x
+x x ******x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 434
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (11, 1) (11, 2) (10, 2) 
+xxxxxxxxxxxxx
+x     ******x
+x         **x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 434
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (5, 1) (4, 1) (4, 2) (3, 2) (2, 2) 
+xxxxxxxxxxxxx
+x   ***     x
+x *****     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 435
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (11, 1) (11, 2) (10, 2) (9, 2) 
+xxxxxxxxxxxxx
+x     ******x
+x        ***x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 436
+priority: -14
+path: (6, 1) (7, 1) (7, 2) (8, 2) (9, 2) (9, 3) (8, 3) (7, 3) (6, 3) (5, 3) (4, 3) 
+xxxxxxxxxxxxx
+x     **    x
+x      ***  x
+x x ******x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 437
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (11, 1) (11, 2) (10, 2) (9, 2) (8, 2) 
+xxxxxxxxxxxxx
+x     ******x
+x       ****x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 438
+priority: -14
+path: (6, 1) (5, 1) (5, 2) (6, 2) (7, 2) (7, 3) (6, 3) (5, 3) (4, 3) (4, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x   ****    x
+x x ****  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 439
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (11, 1) (11, 2) (10, 2) (9, 2) (8, 2) (7, 2) 
+xxxxxxxxxxxxx
+x     ******x
+x      *****x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 440
+priority: -14
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) (5, 2) (6, 2) (6, 3) (5, 3) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ****     x
+x x****   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 439
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (11, 1) (11, 2) (10, 2) (9, 2) (8, 2) (7, 2) (6, 2) 
+xxxxxxxxxxxxx
+x     ******x
+x     ******x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 440
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (9, 1) (10, 1) (11, 1) (11, 2) (10, 2) (9, 2) (8, 2) (7, 2) (7, 3) 
+xxxxxxxxxxxxx
+x     ******x
+x      *****x
+x x    *  x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 441
+priority: -14
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (4, 2) (5, 2) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  *****    x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 443
+priority: -14
+path: (6, 1) (7, 1) (7, 2) (6, 2) (6, 3) (7, 3) (8, 3) (9, 3) (9, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x     ** *  x
+x x   ****x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 445
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (8, 2) (8, 3) (9, 3) (9, 2) (9, 1) 
+xxxxxxxxxxxxx
+x     ****  x
+x       **  x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 445
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 446
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (5, 3) (4, 3) (4, 2) (3, 2) (2, 2) 
+xxxxxxxxxxxxx
+x     *     x
+x *****     x
+x x **    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 447
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) (1, 3) 
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x*x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 447
+priority: -14
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (3, 3) (3, 2) (3, 1) 
+xxxxxxxxxxxxx
+x  * **     x
+x  ***      x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 448
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) (1, 3) (1, 4) 
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x*x       x x
+x*xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 448
+priority: -14
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (3, 3) (3, 2) (3, 1) (4, 1) 
+xxxxxxxxxxxxx
+x  ****     x
+x  ***      x
+x x**     x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 447
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) (1, 3) (1, 4) (1, 5) 
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x*x       x x
+x*xxxxxxxxx x
+x*    g     x
+xxxxxxxxxxxxx
+queue size: 447
+priority: -14
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) (7, 2) (7, 1) 
+xxxxxxxxxxxxx
+x    ***    x
+x   ****    x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 447
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) (1, 3) (1, 4) (1, 5) (2, 5) 
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x*x       x x
+x*xxxxxxxxx x
+x**   g     x
+xxxxxxxxxxxxx
+queue size: 447
+priority: -14
+path: (6, 1) (5, 1) (5, 2) (4, 2) (4, 3) (5, 3) (6, 3) (6, 2) (7, 2) (8, 2) 
+xxxxxxxxxxxxx
+x    **     x
+x   *****   x
+x x ***   x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 449
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) (1, 3) (1, 4) (1, 5) (2, 5) (3, 5) 
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x*x       x x
+x*xxxxxxxxx x
+x***  g     x
+xxxxxxxxxxxxx
+queue size: 449
+priority: -14
+path: (6, 1) (5, 1) (4, 1) (3, 1) (3, 2) (3, 3) (4, 3) (5, 3) (5, 2) (6, 2) (7, 2) 
+xxxxxxxxxxxxx
+x  ****     x
+x  * ***    x
+x x***    x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 451
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) (1, 3) (1, 4) (1, 5) (2, 5) (3, 5) (4, 5) 
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x*x       x x
+x*xxxxxxxxx x
+x**** g     x
+xxxxxxxxxxxxx
+queue size: 451
+priority: -14
+path: (6, 1) (7, 1) (7, 2) (8, 2) (8, 3) (9, 3) (9, 2) (10, 2) 
+xxxxxxxxxxxxx
+x     **    x
+x      **** x
+x x     **x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 452
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) (1, 3) (1, 4) (1, 5) (2, 5) (3, 5) (4, 5) (5, 5) 
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x*x       x x
+x*xxxxxxxxx x
+x*****g     x
+xxxxxxxxxxxxx
+queue size: 452
+priority: -14
+path: (6, 1) (7, 1) (8, 1) (8, 2) (7, 2) (6, 2) (5, 2) (4, 2) (3, 2) 
+xxxxxxxxxxxxx
+x     ***   x
+x  ******   x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+queue size: 454
+priority: -14
+path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) (1, 3) (1, 4) (1, 5) (2, 5) (3, 5) (4, 5) (5, 5) (6, 5) 
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x*x       x x
+x*xxxxxxxxx x
+x******     x
+xxxxxxxxxxxxx
+
+############ Path form (6, 1) to (6, 5) ############
+Path length: 15
+Path: (6, 1) (6, 2) (5, 2) (4, 2) (3, 2) (2, 2) (1, 2) (1, 3) (1, 4) (1, 5) (2, 5) (3, 5) (4, 5) (5, 5) (6, 5) 
+xxxxxxxxxxxxx
+x     s     x
+x           x
+x x       x x
+x xxxxxxxxx x
+x     g     x
+xxxxxxxxxxxxx
+xxxxxxxxxxxxx
+x     *     x
+x******     x
+x*x       x x
+x*xxxxxxxxx x
+x******     x
+xxxxxxxxxxxxx
