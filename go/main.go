@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"math"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -154,7 +155,22 @@ func (env field) printField() {
 	env.printFieldWithPath(nil)
 }
 
-func (env field) genericSearch(priority func(path) float64) *path {
+func queueInfos(pq priorityQueue) (nodes, maxPathLength int) {
+
+	for _, item := range pq {
+
+		size := len(item.Value.cells)
+		nodes += size
+
+		if maxPathLength < size {
+			maxPathLength = size
+		}
+	}
+
+	return nodes, maxPathLength
+}
+
+func (env field) genericSearch(count int, priority func(path) float64) []path {
 
 	startPath := newPath(env.start)
 
@@ -165,21 +181,34 @@ func (env field) genericSearch(priority func(path) float64) *path {
 	})
 	heap.Init(&pq)
 
+	pathsToGoal := make([]path, 0)
+	expandOperations := 0
+
 	for pq.Len() > 0 {
 
 		popItem := heap.Pop(&pq).(*item)
 		path := popItem.Value
+		expandOperations++
 
-		fmt.Printf("queue size: %d\n", pq.Len())
-		fmt.Printf("priority: %.f\n", popItem.Priority)
-		fmt.Printf("path: %s\n", path.toString())
+		queueNodes, maxPathLength := queueInfos(pq)
 
+		fmt.Printf("expanded path: %s\n", path.toString())
 		env.printFieldWithPath(path.cells)
+		fmt.Printf("expand operations:      %d\n", expandOperations)
+		fmt.Printf("enqueued objects:       %d\n", pq.Len())
+		fmt.Printf("nodes in queue:         %d\n", queueNodes)
+		fmt.Printf("longest path in queue:  %d\n", maxPathLength)
+		fmt.Printf("path priority:          %.f\n", popItem.Priority)
+		fmt.Println()
 
 		lastCell := path.cells[len(path.cells)-1]
 
 		if env.goals[lastCell] {
-			return &path
+			pathsToGoal = append(pathsToGoal, path)
+
+			if len(pathsToGoal) >= count {
+				return pathsToGoal
+			}
 		}
 
 		neighbours := env.getNeighbours(lastCell)
@@ -202,11 +231,11 @@ func (env field) genericSearch(priority func(path) float64) *path {
 		}
 	}
 
-	return nil
+	return pathsToGoal
 }
 
 // Best-First-Search
-func (env field) searchBestFirst() *path {
+func (env field) searchBestFirst() []path {
 
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
@@ -215,11 +244,11 @@ func (env field) searchBestFirst() *path {
 		return -last.distance
 	}
 
-	return env.genericSearch(h)
+	return env.genericSearch(1, h)
 }
 
 // A* Search
-func (env *field) searchAStar() *path {
+func (env *field) searchAStar() []path {
 
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
@@ -229,11 +258,11 @@ func (env *field) searchAStar() *path {
 		// return -(float64(len(path.cells)) + last.distance)
 	}
 
-	return env.genericSearch(h)
+	return env.genericSearch(1, h)
 }
 
 // Breadth-First-Search
-func (env *field) searchBreadthFirst() *path {
+func (env *field) searchBreadthFirst() []path {
 
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
@@ -241,11 +270,11 @@ func (env *field) searchBreadthFirst() *path {
 		return -float64(len(path.cells))
 	}
 
-	return env.genericSearch(h)
+	return env.genericSearch(1, h)
 }
 
 // Depth-First-Search
-func (env *field) searchDepthFirst() *path {
+func (env *field) searchDepthFirst(count int) []path {
 
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
@@ -253,7 +282,7 @@ func (env *field) searchDepthFirst() *path {
 		return float64(len(path.cells))
 	}
 
-	return env.genericSearch(h)
+	return env.genericSearch(count, h)
 }
 
 func Init(path string) (*field, error) {
@@ -334,6 +363,7 @@ func main() {
 	aStar := "aStar"
 	breadthFirst := "breadth-first"
 	depthFirst := "depth-first"
+	findKPaths := "find-NUMBER"
 
 	search := bestFirst
 
@@ -341,7 +371,8 @@ func main() {
 		search = os.Args[1]
 		src = os.Args[2]
 	} else {
-		fmt.Printf("How to use: go run ./go [%s, %s, %s, %s] PATH_TO_ENV_TXT\n", bestFirst, aStar, breadthFirst, depthFirst)
+		fmt.Printf("How to use: go run ./go [%s, %s, %s, %s, %s] PATH_TO_ENV_TXT\n",
+			bestFirst, aStar, breadthFirst, depthFirst, findKPaths)
 		return
 	}
 
@@ -357,33 +388,41 @@ func main() {
 	env.calculateDistancesPortal()
 	env.printPriorityMatrix()
 
-	var pathToGoal *path
+	var pathsToGoal []path
 
 	if search == bestFirst {
-		pathToGoal = env.searchBestFirst()
+		pathsToGoal = env.searchBestFirst()
 	}
 
 	if search == aStar {
-		pathToGoal = env.searchAStar()
+		pathsToGoal = env.searchAStar()
 	}
 
 	if search == breadthFirst {
-		pathToGoal = env.searchBreadthFirst()
+		pathsToGoal = env.searchBreadthFirst()
 	}
 
 	if search == depthFirst {
-		pathToGoal = env.searchDepthFirst()
+		pathsToGoal = env.searchDepthFirst(1)
 	}
 
-	if pathToGoal == nil {
-		return
+	if strings.HasPrefix(search, "find-") {
+		count, err := strconv.Atoi(strings.ReplaceAll(search, "find-", ""))
+		if err != nil {
+			panic(err)
+		}
+
+		pathsToGoal = env.searchDepthFirst(count)
 	}
 
-	fmt.Printf("\n############ Path form %s ############\n", env.start.coordinates())
-	fmt.Printf("Path length: %d\n", len(pathToGoal.cells))
-	fmt.Printf("Path: %s\n", pathToGoal.toString())
+	fmt.Printf("\n############ Found %d paths to goal ############\n\n", len(pathsToGoal))
+
 	env.printField()
-	env.printFieldWithPath(pathToGoal.cells)
-	// env.printPathToGoal()
-	// env.printFieldWithPathToGoal()
+
+	for _, path := range pathsToGoal {
+		fmt.Println()
+		env.printFieldWithPath(path.cells)
+		fmt.Printf("Path: %s\n", path.toString())
+		fmt.Printf("Path length: %d\n", len(path.cells))
+	}
 }
