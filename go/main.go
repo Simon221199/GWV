@@ -27,48 +27,20 @@ func (cell cell) isPortal() bool {
 	return isNumber(cell.symbol)
 }
 
-// Euclidean Distance for two points
-// Source https://en.wikipedia.org/wiki/Euclidean_distance
-func distanceEuclidean(goal, node *cell) float64 {
-
-	tmp := math.Pow(float64(node.inx-goal.inx), 2) +
-		math.Pow(float64(node.iny-goal.iny), 2)
-
-	h := math.Sqrt(tmp)
-
-	return h
-}
-
-// Manhattan Distance for two points
-func distanceManhattan(goal, node *cell) float64 {
-
-	h := math.Abs(float64(node.inx-goal.inx)) +
-		math.Abs(float64(node.iny-goal.iny))
-
-	return h
-}
-
-// Helper function to easily switch between distances functions
-func calculateDistance(goal, node *cell) float64 {
-
-	// return distanceEuclidean(goal, node)
-	return distanceManhattan(goal, node)
-}
-
 // Wrapper struct for environment
 type field struct {
 	cells       [][]*cell
 	coordinates map[string]*cell
 	start       *cell
-	goal        *cell
+	goals       map[*cell]bool
 }
 
 func (env field) getPortalCell(cell1 *cell) *cell {
 
 	for iny := range env.cells {
-		for inx := range env.cells[ iny ] {
+		for inx := range env.cells[iny] {
 
-			cell2 := env.cells[ iny ][ inx ]
+			cell2 := env.cells[iny][inx]
 
 			if cell1 != cell2 && cell1.symbol == cell2.symbol {
 				return cell2
@@ -95,7 +67,7 @@ func (env field) getNeighbours(node *cell) []*cell {
 			return
 		}
 
-		cell := env.cells[ iny ][ inx ]
+		cell := env.cells[iny][inx]
 
 		if cell.blocked {
 			return
@@ -117,7 +89,7 @@ func (env field) getNeighbours(node *cell) []*cell {
 
 	// Calculate coordinate range/vector for x
 	startX := max(0, node.inx-1)
-	endX := min(len(env.cells[ 0 ]), node.inx+1)
+	endX := min(len(env.cells[0]), node.inx+1)
 
 	for iny := startY; iny <= endY; iny++ {
 		findNeighbours(node.inx, iny)
@@ -130,74 +102,15 @@ func (env field) getNeighbours(node *cell) []*cell {
 	return neighbours
 }
 
-// Calculate distance for one portals counterpart to goal
-func (env field) portalsDistance2Goal() map[*cell]float64 {
-
-	values := make(map[*cell]float64)
-
-	for iny := range env.cells {
-		for inx := range env.cells[ iny ] {
-
-			cell := env.cells[ iny ][ inx ]
-
-			if cell.isPortal() {
-
-				portalCell := env.getPortalCell(cell)
-				values[ cell ] = calculateDistance(env.goal, portalCell)
-			}
-		}
-	}
-
-	return values
-}
-
-// Calculates/sets distances for each cell to goal cell
-func (env *field) calculateDistancesPortal() {
-
-	distancesPortals := env.portalsDistance2Goal()
-
-	for iny := range env.cells {
-		for inx := range env.cells[ iny ] {
-
-			cell := env.cells[ iny ][ inx ]
-			distance := calculateDistance(env.goal, cell)
-
-			// find shortest path to goal with portals as possible shortcuts
-			for portal, portalDistance := range distancesPortals {
-
-				portalDistance := calculateDistance(portal, cell) + portalDistance
-
-				if distance > portalDistance {
-					distance = portalDistance
-				}
-			}
-
-			cell.distance = distance
-		}
-	}
-}
-
-// Calculate distances to goal for each cell
-func (env *field) calculateDistances() {
-
-	for iny := range env.cells {
-		for inx := range env.cells[ iny ] {
-
-			cell := env.cells[ iny ][ inx ]
-			cell.distance = calculateDistance(env.goal, cell)
-		}
-	}
-}
-
 // Prints the field as matrix of distances to goal cell
 func (env field) printPriorityMatrix() {
 
 	matrix := ""
 
 	for iny := range env.cells {
-		for inx := range env.cells[ iny ] {
+		for inx := range env.cells[iny] {
 
-			cell := env.cells[ iny ][ inx ]
+			cell := env.cells[iny][inx]
 
 			if cell.blocked {
 				matrix += fmt.Sprintf("%4s", "X")
@@ -217,15 +130,15 @@ func (env field) printFieldWithPath(path []*cell) {
 
 	tmp := make(map[string]bool)
 	for _, cell := range path {
-		tmp[ cell.coordinates() ] = true
+		tmp[cell.coordinates()] = true
 	}
 
 	for iny := range env.cells {
-		for inx := range env.cells[ iny ] {
+		for inx := range env.cells[iny] {
 
-			cell := env.cells[ iny ][ inx ]
+			cell := env.cells[iny][inx]
 
-			if tmp[ cell.coordinates() ] {
+			if tmp[cell.coordinates()] {
 				fmt.Printf("*")
 			} else {
 				fmt.Printf("%s", cell.symbol)
@@ -263,9 +176,9 @@ func (env field) genericSearch(priority func(path) float64) *path {
 
 		env.printFieldWithPath(path.cells)
 
-		lastCell := path.cells[ len(path.cells)-1 ]
+		lastCell := path.cells[len(path.cells)-1]
 
-		if lastCell == env.goal {
+		if env.goals[lastCell] {
 			return &path
 		}
 
@@ -298,7 +211,7 @@ func (env field) searchBestFirst() *path {
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
 
-		last := path.cells[ len(path.cells)-1 ]
+		last := path.cells[len(path.cells)-1]
 		return -last.distance
 	}
 
@@ -311,7 +224,7 @@ func (env *field) searchAStar() *path {
 	// return negative value, because prioQuere picks highest value
 	h := func(path path) float64 {
 
-		last := path.cells[ len(path.cells)-1 ]
+		last := path.cells[len(path.cells)-1]
 		return -(float64(len(path.cells)-1) + last.distance)
 		// return -(float64(len(path.cells)) + last.distance)
 	}
@@ -356,13 +269,13 @@ func Init(path string) (*field, error) {
 	cells := make([][]*cell, len(lines))
 	coordinates := make(map[string]*cell)
 
-	var goal *cell
 	var start *cell
+	goals := make(map[*cell]bool)
 
 	for iny, line := range lines {
 
 		fields := strings.Split(line, "")
-		cells[ iny ] = make([]*cell, len(fields))
+		cells[iny] = make([]*cell, len(fields))
 
 		for inx, str := range fields {
 
@@ -378,11 +291,11 @@ func Init(path string) (*field, error) {
 				symbol:  str,
 			}
 
-			cells[ iny ][ inx ] = cell
-			coordinates[ cell.coordinates() ] = cell
+			cells[iny][inx] = cell
+			coordinates[cell.coordinates()] = cell
 
 			if str == "g" {
-				goal = cell
+				goals[cell] = true
 			}
 
 			if str == "s" {
@@ -391,7 +304,7 @@ func Init(path string) (*field, error) {
 		}
 	}
 
-	if start == nil || goal == nil {
+	if start == nil || len(goals) == 0 {
 		return nil, fmt.Errorf("error: start == nil || goal == nil")
 	}
 
@@ -399,7 +312,7 @@ func Init(path string) (*field, error) {
 		cells:       cells,
 		coordinates: coordinates,
 		start:       start,
-		goal:        goal,
+		goals:       goals,
 	}
 
 	return grid, nil
@@ -425,8 +338,8 @@ func main() {
 	search := bestFirst
 
 	if len(os.Args) > 2 {
-		search = os.Args[ 1 ]
-		src = os.Args[ 2 ]
+		search = os.Args[1]
+		src = os.Args[2]
 	} else {
 		fmt.Printf("How to use: go run ./go [%s, %s, %s, %s] PATH_TO_ENV_TXT\n", bestFirst, aStar, breadthFirst, depthFirst)
 		return
@@ -439,7 +352,7 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Printf("Searching (%s) path form %s to %s\n", search, env.start.coordinates(), env.goal.coordinates())
+	fmt.Printf("Searching (%s) path form %s\n", search, env.start.coordinates())
 	// env.calculateDistances()
 	env.calculateDistancesPortal()
 	env.printPriorityMatrix()
@@ -466,7 +379,7 @@ func main() {
 		return
 	}
 
-	fmt.Printf("\n############ Path form %s to %s ############\n", env.start.coordinates(), env.goal.coordinates())
+	fmt.Printf("\n############ Path form %s ############\n", env.start.coordinates())
 	fmt.Printf("Path length: %d\n", len(pathToGoal.cells))
 	fmt.Printf("Path: %s\n", pathToGoal.toString())
 	env.printField()
