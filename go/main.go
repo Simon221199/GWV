@@ -194,8 +194,8 @@ func (env field) genericSearch(count int, priority func(path) float64) []path {
 
 		fmt.Printf("expanded path: %s\n", path.toString())
 		env.printFieldWithPath(path.cells)
-		fmt.Printf("expand operations:      %d\n", expandOperations)
-		fmt.Printf("enqueued objects:       %d\n", pq.Len())
+		fmt.Printf("expansion operations:   %d\n", expandOperations)
+		fmt.Printf("enqueued paths:         %d\n", pq.Len())
 		fmt.Printf("nodes in queue:         %d\n", queueNodes)
 		fmt.Printf("longest path in queue:  %d\n", maxPathLength)
 		fmt.Printf("path priority:          %.f\n", popItem.Priority)

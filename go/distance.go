@@ -51,6 +51,7 @@ func (env *field) calculateDistances() {
 	}
 }
 
+// Calculate the nearest distance to multiple goals
 func (env field) calculateMinDistanceToGoals(cell *cell) float64 {
 
 	distance := math.MaxFloat64
