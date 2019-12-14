@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func findDescendantsMany(words []string, predecessor []string) []string {
+func findDescendantsForMany(words []string, predecessor []string) []string {
 
 	descendants := make([]string, 0)
 
@@ -19,21 +19,34 @@ func findDescendantsMany(words []string, predecessor []string) []string {
 
 			index := inx + iny
 
+			// prevent index overflow
 			if len(words) <= index {
 				break
 			}
 
-			if words[ index ] != word {
+			// check if sequent match
+			if words[index] != word {
 				break
 			}
 
-			if len(predecessor) - 1 == iny && len(words) > index + 1 {
+			// prevent overflow
+			if len(words) <= (index + 1) {
+				break
+			}
+
+			// break in end of comment is reached
+			if words[index+1] == "" {
+				break
+			}
+
+			// end reached
+			if len(predecessor)-1 == iny {
 				descendantIndex = index + 1
 			}
 		}
 
 		if descendantIndex >= 0 {
-			descendants = append(descendants, words[ descendantIndex ])
+			descendants = append(descendants, words[descendantIndex])
 		}
 	}
 
@@ -44,32 +57,31 @@ func findDescendantsMany(words []string, predecessor []string) []string {
 
 func trigrams(words []string) {
 
+	// start := "du"
+	// descendantsTmp := findDescendants(words, start)
+	// last := []string{start, descendantsTmp[ rand.Intn(len(descendantsTmp)) ]}
+
 	// last := []string{"fick", "dich"}
 	// last := []string{"angela", "merkel"}
 	// last := []string{"ich", "bin"}
 	last := []string{"du", "bist"}
 	sentences := strings.Join(last, " ")
 
-	descendantsStart := findDescendantsMany(words, last)
+	descendantsStart := findDescendantsForMany(words, last)
 	fmt.Println(descendantsStart)
-	// descendantsStart := findDescendantsMany(words, []string{"dich", "und"})
-	// fmt.Println(descendantsStart)
 
 	for inx := 0; inx < 8; inx++ {
 
-		descendants := findDescendantsMany(words, last)
-
-		// fmt.Println(last)
-		// fmt.Println(descendants)
+		descendants := findDescendantsForMany(words, last)
 
 		if len(descendants) <= 0 {
 			descendants = words
 		}
 
-		last[ 0 ] = last[ 1 ]
-		last[ 1 ] = descendants[ rand.Intn(len(descendants)) ]
+		last[0] = last[1]
+		last[1] = descendants[rand.Intn(len(descendants))]
 
-		sentences += " " + last[ 1 ]
+		sentences += " " + last[1]
 	}
 
 	fmt.Println(sentences)
