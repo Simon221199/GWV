@@ -55,20 +55,13 @@ func findDescendantsForMany(words []string, predecessor []string) []string {
 	return descendants
 }
 
-func trigrams(words []string) {
+func trigrams(words []string, start []string) {
 
-	// start := "du"
-	// descendantsTmp := findDescendants(words, start)
-	// last := []string{start, descendantsTmp[ rand.Intn(len(descendantsTmp)) ]}
-
-	// last := []string{"fick", "dich"}
-	// last := []string{"angela", "merkel"}
-	// last := []string{"ich", "bin"}
-	last := []string{"du", "bist"}
+	last := start
 	sentences := strings.Join(last, " ")
 
-	descendantsStart := findDescendantsForMany(words, last)
-	fmt.Println(descendantsStart)
+	// descendantsStart := findDescendantsForMany(words, last)
+	// fmt.Println(descendantsStart)
 
 	for inx := 0; inx < 8; inx++ {
 

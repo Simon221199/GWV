@@ -24,5 +24,16 @@ func main() {
 	fmt.Printf("words=%d\n", len(words))
 
 	// bigrams(words)
-	trigrams(words)
+
+	// last := []string{"fick", "dich"}
+	// last := []string{"angela", "merkel"}
+	// last := []string{"ich", "bin"}
+	// last := []string{"du", "bist"}
+
+	for inx := 0; inx < 10; inx++ {
+		startWord := words[rand.Intn(len(words))]
+		descendants := findDescendants(words, startWord)
+		start := []string{startWord, descendants[rand.Intn(len(descendants))]}
+		trigrams(words, start)
+	}
 }
