@@ -127,7 +127,7 @@ func (model hmm) forwardAlgorithm(phrase []string) {
 		aResults = append(aResults, result)
 	}
 
-	fmt.Println("aResults", aResults)
+	// fmt.Println("aResults", aResults)
 
 	for inx, word := range phrase {
 
@@ -150,11 +150,27 @@ func (model hmm) forwardAlgorithm(phrase []string) {
 	for _, a := range aResults[len(phrase)-1] {
 		aggregate += a
 	}
+
 	fmt.Println("aggregate", aggregate)
 }
 
+func priorProbabilitiesList(sentencesTags [][]string) matrixList {
+
+	startTagsCount := make(map[string]int)
+	for inx := range sentencesTags {
+		tag := sentencesTags[inx][0]
+		startTagsCount[tag]++
+	}
+
+	priorProbabilities := make(matrixList)
+	for tag, count := range startTagsCount {
+		priorProbabilities[tag] = float64(count) / float64(len(sentencesTags))
+	}
+
+	return priorProbabilities
+}
+
 func main() {
-	fmt.Println("hallo")
 
 	content, err := ioutil.ReadFile("hdt-1-10000-train.tags")
 	if err != nil {
@@ -189,17 +205,7 @@ func main() {
 
 	fmt.Println("tagsCount", tagsCount)
 
-	startTagsCount := make(map[string]int)
-	for inx := range sentencesTags {
-		tag := sentencesTags[inx][0]
-		startTagsCount[tag]++
-	}
-
-	priorProbabilities := make(matrixList)
-	for tag, count := range startTagsCount {
-		priorProbabilities[tag] = float64(count) / float64(len(sentencesTags))
-	}
-
+	priorProbabilities := priorProbabilitiesList(sentencesTags)
 	fmt.Println("priorProbabilities", priorProbabilities)
 
 	emissionsMatrix := emissionMatrixMap(sentencesWords, sentencesTags)
