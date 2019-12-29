@@ -47,7 +47,7 @@ func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) mat
 	return transitionMatrix
 }
 
-func emissionMatrixMap(tagsCount map[string]int, sentencesWords [][]string, sentencesTags [][]string) matrix {
+func emissionMatrixMap(sentencesWords [][]string, sentencesTags [][]string) matrix {
 
 	emissionCount := make(map[string]map[string]int)
 
@@ -71,14 +71,14 @@ func emissionMatrixMap(tagsCount map[string]int, sentencesWords [][]string, sent
 
 		emissionMatrix[tag] = make(matrixList)
 
-		tagsSum := 0
+		wordsSum := 0
 
 		for _, count := range words {
-			tagsSum += count
+			wordsSum += count
 		}
 
 		for word, count := range words {
-			emissionMatrix[tag][word] = float64(count) / float64(tagsSum)
+			emissionMatrix[tag][word] = float64(count) / float64(wordsSum)
 		}
 	}
 
@@ -121,22 +121,36 @@ func (model hmm) forwardAlgorithm(phrase []string) {
 			}
 
 			eVal := model.emissionsMatrix[s][phrase[k+1]]
-
 			result[s] = eVal * akSum
 		}
 
 		aResults = append(aResults, result)
 	}
 
-	fmt.Println("aResults", aResults[2])
+	fmt.Println("aResults", aResults)
 
-	xxx := 0.0
+	for inx, word := range phrase {
 
-	for _, a := range aResults[len(phrase)-1] {
-		xxx += a
+		result := aResults[inx]
+
+		bestTag := ""
+		bestScore := 0.0
+
+		for tag, score := range result {
+			if score > bestScore {
+				bestScore = score
+				bestTag = tag
+			}
+		}
+
+		fmt.Println(word, bestTag)
 	}
 
-	fmt.Println("xxx", xxx)
+	aggregate := 0.0
+	for _, a := range aResults[len(phrase)-1] {
+		aggregate += a
+	}
+	fmt.Println("aggregate", aggregate)
 }
 
 func main() {
@@ -188,13 +202,14 @@ func main() {
 
 	fmt.Println("priorProbabilities", priorProbabilities)
 
-	emissionsMatrix := emissionMatrixMap(tagsCount, sentencesWords, sentencesTags)
+	emissionsMatrix := emissionMatrixMap(sentencesWords, sentencesTags)
 	transitionMatrix := transitionMatrixMap(tagsCount, sentencesTags)
 
-	fmt.Println("emissionsMatrix", emissionsMatrix)
+	// fmt.Println("emissionsMatrix", emissionsMatrix)
 	// fmt.Println("transitionMatrix", transitionMatrix)
 
-	phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
+	// phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
+	phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
 	phraseParts := strings.Split(phrase, " ")
 
 	model := hmm{
