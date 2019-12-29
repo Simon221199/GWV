@@ -6,7 +6,10 @@ import (
 	"strings"
 )
 
-func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) map[string]map[string]float32 {
+type matrixList map[string]float64
+type matrix map[string]matrixList
+
+func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) matrix {
 
 	transitionCount := make(map[string]map[string]int)
 	for tag := range tagsCount {
@@ -22,12 +25,10 @@ func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) map
 		}
 	}
 
-	fmt.Println("transitionCount", transitionCount)
-
 	// init transition matrix
-	transitionMatrix := make(map[string]map[string]float32)
+	transitionMatrix := make(matrix)
 	for tag := range tagsCount {
-		transitionMatrix[tag] = make(map[string]float32)
+		transitionMatrix[tag] = make(matrixList)
 	}
 
 	for tag, data := range transitionCount {
@@ -39,65 +40,14 @@ func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) map
 		}
 
 		for tag2, val := range data {
-			transitionMatrix[tag][tag2] = float32(val) / float32(sum)
+			transitionMatrix[tag][tag2] = float64(val) / float64(sum)
 		}
 	}
-
-	fmt.Println("transitionMatrix", transitionMatrix)
 
 	return transitionMatrix
 }
 
-func transitionMatrix(tagsCount map[string]int, sentencesTags [][]string) (map[string]int, [][]float32) {
-
-	inx := 0
-	tagIndex := make(map[string]int)
-
-	for tag := range tagsCount {
-		tagIndex[tag] = inx
-		inx++
-	}
-
-	transitionCount := make([][]int, len(tagIndex))
-	for inx := range transitionCount {
-		transitionCount[inx] = make([]int, len(tagIndex))
-	}
-
-	for _, tags := range sentencesTags {
-		for inx := 1; inx < len(tags); inx++ {
-			preTag := tags[inx-1]
-			tag := tags[inx]
-
-			preTagIndex := tagIndex[preTag]
-			tagIndex := tagIndex[tag]
-
-			transitionCount[preTagIndex][tagIndex]++
-		}
-	}
-
-	// init transition matrix
-	transitionMatrix := make([][]float32, len(tagIndex))
-	for inx := range transitionMatrix {
-		transitionMatrix[inx] = make([]float32, len(tagIndex))
-	}
-
-	for inx, data := range transitionCount {
-
-		sum := 0
-
-		for _, val := range data {
-			sum += val
-		}
-
-		for iny, val := range data {
-			transitionMatrix[inx][iny] = float32(val) / float32(sum)
-		}
-	}
-
-	return tagIndex, transitionMatrix
-}
-
-func emissionMatrixMap(tagsCount map[string]int, sentencesWords [][]string, sentencesTags [][]string) map[string]map[string]float32 {
+func emissionMatrixMap(tagsCount map[string]int, sentencesWords [][]string, sentencesTags [][]string) matrix {
 
 	emissionCount := make(map[string]map[string]int)
 
@@ -107,32 +57,86 @@ func emissionMatrixMap(tagsCount map[string]int, sentencesWords [][]string, sent
 			word := sentencesWords[inx][iny]
 			tag := sentencesTags[inx][iny]
 
-			if emissionCount[word] == nil {
-				emissionCount[word] = make(map[string]int)
+			if emissionCount[tag] == nil {
+				emissionCount[tag] = make(map[string]int)
 			}
 
-			emissionCount[word][tag]++
+			emissionCount[tag][word]++
 		}
 	}
 
-	emissionMatrix := make(map[string]map[string]float32)
+	emissionMatrix := make(matrix)
 
-	for word, tags := range emissionCount {
+	for tag, words := range emissionCount {
 
-		emissionMatrix[word] = make(map[string]float32)
+		emissionMatrix[tag] = make(matrixList)
 
 		tagsSum := 0
 
-		for _, count := range tags {
+		for _, count := range words {
 			tagsSum += count
 		}
 
-		for tag, count := range tags {
-			emissionMatrix[word][tag] = float32(count) / float32(tagsSum)
+		for word, count := range words {
+			emissionMatrix[tag][word] = float64(count) / float64(tagsSum)
 		}
 	}
 
 	return emissionMatrix
+}
+
+type hmm struct {
+	priorProbabilities map[string]float64
+	emissionsMatrix    matrix
+	transitionMatrix   matrix
+}
+
+func (model hmm) forwardAlgorithm(phrase []string) {
+
+	// phrase --> Observation
+	startWord := phrase[0]
+
+	initResults := make(matrixList)
+
+	for s := range model.transitionMatrix {
+		initResults[s] = model.priorProbabilities[s] * model.emissionsMatrix[s][startWord]
+	}
+
+	fmt.Println("startWord", startWord)
+	fmt.Println("initResults", initResults)
+
+	aResults := make([]matrixList, 1)
+	aResults[0] = initResults
+
+	for k := 0; k < len(phrase)-1; k++ {
+
+		result := make(matrixList)
+
+		for s := range model.transitionMatrix {
+
+			akSum := 0.0
+
+			for q := range model.transitionMatrix {
+				akSum += aResults[k][q] * model.transitionMatrix[q][s]
+			}
+
+			eVal := model.emissionsMatrix[s][phrase[k+1]]
+
+			result[s] = eVal * akSum
+		}
+
+		aResults = append(aResults, result)
+	}
+
+	fmt.Println("aResults", aResults[2])
+
+	xxx := 0.0
+
+	for _, a := range aResults[len(phrase)-1] {
+		xxx += a
+	}
+
+	fmt.Println("xxx", xxx)
 }
 
 func main() {
@@ -177,23 +181,27 @@ func main() {
 		startTagsCount[tag]++
 	}
 
-	priorProbabilities := make(map[string]float32)
+	priorProbabilities := make(matrixList)
 	for tag, count := range startTagsCount {
-		priorProbabilities[tag] = float32(count) / float32(len(sentencesTags))
+		priorProbabilities[tag] = float64(count) / float64(len(sentencesTags))
 	}
 
 	fmt.Println("priorProbabilities", priorProbabilities)
 
 	emissionsMatrix := emissionMatrixMap(tagsCount, sentencesWords, sentencesTags)
-	// transitionMatrix := transitionMatrixMap(tagsCount, sentencesTags)
+	transitionMatrix := transitionMatrixMap(tagsCount, sentencesTags)
 
 	fmt.Println("emissionsMatrix", emissionsMatrix)
 	// fmt.Println("transitionMatrix", transitionMatrix)
 
-	// tags, matrix := transitionMatrix(tagsCount, sentencesTags)
-	// fmt.Println("tags", tags)
-	// fmt.Println("matrix", matrix[ tags[ "$(" ] ][ tags[ "$(" ] ])
+	phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
+	phraseParts := strings.Split(phrase, " ")
 
-	// matrix := transitionMatrixMap(tagsCount, sentencesTags)
-	// fmt.Println("matrix", matrix)
+	model := hmm{
+		priorProbabilities: priorProbabilities,
+		emissionsMatrix:    emissionsMatrix,
+		transitionMatrix:   transitionMatrix,
+	}
+
+	model.forwardAlgorithm(phraseParts)
 }
