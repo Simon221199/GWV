@@ -3,10 +3,12 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"strconv"
 	"strings"
 )
 
-type matrixList map[string]float64
+type float float64
+type matrixList map[string]float
 type matrix map[string]matrixList
 
 func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) matrix {
@@ -40,7 +42,7 @@ func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) mat
 		}
 
 		for tag2, val := range data {
-			transitionMatrix[tag][tag2] = float64(val) / float64(sum)
+			transitionMatrix[tag][tag2] = float(val) / float(sum)
 		}
 	}
 
@@ -78,7 +80,7 @@ func emissionMatrixMap(sentencesWords [][]string, sentencesTags [][]string) matr
 		}
 
 		for word, count := range words {
-			emissionMatrix[tag][word] = float64(count) / float64(wordsSum)
+			emissionMatrix[tag][word] = float(count) / float(wordsSum)
 		}
 	}
 
@@ -86,9 +88,27 @@ func emissionMatrixMap(sentencesWords [][]string, sentencesTags [][]string) matr
 }
 
 type hmm struct {
-	priorProbabilities map[string]float64
+	words              map[string]bool
+	tagProbability     map[string]float
+	priorProbabilities map[string]float
 	emissionsMatrix    matrix
 	transitionMatrix   matrix
+}
+
+// Word is not in model.words
+func (model hmm) tagProbabilityHeuristic(tag, word string) float {
+
+	// word looks like a number!
+	if _, err := strconv.Atoi(word); err == nil {
+
+		if tag == "CARD" {
+			return float(1)
+		}
+
+		return float(0)
+	}
+
+	return model.tagProbability[tag]
 }
 
 func (model hmm) forwardAlgorithm(phrase []string) []string {
@@ -99,6 +119,12 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 	initResults := make(matrixList)
 
 	for s := range model.transitionMatrix {
+
+		if val := model.words[startWord]; !val {
+			initResults[s] = model.priorProbabilities[s] * model.tagProbability[s]
+			continue
+		}
+
 		initResults[s] = model.priorProbabilities[s] * model.emissionsMatrix[s][startWord]
 	}
 
@@ -114,13 +140,20 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 
 		for s := range model.transitionMatrix {
 
-			akSum := 0.0
+			akSum := float(0)
 
 			for q := range model.transitionMatrix {
 				akSum += aResults[k][q] * model.transitionMatrix[q][s]
 			}
 
-			eVal := model.emissionsMatrix[s][phrase[k+1]]
+			eVal := float(0.0)
+
+			if val := model.words[phrase[k+1]]; val {
+				eVal = model.emissionsMatrix[s][phrase[k+1]]
+			} else {
+				eVal = model.tagProbability[s]
+			}
+
 			result[s] = eVal * akSum
 		}
 
@@ -136,7 +169,7 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 		result := aResults[inx]
 
 		bestTag := "###"
-		bestScore := 0.0
+		bestScore := float(0)
 
 		for tag, score := range result {
 			if score > bestScore {
@@ -168,7 +201,7 @@ func priorProbabilitiesList(sentencesTags [][]string) matrixList {
 
 	priorProbabilities := make(matrixList)
 	for tag, count := range startTagsCount {
-		priorProbabilities[tag] = float64(count) / float64(len(sentencesTags))
+		priorProbabilities[tag] = float(count) / float(len(sentencesTags))
 	}
 
 	return priorProbabilities
@@ -185,6 +218,7 @@ func main() {
 	sentences := strings.Split(text, "\n\n")
 
 	tagsCount := make(map[string]int)
+	words := make(map[string]bool)
 
 	sentencesWords := make([][]string, len(sentences))
 	sentencesTags := make([][]string, len(sentences))
@@ -203,11 +237,22 @@ func main() {
 			sentencesWords[inx][iny] = wordTag[0]
 			sentencesTags[inx][iny] = wordTag[1]
 
+			words[wordTag[0]] = true
 			tagsCount[wordTag[1]]++
 		}
 	}
 
 	fmt.Println("tagsCount", tagsCount)
+
+	tagsSum := 0
+	for _, count := range tagsCount {
+		tagsSum += count
+	}
+
+	tagProbability := make(map[string]float)
+	for tag, count := range tagsCount {
+		tagProbability[tag] = float(count) / float(tagsSum)
+	}
 
 	priorProbabilities := priorProbabilitiesList(sentencesTags)
 	fmt.Println("priorProbabilities", priorProbabilities)
@@ -219,6 +264,8 @@ func main() {
 	// fmt.Println("transitionMatrix", transitionMatrix)
 
 	model := hmm{
+		words:              words,
+		tagProbability:     tagProbability,
 		priorProbabilities: priorProbabilities,
 		emissionsMatrix:    emissionsMatrix,
 		transitionMatrix:   transitionMatrix,
@@ -269,12 +316,16 @@ func main() {
 		panic(err)
 	}
 
-	// // phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
-	// phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
+	// phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
+	// // phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
 	// phraseParts := strings.Split(phrase, " ")
 	//
 	// tags := model.forwardAlgorithm(phraseParts)
 	//
 	// fmt.Println(phraseParts)
 	// fmt.Println(tags)
+
+	// diff -u hdt-10001-12000-test.tags results.tags | grep '^+' | wc -l
+	// 8768
+	// 5315
 }
