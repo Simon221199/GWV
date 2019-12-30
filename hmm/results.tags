@@ -1657,7 +1657,7 @@ sich	PRF
 als	KOKOM
 ein	ART
 Herr	NN
-el-Amir	APPR
+el-Amir	NN
 ausgegeben	VVPP
 .	$.
 
@@ -3995,7 +3995,7 @@ solchen	PIDAT
 Inseln	NN
 lassen	VVINF
 sich	PRF
-1-Elektronen-Schalter	APPR
+1-Elektronen-Schalter	NN
 realisieren	VVINF
 -	$(
 man	PIS
@@ -6989,7 +6989,7 @@ VirtuHammer	NN
 soll	VMFIN
 ,	$,
 rund	ADV
-100-mal	APPR
+100-mal	NN
 schneller	ADJD
 als	KOKOM
 SimNow	NN
@@ -7042,7 +7042,7 @@ ist	VAFIN
 VirtuHammer	NN
 alias	ADV
 Simics	NN
-x86-64/LE	APPR
+x86-64/LE	NN
 für	APPR
 eine	ART
 Jahreslizenz	NN
@@ -8174,8 +8174,8 @@ Intel	NE
 bereits	ADV
 Ende	NN
 März	NN
-1-GHz-Prozessoren	APPR
-freigeben	NN
+1-GHz-Prozessoren	NN
+freigeben	APPR
 sollte	VMFIN
 ,	$,
 sind	VAFIN
@@ -8359,7 +8359,7 @@ mit	APPR
 dem	ART
 sich	PRF
 bereits	ADV
-80-nm-Strukturen	APPR
+80-nm-Strukturen	NN
 realisieren	VVINF
 ließen	VVFIN
 .	$.
@@ -9196,7 +9196,7 @@ III	CARD
 mit	APPR
 einem	ART
 650-MHz-Athlon	NN
-kontern	NN
+kontern	APPR
 .	$.
 
 Er	PPER
@@ -9540,7 +9540,7 @@ der	ART
 Produktion	NN
 von	APPR
 vermutlich	ADV
-256-MBit-DRAMs	APPR
+256-MBit-DRAMs	NN
 beginnen	VVINF
 .	$.
 
@@ -10122,7 +10122,7 @@ eingeladen	VVPP
 Transmeta	NE
 morpht	NN
 AMDs	NN
-64-Bit-CPU	APPR
+64-Bit-CPU	NN
 Sledgehammer	NN
 
 Transmeta	NE
@@ -10243,7 +10243,7 @@ Schnelle	ADJA
 wird	VAFIN
 eine	ART
 64-Bit-Erweiterung	NN
-nachgerüstet	NN
+nachgerüstet	APPR
 .	$.
 
 Ob	KOUS
@@ -10641,7 +10641,7 @@ wird	VAFIN
 noch	ADV
 in	APPR
 0,18-µm-CMOS-8S2SOI	NN
-gefertigt	NN
+gefertigt	APPR
 .	$.
 
 DVD/TV-PC	NN
@@ -12060,8 +12060,8 @@ Web	NN
 ermittelte	ADJA
 ,	$,
 daß	KOUS
-2^3021377-1	ART
-prim	NN
+2^3021377-1	NN
+prim	APPR
 ist	VAFIN
 -	$(
 eine	ART
@@ -14757,7 +14757,7 @@ II	CARD
 
 Das	ART
 c't-Prüfprogramm	NN
-ctp2info	NN
+ctp2info	APPR
 zum	APPRART
 Identifizieren	NN
 umfrisierter	APPR
@@ -14784,7 +14784,7 @@ bestimmten	ADJA
 Typ	NN
 gefälschter	APPR
 350-MHz-Prozessoren	NN
-entlarven	NN
+entlarven	APPR
 .	$.
 
 Eine	ART
@@ -15604,7 +15604,7 @@ Jahre	NN
 2000/2001	CARD
 die	ART
 1-GHz-Marke	NN
-übertreffen	NN
+übertreffen	APPR
 .	$.
 
 Startup	NN
@@ -17471,7 +17471,7 @@ mit	APPR
 1-	NN
 und	KON
 2-MByte	NN
-Cache	NN
+Cache	FM
 -	$(
 was	PWS
 allerdings	ADV
@@ -17627,8 +17627,8 @@ verfügbaren	ADJA
 Suchsoftware	NN
 ,	$,
 daß	KOUS
-2^6972593-1	ART
-prim	NN
+2^6972593-1	NN
+prim	APPR
 ist	VAFIN
 .	$.
 
@@ -19071,7 +19071,7 @@ Stück	NN
 
 Intel	NE
 stellt	VVFIN
-1-GHz-Prozesstechnik	ART
+1-GHz-Prozesstechnik	NN
 vor	APPR
 
 In	APPR
@@ -20068,7 +20068,7 @@ verarbeiten	VVINF
 Der	ART
 im	APPRART
 0,25-µm-Prozess	NN
-hergestellte	NN
+hergestellte	APPR
 ,	$,
 aus	APPR
 8,5	CARD
@@ -20182,7 +20182,7 @@ Bis	APPR
 dahin	ADV
 wird	VAFIN
 man	PIS
-1-GHz-Systeme	APPR
+1-GHz-Systeme	NN
 nur	ADV
 von	APPR
 wenigen	PIDAT
@@ -20254,7 +20254,7 @@ an	APPR
 wenn	KOUS
 nun	ADV
 bereits	ADV
-1-GHz-Prozessoren	APPR
+1-GHz-Prozessoren	NN
 präsentiert	VVFIN
 werden	VAINF
 .	$.
@@ -20486,7 +20486,7 @@ Testsysteme	NN
 sind	VAFIN
 mit	APPR
 Asus	NN
-7VX-Board	APPR
+7VX-Board	NN
 und	KON
 133-MHz-Virtual-Channel-SDRAMs	NN
 bestückt	VVPP
@@ -24622,7 +24622,7 @@ Die	ART
 DSPs	NN
 der	ART
 TMS	NN
-320C5000-Serie	APPR
+320C5000-Serie	NN
 sind	VAFIN
 schon	ADV
 erfolgreich	ADJD
@@ -24810,7 +24810,7 @@ bezahlt	VVPP
 Der	ART
 Compaq	NE
 Presario	NN
-5900Z-1GHz	APPR
+5900Z-1GHz	NN
 etwa	ADV
 kostet	VVFIN
 dort	ADV
@@ -25414,7 +25414,7 @@ Frühjahr	NN
 auf	APPR
 der	ART
 ISSCC	NN
-1-GBit-Muster	APPR
+1-GBit-Muster	NN
 auf	APPR
 Basis	NN
 bestehender	ADJA
@@ -26596,7 +26596,7 @@ schließen	VVINF
 Ob	KOUS
 der	ART
 Datentransfer	NN
-64-	APPR
+64-	NN
 oder	KON
 128-bittig	NN
 (	$(
@@ -27508,8 +27508,8 @@ preiswerter	ADJD
 
 Millionen-Fond	NN
 soll	VMFIN
-iA64-Software	ART
-anheizen	NN
+iA64-Software	NN
+anheizen	APPR
 
 Um	KOUI
 die	ART
@@ -27994,7 +27994,7 @@ lizenziert	NN
 
 AMD	NE
 enthüllt	VVPP
-x86-64-Architektur	$.
+x86-64-Architektur	NN
 Sledgehammer	NN
 
 Mit	APPR
@@ -28588,9 +28588,9 @@ diese	PDAT
 auch	ADV
 für	APPR
 AMDs	NN
-64-Bit-Modus	APPR
+64-Bit-Modus	NN
 x86-64	NN
-programmieren	NN
+programmieren	APPR
 (	$(
 und	KON
 optimieren	VVINF
@@ -28625,7 +28625,7 @@ haben	VAFIN
 die	ART
 für	APPR
 AMDs	NN
-64-Bit-Prozessor	APPR
+64-Bit-Prozessor	NN
 Sledgehammer	NN
 verantwortlichen	ADJA
 Projektleiter	NN
@@ -28716,7 +28716,7 @@ Infrastruktur	NN
 (	$(
 u.	APPR
 a.	PIS
-32-Bit-Compiler	APPR
+32-Bit-Compiler	NN
 )	$(
 abstützen	NN
 kann	VMFIN
@@ -29737,7 +29737,7 @@ Platz	NN
 
 AMD	NE
 präsentiert	VVFIN
-850-MHz-Athlon	ART
+850-MHz-Athlon	NN
 
 AMD	NE
 hat	VAFIN
@@ -30808,7 +30808,7 @@ dem	ART
 Chip	NN
 integriert	VVPP
 sind	VAFIN
-2-D-Grafik-	ART
+2-D-Grafik-	NN
 ,	$,
 SDRAM-	NN
 ,	$,
@@ -30956,7 +30956,7 @@ bietet	VVFIN
 Beide	PIDAT
 Kontrahenten	NN
 sind	VAFIN
-x86-kompatibel	ART
+x86-kompatibel	NN
 ,	$,
 können	VMFIN
 daher	PROAV
@@ -32249,7 +32249,7 @@ S3-Submission	NN
 (	$(
 File	FM
 Nr.	NN
-333-45346	APPR
+333-45346	NN
 )	$(
 vom	APPRART
 7.	ADJA
@@ -33588,7 +33588,7 @@ erzielen	VVINF
 Gefertigt	NN
 in	APPR
 Infineons	NN
-0,13-µm-Prozess	APPR
+0,13-µm-Prozess	NN
 benötigt	VVFIN
 der	ART
 Kern	NN
@@ -33903,7 +33903,7 @@ vom	APPRART
 Juni	NN
 2000	CARD
 sind	VAFIN
-933-MHz-SECC2-Prozessoren	ART
+933-MHz-SECC2-Prozessoren	NN
 allerdings	ADV
 noch	ADV
 gar	ADV
@@ -35254,7 +35254,7 @@ neue	ADJA
 32-Bit-	NN
 als	KOKOM
 auch	ADV
-64-Bit-Cores	APPR
+64-Bit-Cores	NN
 vor	APPR
 ,	$,
 die	PRELS
@@ -35566,7 +35566,7 @@ integrieren	VVINF
 Gefertigt	NN
 in	APPR
 Nationals	NN
-0,13-µm-Prozess	APPR
+0,13-µm-Prozess	NN
 soll	VMFIN
 er	PPER
 dann	ADV
@@ -35963,7 +35963,7 @@ hat	VAFIN
 dort	ADV
 ,	$,
 wo	PWAV
-6x86-Prozessoren	ART
+6x86-Prozessoren	NN
 eingesetzt	VVPP
 werden	VAINF
 ,	$,
@@ -36415,7 +36415,7 @@ herauskommen	VVFIN
 .	$.
 
 Revolutionäres	NN
-x86-Design	APPR
+x86-Design	NN
 
 Der	ART
 geheimnisvolle	NN
@@ -36622,7 +36622,7 @@ ermöglicht	VVFIN
 
 Hier	ADV
 stehen	VVFIN
-0,18-µm-Strukturen	ART
+0,18-µm-Strukturen	NN
 und	KON
 der	ART
 Wechsel	NN
@@ -37112,7 +37112,7 @@ ordern	VVINF
 oder	KON
 eine	ART
 30-Tage-Version	NN
-downloaden	NN
+downloaden	APPR
 .	$.
 
 Bleibt	VVFIN
@@ -37892,7 +37892,7 @@ der	ART
 wird	VAFIN
 im	APPRART
 0,18-µm-Prozeß	NN
-gefertigt	NN
+gefertigt	APPR
 .	$.
 
 Damit	PROAV
@@ -38404,7 +38404,7 @@ mit	APPR
 Intel-Chipsätzen	NN
 der	ART
 8xx-Generation	NN
-zusammenspielt	NN
+zusammenspielt	APPR
 .	$.
 
 Hierzu	PROAV
@@ -38819,7 +38819,7 @@ mit	APPR
 Intel	NE
 den	ART
 3-D-Grafikprozessor	NN
-i740	NN
+i740	APPR
 entwickelte	ADJA
 .	$.
 
@@ -40028,7 +40028,7 @@ Breite	###
 Der	ART
 Backside-Cache-Bus	NN
 kann	VMFIN
-64-	ART
+64-	NN
 oder	KON
 128-bittig	NN
 Daten	NN

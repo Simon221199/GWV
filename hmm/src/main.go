@@ -112,8 +112,8 @@ func (model hmm) tagProbabilityHeuristic(tag, word string) float {
 
 	nn := regexp.MustCompile(`^[A-Z]`)
 
-	// word looks like a number!
-	if nn.MatchString(word) {
+	// word looks like a noun!
+	if nn.MatchString(word) || strings.Contains(word, "-") {
 
 		if tag == "NN" {
 			return float(1)
@@ -322,41 +322,41 @@ func main() {
 		}
 	}
 
-	// evalText := ""
-	//
-	// for _, phrase := range trainPhrases {
-	//
-	// 	fmt.Println("phrase", phrase)
-	//
-	// 	tags := model.forwardAlgorithm(phrase)
-	//
-	// 	fmt.Println("tags", tags)
-	//
-	// 	for iny := range phrase {
-	// 		evalText += phrase[iny] + "\t" + tags[iny] + "\n"
-	// 	}
-	//
-	// 	evalText += "\n"
-	// }
-	//
-	// err = ioutil.WriteFile("results.tags", []byte(evalText), 0755)
-	// if err != nil {
-	// 	panic(err)
-	// }
+	evalText := ""
 
-	phrase := "Sie begründeten ihren Pessimismus unter anderem mit dem Umsatzrückgang nach den Attentaten am 11. September ."
-	// phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
-	// phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
-	phraseParts := strings.Split(phrase, " ")
+	for _, phrase := range trainPhrases {
 
-	tags := model.forwardAlgorithm(phraseParts)
+		fmt.Println("phrase", phrase)
 
-	fmt.Println(phraseParts)
-	fmt.Println(tags)
+		tags := model.forwardAlgorithm(phrase)
+
+		fmt.Println("tags", tags)
+
+		for iny := range phrase {
+			evalText += phrase[iny] + "\t" + tags[iny] + "\n"
+		}
+
+		evalText += "\n"
+	}
+
+	err = ioutil.WriteFile("results.tags", []byte(evalText), 0755)
+	if err != nil {
+		panic(err)
+	}
+
+	// phrase := "Sie begründeten ihren Pessimismus unter anderem mit dem Umsatzrückgang nach den Attentaten am 11. September ."
+	// // phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
+	// // phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
+	// phraseParts := strings.Split(phrase, " ")
+	//
+	// tags := model.forwardAlgorithm(phraseParts)
+	//
+	// fmt.Println(phraseParts)
+	// fmt.Println(tags)
 
 	// diff -u hdt-10001-12000-test.tags results.tags | grep '^+' | wc -l
 	// 8768
 	// 5315
 	// 5128 --> Number heuristic
-	// 4991 --> NN heuristic
+	// 4968 --> NN heuristic
 }
