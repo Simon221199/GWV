@@ -8,8 +8,8 @@ import (
 )
 
 type float float64
-type matrixList map[string]float
-type matrix map[string]matrixList
+type probabilityMap map[string]float
+type matrix map[string]probabilityMap
 
 func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) matrix {
 
@@ -30,7 +30,7 @@ func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) mat
 	// init transition matrix
 	transitionMatrix := make(matrix)
 	for tag := range tagsCount {
-		transitionMatrix[tag] = make(matrixList)
+		transitionMatrix[tag] = make(probabilityMap)
 	}
 
 	for tag, data := range transitionCount {
@@ -71,7 +71,7 @@ func emissionMatrixMap(sentencesWords [][]string, sentencesTags [][]string) matr
 
 	for tag, words := range emissionCount {
 
-		emissionMatrix[tag] = make(matrixList)
+		emissionMatrix[tag] = make(probabilityMap)
 
 		wordsSum := 0
 
@@ -130,7 +130,7 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 	// phrase --> Observation
 	startWord := phrase[0]
 
-	initResults := make(matrixList)
+	initResults := make(probabilityMap)
 
 	for s := range model.transitionMatrix {
 
@@ -145,12 +145,12 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 	// fmt.Println("startWord", startWord)
 	// fmt.Println("initResults", initResults)
 
-	aResults := make([]matrixList, 1)
+	aResults := make([]probabilityMap, 1)
 	aResults[0] = initResults
 
 	for k := 0; k < len(phrase)-1; k++ {
 
-		result := make(matrixList)
+		result := make(probabilityMap)
 
 		for s := range model.transitionMatrix {
 
@@ -205,7 +205,7 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 	return resultTag
 }
 
-func priorProbabilitiesList(sentencesTags [][]string) matrixList {
+func priorProbabilitiesList(sentencesTags [][]string) probabilityMap {
 
 	startTagsCount := make(map[string]int)
 	for inx := range sentencesTags {
@@ -213,7 +213,7 @@ func priorProbabilitiesList(sentencesTags [][]string) matrixList {
 		startTagsCount[tag]++
 	}
 
-	priorProbabilities := make(matrixList)
+	priorProbabilities := make(probabilityMap)
 	for tag, count := range startTagsCount {
 		priorProbabilities[tag] = float(count) / float(len(sentencesTags))
 	}
@@ -322,36 +322,37 @@ func main() {
 		}
 	}
 
-	evalText := ""
+	// evalText := ""
+	//
+	// for _, phrase := range trainPhrases {
+	//
+	// 	fmt.Println("phrase", phrase)
+	//
+	// 	tags := model.forwardAlgorithm(phrase)
+	//
+	// 	fmt.Println("tags", tags)
+	//
+	// 	for iny := range phrase {
+	// 		evalText += phrase[iny] + "\t" + tags[iny] + "\n"
+	// 	}
+	//
+	// 	evalText += "\n"
+	// }
+	//
+	// err = ioutil.WriteFile("results.tags", []byte(evalText), 0755)
+	// if err != nil {
+	// 	panic(err)
+	// }
 
-	for _, phrase := range trainPhrases {
-
-		fmt.Println("phrase", phrase)
-
-		tags := model.forwardAlgorithm(phrase)
-
-		fmt.Println("tags", tags)
-
-		for iny := range phrase {
-			evalText += phrase[iny] + "\t" + tags[iny] + "\n"
-		}
-
-		evalText += "\n"
-	}
-
-	err = ioutil.WriteFile("results.tags", []byte(evalText), 0755)
-	if err != nil {
-		panic(err)
-	}
-
+	phrase := "Sie begründeten ihren Pessimismus unter anderem mit dem Umsatzrückgang nach den Attentaten am 11. September ."
 	// phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
-	// // phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
-	// phraseParts := strings.Split(phrase, " ")
-	//
-	// tags := model.forwardAlgorithm(phraseParts)
-	//
-	// fmt.Println(phraseParts)
-	// fmt.Println(tags)
+	// phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
+	phraseParts := strings.Split(phrase, " ")
+
+	tags := model.forwardAlgorithm(phraseParts)
+
+	fmt.Println(phraseParts)
+	fmt.Println(tags)
 
 	// diff -u hdt-10001-12000-test.tags results.tags | grep '^+' | wc -l
 	// 8768
