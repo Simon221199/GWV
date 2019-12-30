@@ -145,7 +145,7 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 	// fmt.Println("startWord", startWord)
 	// fmt.Println("initResults", initResults)
 
-	aResults := make([]probabilityMap, 1)
+	aResults := make([]probabilityMap, len(phrase))
 	aResults[0] = initResults
 
 	for k := 0; k < len(phrase)-1; k++ {
@@ -160,7 +160,7 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 				akSum += aResults[k][q] * model.transitionMatrix[q][s]
 			}
 
-			eVal := float(0.0)
+			eVal := float(0)
 
 			if val := model.words[phrase[k+1]]; val {
 				eVal = model.emissionsMatrix[s][phrase[k+1]]
@@ -171,10 +171,10 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 			result[s] = eVal * akSum
 		}
 
-		aResults = append(aResults, result)
+		aResults[k+1] = result
 	}
 
-	// fmt.Println("aResults", aResults)
+	// fmt.Println("aResults", aResults[ 2 ])
 
 	resultTag := make([]string, len(phrase))
 
@@ -277,6 +277,8 @@ func main() {
 		tagsSum += count
 	}
 
+	fmt.Println("tagsSum", tagsSum)
+
 	tagProbability := make(probabilityMap)
 	for tag, count := range tagsCount {
 		tagProbability[tag] = float(count) / float(tagsSum)
@@ -324,13 +326,16 @@ func main() {
 
 	evalText := ""
 
-	for _, phrase := range trainPhrases {
+	fmt.Printf("Total phrases: %d\n", len(trainPhrases))
 
-		fmt.Println("phrase", phrase)
+	for inx, phrase := range trainPhrases {
+
+		fmt.Printf("\rProcessing phrase: %d", inx+1)
 
 		tags := model.forwardAlgorithm(phrase)
 
-		fmt.Println("tags", tags)
+		// fmt.Println("phrase", phrase)
+		// fmt.Println("tags", tags)
 
 		for iny := range phrase {
 			evalText += phrase[iny] + "\t" + tags[iny] + "\n"
@@ -339,24 +344,31 @@ func main() {
 		evalText += "\n"
 	}
 
+	fmt.Println()
+
 	err = ioutil.WriteFile("results.tags", []byte(evalText), 0755)
 	if err != nil {
 		panic(err)
 	}
 
+	// Fail Sentences
 	// phrase := "Sie begründeten ihren Pessimismus unter anderem mit dem Umsatzrückgang nach den Attentaten am 11. September ."
-	// // phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
-	// // phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
+
+	// Unknown Word
+	// phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
+
+	// Simple Example
+	// phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
+
 	// phraseParts := strings.Split(phrase, " ")
-	//
 	// tags := model.forwardAlgorithm(phraseParts)
-	//
 	// fmt.Println(phraseParts)
 	// fmt.Println(tags)
 
+	// total 176311
 	// diff -u hdt-10001-12000-test.tags results.tags | grep '^+' | wc -l
 	// 8768
 	// 5315
 	// 5128 --> Number heuristic
-	// 4968 --> NN heuristic
+	// 4968 --> NN heuristic --> 97.18% right
 }
