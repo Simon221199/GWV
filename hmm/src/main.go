@@ -91,7 +91,7 @@ type hmm struct {
 	transitionMatrix   matrix
 }
 
-func (model hmm) forwardAlgorithm(phrase []string) {
+func (model hmm) forwardAlgorithm(phrase []string) []string {
 
 	// phrase --> Observation
 	startWord := phrase[0]
@@ -102,8 +102,8 @@ func (model hmm) forwardAlgorithm(phrase []string) {
 		initResults[s] = model.priorProbabilities[s] * model.emissionsMatrix[s][startWord]
 	}
 
-	fmt.Println("startWord", startWord)
-	fmt.Println("initResults", initResults)
+	// fmt.Println("startWord", startWord)
+	// fmt.Println("initResults", initResults)
 
 	aResults := make([]matrixList, 1)
 	aResults[0] = initResults
@@ -129,11 +129,13 @@ func (model hmm) forwardAlgorithm(phrase []string) {
 
 	// fmt.Println("aResults", aResults)
 
-	for inx, word := range phrase {
+	resultTag := make([]string, len(phrase))
+
+	for inx := range phrase {
 
 		result := aResults[inx]
 
-		bestTag := ""
+		bestTag := "###"
 		bestScore := 0.0
 
 		for tag, score := range result {
@@ -143,15 +145,17 @@ func (model hmm) forwardAlgorithm(phrase []string) {
 			}
 		}
 
-		fmt.Println(word, bestTag)
+		resultTag[inx] = bestTag
 	}
 
-	aggregate := 0.0
-	for _, a := range aResults[len(phrase)-1] {
-		aggregate += a
-	}
+	// aggregate := 0.0
+	// for _, a := range aResults[len(phrase)-1] {
+	// 	aggregate += a
+	// }
+	//
+	// fmt.Println("aggregate", aggregate)
 
-	fmt.Println("aggregate", aggregate)
+	return resultTag
 }
 
 func priorProbabilitiesList(sentencesTags [][]string) matrixList {
@@ -214,15 +218,63 @@ func main() {
 	// fmt.Println("emissionsMatrix", emissionsMatrix)
 	// fmt.Println("transitionMatrix", transitionMatrix)
 
-	// phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
-	phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
-	phraseParts := strings.Split(phrase, " ")
-
 	model := hmm{
 		priorProbabilities: priorProbabilities,
 		emissionsMatrix:    emissionsMatrix,
 		transitionMatrix:   transitionMatrix,
 	}
 
-	model.forwardAlgorithm(phraseParts)
+	content, err = ioutil.ReadFile("hdt-10001-12000-test.tags")
+	if err != nil {
+		panic(err)
+	}
+
+	text = strings.TrimSpace(string(content))
+	text = strings.Trim(text, "\n")
+	trainSentences := strings.Split(text, "\n\n")
+
+	trainPhrases := make([][]string, len(trainSentences))
+
+	for inx, sentence := range trainSentences {
+
+		lines := strings.Split(sentence, "\n")
+		trainPhrases[inx] = make([]string, len(lines))
+
+		for iny, line := range lines {
+
+			wordTag := strings.Split(line, "\t")
+			trainPhrases[inx][iny] = wordTag[0]
+		}
+	}
+
+	evalText := ""
+
+	for _, phrase := range trainPhrases {
+
+		fmt.Println("phrase", phrase)
+
+		tags := model.forwardAlgorithm(phrase)
+
+		fmt.Println("tags", tags)
+
+		for iny := range phrase {
+			evalText += phrase[iny] + "\t" + tags[iny] + "\n"
+		}
+
+		evalText += "\n"
+	}
+
+	err = ioutil.WriteFile("results.tags", []byte(evalText), 0755)
+	if err != nil {
+		panic(err)
+	}
+
+	// // phrase := "Pro Monat sind dafür 2,99 Euro fällig ."
+	// phrase := "Dazu kommen zehn statt bisher fünf E-Mail-Adressen sowie zehn MByte Webspace ."
+	// phraseParts := strings.Split(phrase, " ")
+	//
+	// tags := model.forwardAlgorithm(phraseParts)
+	//
+	// fmt.Println(phraseParts)
+	// fmt.Println(tags)
 }
