@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"strconv"
+	"regexp"
 	"strings"
 )
 
@@ -98,8 +98,10 @@ type hmm struct {
 // Word is not in model.words
 func (model hmm) tagProbabilityHeuristic(tag, word string) float {
 
+	numReg := regexp.MustCompile(`^[0-9,.:]+$`)
+
 	// word looks like a number!
-	if _, err := strconv.Atoi(word); err == nil {
+	if numReg.MatchString(word) {
 
 		if tag == "CARD" {
 			return float(1)
@@ -121,7 +123,7 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 	for s := range model.transitionMatrix {
 
 		if val := model.words[startWord]; !val {
-			initResults[s] = model.priorProbabilities[s] * model.tagProbability[s]
+			initResults[s] = model.priorProbabilities[s] * model.tagProbabilityHeuristic(s, startWord)
 			continue
 		}
 
@@ -151,7 +153,7 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 			if val := model.words[phrase[k+1]]; val {
 				eVal = model.emissionsMatrix[s][phrase[k+1]]
 			} else {
-				eVal = model.tagProbability[s]
+				eVal = model.tagProbabilityHeuristic(s, phrase[k+1])
 			}
 
 			result[s] = eVal * akSum
@@ -208,6 +210,20 @@ func priorProbabilitiesList(sentencesTags [][]string) matrixList {
 }
 
 func main() {
+
+	// word := "2,99"
+	//
+	// var digitCheck = regexp.MustCompile(`^[0-9,.:]+$`)
+	//
+	// if digitCheck.MatchString(word) {
+	// 	fmt.Printf("%q looks like a number.\n", word)
+	// } else {
+	// 	fmt.Printf("%q looks NOT like a number.\n", word)
+	// }
+	//
+	// if 1 > 0 {
+	// 	return
+	// }
 
 	content, err := ioutil.ReadFile("hdt-1-10000-train.tags")
 	if err != nil {
@@ -328,4 +344,5 @@ func main() {
 	// diff -u hdt-10001-12000-test.tags results.tags | grep '^+' | wc -l
 	// 8768
 	// 5315
+	// 5128 --> Number Heuristic
 }
