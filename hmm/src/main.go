@@ -89,8 +89,8 @@ func emissionMatrixMap(sentencesWords [][]string, sentencesTags [][]string) matr
 
 type hmm struct {
 	words              map[string]bool
-	tagProbability     map[string]float
-	priorProbabilities map[string]float
+	tagProbability     probabilityMap
+	priorProbabilities probabilityMap
 	emissionsMatrix    matrix
 	transitionMatrix   matrix
 }
@@ -277,7 +277,7 @@ func main() {
 		tagsSum += count
 	}
 
-	tagProbability := make(map[string]float)
+	tagProbability := make(probabilityMap)
 	for tag, count := range tagsCount {
 		tagProbability[tag] = float(count) / float(tagsSum)
 	}
