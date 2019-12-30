@@ -110,6 +110,18 @@ func (model hmm) tagProbabilityHeuristic(tag, word string) float {
 		return float(0)
 	}
 
+	nn := regexp.MustCompile(`^[A-Z]`)
+
+	// word looks like a number!
+	if nn.MatchString(word) {
+
+		if tag == "NN" {
+			return float(1)
+		}
+
+		return float(0)
+	}
+
 	return model.tagProbability[tag]
 }
 
@@ -344,5 +356,6 @@ func main() {
 	// diff -u hdt-10001-12000-test.tags results.tags | grep '^+' | wc -l
 	// 8768
 	// 5315
-	// 5128 --> Number Heuristic
+	// 5128 --> Number heuristic
+	// 4991 --> NN heuristic
 }

@@ -244,7 +244,7 @@ korrigiert	VVPP
 werden	VAINF
 ,	$,
 sagte	VVFIN
-Vorstandvorsitzender	ART
+Vorstandvorsitzender	NN
 Scott	NE
 McNealy	NE
 nun	ADV
@@ -346,7 +346,7 @@ unbeeindruckt	ADJD
 
 Bundesregierung	NN
 erwartet	VVPP
-Linderung	$.
+Linderung	NN
 des	ART
 IT-Fachkräftemangels	NN
 
@@ -416,7 +416,7 @@ beibehalte	NN
 
 Außerdem	PROAV
 müssten	VMFIN
-Hochschulreformen	ART
+Hochschulreformen	NN
 greifen	VVINF
 und	KON
 die	ART
@@ -697,7 +697,7 @@ Afghanistan	NE
 Nach	APPR
 den	ART
 Angriffen	NN
-US-amerikanischer	APPR
+US-amerikanischer	NN
 und	KON
 britischer	ADJA
 Streitkräfte	NN
@@ -800,7 +800,7 @@ weichen	VVFIN
 .	$.
 
 Erstens	NN
-wisse	NN
+wisse	APPR
 niemand	PIS
 ,	$,
 ob	KOUS
@@ -824,7 +824,7 @@ lange	ADJD
 sich	PRF
 die	ART
 Attacken	NN
-hinzögen	NN
+hinzögen	APPR
 .	$.
 
 Der	ART
@@ -879,7 +879,7 @@ auf	APPR
 die	ART
 afghanischen	NN
 Städte	NN
-Kabul	APPR
+Kabul	NN
 ,	$,
 Kandahar	NN
 und	KON
@@ -1082,7 +1082,7 @@ asiatischen	ADJA
 Börsen	NN
 gab	VVFIN
 es	PPER
-Kurseinbußen	APPR
+Kurseinbußen	NN
 .	$.
 
 Die	ART
@@ -1370,7 +1370,7 @@ Kauf	NN
 von	APPR
 50	CARD
 Prozent	NN
-Aktienanteilen	APPR
+Aktienanteilen	NN
 an	APPR
 AOL	NE
 Europe	NE
@@ -1529,7 +1529,7 @@ wird	VAFIN
 .	$.
 
 Attentäter	NN
-verpackten	NN
+verpackten	APPR
 Computer	NN
 
 Eine	ART
@@ -1590,7 +1590,7 @@ in	APPR
 der	ART
 Hamburger	ADJA
 Computerfirma	NN
-Hay	APPR
+Hay	NN
 Computing	NE
 Service	NN
 GmbH	NN
@@ -1688,7 +1688,7 @@ Jobvermittlung	NN
 der	ART
 Technischen	ADJA
 Universität	NN
-Hamburg-Harburg	APPR
+Hamburg-Harburg	NN
 in	APPR
 Kontakt	NN
 mit	APPR
@@ -1712,7 +1712,7 @@ auch	ADV
 angeboten	VVPP
 ,	$,
 Freunde	NN
-mitzubringen	NN
+mitzubringen	APPR
 .	$.
 
 Nach	APPR
@@ -1745,7 +1745,7 @@ wurden	VAFIN
 ,	$,
 um	KOUI
 sich	PRF
-Atta	APPR
+Atta	NN
 anzuschließen	VVIZU
 .	$.
 
@@ -1827,7 +1827,7 @@ es	PPER
 den	ART
 Berliner	ADJA
 Polizisten	NN
-T-D1-Mobilfunkgeräte	APPR
+T-D1-Mobilfunkgeräte	NN
 mit	APPR
 einer	ART
 Gebührenbefreiung	NN
@@ -1846,7 +1846,7 @@ Mark	NN
 
 Damit	PROAV
 will	VMFIN
-T-Mobile	ART
+T-Mobile	NN
 "	$(
 weitere	ADJA
 Unternehmen	NN
@@ -1913,7 +1913,7 @@ Ende	NN
 August	NN
 2001	CARD
 hatte	VAFIN
-BlueTel	ART
+BlueTel	NN
 diesen	PDAT
 Service	NN
 allen	PIDAT
@@ -2195,7 +2195,7 @@ zu	PTKZU
 erfahren	VVINF
 ,	$,
 dass	KOUS
-Mehrausgaben	ART
+Mehrausgaben	NN
 nicht	PTKNEG
 zwingend	ADJD
 notwendig	ADJD
@@ -2264,7 +2264,7 @@ für	APPR
 deutsche	ADJA
 Behörden	NN
 tatsächlich	ADJD
-Mehrausgaben	APPR
+Mehrausgaben	NN
 zur	APPRART
 Folge	NN
 gehabt	VAPP
@@ -2361,7 +2361,7 @@ Association	FM
 NMPA	NN
 )	$(
 versammelten	VVFIN
-Verleger	ART
+Verleger	NN
 und	KON
 Komponisten	NN
 haben	VAFIN
@@ -2702,7 +2702,7 @@ auszugleichen	APPR
 Bush	NE
 holt	VVFIN
 sich	PRF
-Computer-Sonderberater	APPR
+Computer-Sonderberater	NN
 
 US-Präsident	NN
 George	NE
@@ -3088,24 +3088,24 @@ neben	APPR
 D1	FM
 ,	$,
 D2	XY
-Vodafone	APPR
-,	$,
-E-Plus	NE
-,	$,
-Viag	NE
-Interkom	NE
-und	KON
-Mobilcom	NE
-für	APPR
-mehr	PIAT
-als	KOKOM
-16	CARD
-Milliarden	NN
-DM	NN
-eine	ART
-UMTS-Lizenz	NN
-ersteigert	VVFIN
-.	$.
+Vodafone	###
+,	###
+E-Plus	###
+,	###
+Viag	###
+Interkom	###
+und	###
+Mobilcom	###
+für	###
+mehr	###
+als	###
+16	###
+Milliarden	###
+DM	###
+eine	###
+UMTS-Lizenz	###
+ersteigert	###
+.	###
 
 An	APPR
 dem	ART
@@ -3115,7 +3115,7 @@ sind	VAFIN
 die	ART
 spanische	ADJA
 Telefonica	NN
-Moviles	APPR
+Moviles	NN
 zu	PTKZU
 57,2	CARD
 und	KON
@@ -3165,7 +3165,7 @@ Kunden	NN
 "	$(
 ,	$,
 sagte	VVFIN
-Folgmann	ART
+Folgmann	NN
 gegenüber	APPR
 dpa	NE
 .	$.
@@ -3201,7 +3201,7 @@ Gewinnung	NN
 von	APPR
 Kunden	NN
 ist	VAFIN
-Folgmann	ART
+Folgmann	NN
 zuversichtlich	ADJD
 .	$.
 
@@ -3455,7 +3455,7 @@ haben	VAFIN
 Der	ART
 japanische	ADJA
 Analyst	NN
-Akira	APPR
+Akira	NN
 Minamikawa	NN
 prophezeit	VVFIN
 der	ART
@@ -3505,7 +3505,7 @@ Tagung	NN
 in	APPR
 Tokyo	NE
 verkündete	VVFIN
-Minamikawa	ART
+Minamikawa	NN
 nun	ADV
 ,	$,
 dass	KOUS
@@ -3558,7 +3558,7 @@ Dollar	NN
 über	APPR
 die	ART
 Ladentische	NN
-wandern	NN
+wandern	APPR
 .	$.
 
 Windows	NN
@@ -3655,7 +3655,7 @@ Sony-Handys	NN
 Der	ART
 japanische	ADJA
 Mobilfunkanbieter	NN
-KDDI	APPR
+KDDI	NN
 ruft	VVFIN
 rund	ADV
 560.000	CARD
@@ -3683,7 +3683,7 @@ au	NN
 "	$(
 gehörende	ADJA
 Modell	NN
-C406S	APPR
+C406S	NN
 .	$.
 
 Der	ART
@@ -3709,14 +3709,14 @@ hatte	VAFIN
 das	ART
 japanische	ADJA
 Mobilfunkunternehmen	NN
-NTT	APPR
+NTT	NN
 DoCoMo	NN
 420.000	CARD
 Sony-Handys	NN
 wegen	APPR
 eines	ART
 Softwarefehlers	NN
-zurückbeordert	NN
+zurückbeordert	APPR
 .	$.
 
 Wie	PWAV
@@ -3806,7 +3806,7 @@ werden	VAFIN
 kann	VMFIN
 ,	$,
 sind	VAFIN
-Proteine	ART
+Proteine	NN
 "	$(
 Arbeitsmoleküle	NN
 "	$(
@@ -3834,7 +3834,7 @@ im	APPRART
 Falle	NN
 der	ART
 DNA	NN
-ledigich	NN
+ledigich	APPR
 die	ART
 Sequenz	NN
 der	ART
@@ -3896,7 +3896,7 @@ der	ART
 Universität	NN
 von	APPR
 Indiana	NN
-molekulare	NN
+molekulare	APPR
 Strukturen	NN
 unter	APPR
 Zusatz	NN
@@ -4127,7 +4127,7 @@ die	ART
 Ablenkung	NN
 des	ART
 Lichts	NN
-ausgelesen	NN
+ausgelesen	APPR
 werden	VAINF
 .	$.
 
@@ -4135,7 +4135,7 @@ Kleine	ADJA
 Pakete	NN
 von	APPR
 Selen-Atomen	NN
-absorbieren	NN
+absorbieren	APPR
 mehr	ADV
 Licht	NN
 als	KOKOM
@@ -4268,7 +4268,7 @@ gewährleisten	VVINF
 
 Frankreich	NE
 forciert	VVFIN
-Internet-Gesetzgebung	ART
+Internet-Gesetzgebung	NN
 
 Frankreich	NE
 versucht	VVFIN
@@ -4581,7 +4581,7 @@ IFA	NE
 
 Philips	NE
 sucht	VVFIN
-Betatester	ART
+Betatester	NN
 für	APPR
 MP3-Ghettoblaster	NN
 
@@ -4718,7 +4718,7 @@ nach	APPR
 Ablauf	NN
 der	ART
 Bewerbungsfrist	NN
-anschreiben	NN
+anschreiben	APPR
 und	KON
 erwartet	VVFIN
 innerhalb	APPR
@@ -4779,7 +4779,7 @@ BMW	NE
 kündigt	VVFIN
 nun	ADV
 auch	ADV
-Audi	APPR
+Audi	NN
 ein	ART
 Auto	NN
 mit	APPR
@@ -4794,7 +4794,7 @@ IAA	NN
 im	APPRART
 September	NN
 möchte	VMFIN
-Audi	ART
+Audi	NN
 einen	ART
 Prototypen	NN
 präsentieren	VVINF
@@ -4852,7 +4852,7 @@ Für	APPR
 die	ART
 Anzeige	NN
 will	VMFIN
-Audi	ART
+Audi	NN
 ein	ART
 hochauflösendes	NN
 Farbdisplay	NN
@@ -4888,7 +4888,7 @@ die	ART
 Anbindung	NN
 ans	APPRART
 Internet	NN
-HSCSD	APPR
+HSCSD	NN
 (	$(
 High	NE
 Speed	NE
@@ -4904,7 +4904,7 @@ Einsatz	NN
 einer	ART
 speziellen	ADJA
 Funkkanalbündelung	NN
-Surfgeschwindigkeiten	APPR
+Surfgeschwindigkeiten	NN
 von	APPR
 bis	APPR
 zu	APPR
@@ -4927,7 +4927,7 @@ Ein	ART
 eigens	NN
 von	APPR
 Audi	NN
-entwickeltes	NN
+entwickeltes	APPR
 Online-Portal	NN
 soll	VMFIN
 dem	ART
@@ -4971,7 +4971,7 @@ wird	VAFIN
 
 Audi	NN
 will	VMFIN
-MMI	ART
+MMI	NN
 in	APPR
 den	ART
 neuen	ADJA
@@ -5006,14 +5006,14 @@ Willen	NN
 der	ART
 amerikanischen	ADJA
 Firma	NN
-E-Data	APPR
+E-Data	NN
 ,	$,
 die	PRELS
 früher	ADJD
 als	KOKOM
 Interactive	FM
 Gift	NN
-Express	FM
+Express	NE
 firmierte	NN
 ,	$,
 ist	VAFIN
@@ -5149,7 +5149,7 @@ Argumente	NN
 
 Die	ART
 Firma	NN
-E-Data	APPR
+E-Data	NN
 hat	VAFIN
 zwar	ADV
 kein	PIAT
@@ -5196,7 +5196,7 @@ März	NN
 von	APPR
 einem	ART
 US-Bezirksgericht	NN
-negativ	NN
+negativ	APPR
 beschieden	VVPP
 .	$.
 
@@ -5388,7 +5388,7 @@ zusammen	PTKVZ
 mit	APPR
 der	ART
 Universität	NN
-Frankfurt/Oder	APPR
+Frankfurt/Oder	NN
 in	APPR
 einer	ART
 Studie	NN
@@ -5405,7 +5405,7 @@ Dazu	PROAV
 wurde	VAFIN
 ein	ART
 Online-Fragebogen	NN
-entworfen	NN
+entworfen	APPR
 ,	$,
 in	APPR
 dem	ART
@@ -5591,7 +5591,7 @@ Angebots	NN
 gab	VVFIN
 der	ART
 ListBot-Betreiber	NN
-bCentral	NN
+bCentral	APPR
 nicht	PTKNEG
 an	PTKVZ
 .	$.
@@ -5618,7 +5618,7 @@ Jahr	NN
 unter	APPR
 dem	ART
 Namen	NN
-ListBuilder	APPR
+ListBuilder	NN
 anbieten	VVINF
 .	$.
 
@@ -5683,7 +5683,7 @@ Netguide	NN
 aus	APPR
 der	ART
 Taufe	NN
-gehoben	NN
+gehoben	APPR
 .	$.
 
 Herz	NN
@@ -5703,7 +5703,7 @@ nach	APPR
 Focus-Angaben	NN
 60.000	CARD
 aufbereiteten	NN
-Begriffen	APPR
+Begriffen	NN
 basiert	VVFIN
 .	$.
 
@@ -5768,7 +5768,7 @@ Neben	APPR
 der	ART
 Suchmaschine	NN
 bietet	VVFIN
-Netguide	ART
+Netguide	NN
 einen	ART
 Überblick	NN
 übers	APPRART
@@ -5862,7 +5862,7 @@ entwickeln	VVINF
 
 Zunächst	ADV
 rechnet	VVFIN
-Mandl	ART
+Mandl	NN
 allerdings	ADV
 mit	APPR
 Anlaufverlusten	NN
@@ -5913,7 +5913,7 @@ der	ART
 geplanten	ADJA
 Fernsehwerbung	NN
 wurde	VAFIN
-Netguide	ART
+Netguide	NN
 lediglich	ADV
 in	APPR
 den	ART
@@ -5956,7 +5956,7 @@ Studie	NN
 des	ART
 amerikanischen	ADJA
 Analysten	NN
-Merril	APPR
+Merril	NN
 Lynch	NE
 wird	VAFIN
 Indien	NE
@@ -5993,7 +5993,7 @@ bereits	ADV
 von	APPR
 den	ART
 Firmen	NN
-Wipro	APPR
+Wipro	NN
 und	KON
 HPS	NN
 angeboten	VVPP
@@ -6052,7 +6052,7 @@ USA	NE
 und	KON
 in	APPR
 Westeuropa	NN
-anzutreffen	NN
+anzutreffen	APPR
 .	$.
 
 Taiwanesischen	NN
@@ -6156,7 +6156,7 @@ Jahr	NN
 .	$.
 
 Indiens	NN
-technologischer	NN
+technologischer	APPR
 Aufbruch	NN
 begann	VVFIN
 in	APPR
@@ -6263,7 +6263,7 @@ dem	ART
 RealPlayer	NE
 Mobile	FM
 sollen	VMFIN
-Handybesitzer	ART
+Handybesitzer	NN
 Audio-	TRUNC
 oder	KON
 Video-Dateien	NN
@@ -6286,7 +6286,7 @@ Multimedia-Vergnügen	NN
 Durch	APPR
 die	ART
 GSM-übliche	NN
-Übertragungsrate	NN
+Übertragungsrate	APPR
 von	APPR
 9,6	CARD
 KB/s	NN
@@ -6550,7 +6550,7 @@ den	ART
 Urlaubstagen	NN
 der	ART
 Arbeitnehmern	NN
-abziehen	NN
+abziehen	APPR
 zu	PTKZU
 können	VMINF
 .	$.
@@ -6569,7 +6569,7 @@ dürfen	VMINF
 
 ARM	NN
 erzielt	VVPP
-Rekordgewinn	$.
+Rekordgewinn	NN
 
 Während	KOUS
 andere	PIS
@@ -6588,7 +6588,7 @@ drehte	NN
 die	ART
 britische	ADJA
 IP-Schmiede	NN
-ARM	APPR
+ARM	NN
 so	ADV
 richtig	ADJD
 auf	APPR
@@ -6598,10 +6598,10 @@ Nur	ADV
 steht	VVFIN
 im	APPRART
 Falle	NN
-ARM	APPR
+ARM	NN
 das	ART
 Kürzel	NN
-IP	APPR
+IP	NN
 nicht	PTKNEG
 etwa	ADV
 für	APPR
@@ -6648,7 +6648,7 @@ im	APPRART
 Gesamtjahr	NN
 2000	CARD
 konnte	VMFIN
-ARM	ART
+ARM	NN
 sogar	ADV
 um	APPR
 97	CARD
@@ -6666,7 +6666,7 @@ Jahr	NN
 "	$(
 ,	$,
 meinte	VVFIN
-ARMs	ART
+ARMs	NN
 Financial	FM
 Officer	FM
 Jonathan	NE
@@ -6771,7 +6771,7 @@ Millionen	NN
 auf	APPR
 der	ART
 ARM-Architektur	NN
-beruhende	NN
+beruhende	APPR
 Prozessoren	NN
 verkauft	VVPP
 ,	$,
@@ -6790,7 +6790,7 @@ Millionen	NN
 
 Damit	PROAV
 hat	VAFIN
-ARM	ART
+ARM	NN
 die	ART
 Position	NN
 als	KOKOM
@@ -6837,7 +6837,7 @@ mit	APPR
 dem	ART
 zu	APPR
 ARM-V.5TE	NN
-kompatiblen	NN
+kompatiblen	APPR
 XScale-Prozessor	NN
 .	$.
 
@@ -6855,7 +6855,7 @@ der	ART
 Weg	NN
 für	APPR
 ARM	NN
-geebnet	NN
+geebnet	APPR
 ,	$,
 denn	KON
 sowohl	KON
@@ -6865,7 +6865,7 @@ PICA	NN
 Personal	FM
 Internet	NN
 Client	NN
-Architecture	APPR
+Architecture	NN
 )	$(
 als	KOKOM
 auch	ADV
@@ -6910,18 +6910,18 @@ VirtuHammer	NN
 "	$(
 der	ART
 Firma	NN
-Virtutech	APPR
+Virtutech	NN
 für	APPR
 den	ART
 geplanten	ADJA
 64-Bit-Prozessor	NN
-Sledgehammer	APPR
+Sledgehammer	NN
 .	$.
 
 Der	ART
 eigene	ADJA
 Emulator	NN
-SimNow!	APPR
+SimNow!	NN
 ,	$,
 den	ART
 man	PIS
@@ -6964,7 +6964,7 @@ konnte	VMFIN
 
 Außerdem	PROAV
 war	VAFIN
-SSE2	ART
+SSE2	NN
 (	$(
 die	ART
 geplante	ADJA
@@ -6983,7 +6983,7 @@ Sache	NN
 jetzt	ADV
 aber	ADV
 richtig	ADJD
-Zunder	APPR
+Zunder	NN
 ,	$,
 VirtuHammer	NN
 soll	VMFIN
@@ -7027,10 +7027,10 @@ größeren	ADJA
 Emulator-Paktes	NN
 namens	APPR
 Simics	NN
-kursierenden	NN
-Emulators	FM
+kursierenden	APPR
+Emulators	NN
 unterstützt	VVFIN
-SSE	ART
+SSE	NN
 und	KON
 SSE2	NN
 .	$.
@@ -7039,10 +7039,10 @@ Ab	APPR
 Ende	NN
 Februar	NN
 ist	VAFIN
-VirtuHammer	ART
+VirtuHammer	NN
 alias	ADV
-Simics	APPR
-x86-64/LE	NN
+Simics	NN
+x86-64/LE	APPR
 für	APPR
 eine	ART
 Jahreslizenz	NN
@@ -7058,7 +7058,7 @@ als	KOKOM
 auch	ADV
 für	APPR
 Windows	NN
-NT/2000	APPR
+NT/2000	NN
 )	$(
 .	$.
 
@@ -7095,7 +7095,7 @@ US-Dollar	NN
 .	$.
 
 Ist	VAFIN
-Pi	ART
+Pi	NN
 normal	ADJD
 ?	$.
 
@@ -7181,7 +7181,7 @@ Portland	NN
 Oregon	NN
 einen	ART
 Riesenschritt	NN
-vorwärts	NN
+vorwärts	APPR
 in	APPR
 Richtung	NN
 des	ART
@@ -7223,7 +7223,7 @@ dann	ADV
 etwa	ADV
 zwei	CARD
 aufeinanderfolgend	NN
-Ziffern	APPR
+Ziffern	NN
 als	KOKOM
 ASCII-Darstellung	NN
 von	APPR
@@ -7322,8 +7322,8 @@ BBP	NN
 )	$(
 eine	ART
 Art	NN
-Roadmap	APPR
-hin	ADV
+Roadmap	NN
+hin	PTKVZ
 zu	PTKZU
 einem	ART
 vollständigen	NN
@@ -7336,7 +7336,7 @@ Damals	ADV
 )	$(
 war	VAFIN
 übrigens	ADV
-Pi	APPR
+Pi	NN
 nur	ADV
 auf	APPR
 6,4	CARD
@@ -7350,7 +7350,7 @@ bekannt	ADJD
 Inzwischen	ADV
 haben	VAFIN
 Supercomputer	NN
-Pi	APPR
+Pi	NN
 bereits	ADV
 auf	APPR
 500	CARD
@@ -7516,7 +7516,7 @@ mit	APPR
 dem	ART
 1,2	CARD
 GHz	NN
-Pentium-III-M	APPR
+Pentium-III-M	NN
 (	$(
 mit	APPR
 Tualatin-Kern	NN
@@ -7829,7 +7829,7 @@ der	ART
 Run	NN
 auf	APPR
 SDRAMs	NN
-verstärken	VVFIN
+verstärken	VVINF
 ,	$,
 was	PRELS
 die	ART
@@ -7988,7 +7988,7 @@ Technology	FM
 JNT	NE
 )	$(
 gemeinsam	ADJD
-Referenzmodelle	APPR
+Referenzmodelle	NN
 von	APPR
 Internet-fähigen	NN
 Endgeräten	NN
@@ -7996,7 +7996,7 @@ Endgeräten	NN
 so	ADV
 genannten	ADJA
 Internet	NN
-Appliances	APPR
+Appliances	NN
 )	$(
 mit	APPR
 Crusoe-Prozessoren	NN
@@ -8010,7 +8010,7 @@ Crusoe-System	NN
 des	ART
 taiwanischen	NN
 Herstellers	NN
-FIC	APPR
+FIC	NN
 ist	VAFIN
 auf	APPR
 japanischen	ADJA
@@ -8031,7 +8031,7 @@ der	ART
 größte	ADJA
 taiwanische	ADJA
 Notebookhersteller	NN
-Quanta	APPR
+Quanta	NN
 Computer	NN
 genannt	VVPP
 ,	$,
@@ -8203,7 +8203,7 @@ Produktion	NN
 waren	VAFIN
 ,	$,
 geraten	VVPP
-Vorstellungstermine	$.
+Vorstellungstermine	NN
 jetzt	ADV
 mehr	ADV
 und	KON
@@ -8217,7 +8217,7 @@ Hauptzweck	NN
 AMD	NE
 die	ART
 Performance-Führerschaft	NN
-streitig	NN
+streitig	APPR
 zu	PTKZU
 machen	VVINF
 .	$.
@@ -8262,7 +8262,7 @@ ließen	VVFIN
 
 IBM/Nikon	NN
 realisieren	VVINF
-Elektronenstrahl-Lithografie	$.
+Elektronenstrahl-Lithografie	###
 
 IBM	NE
 hat	VAFIN
@@ -8286,7 +8286,7 @@ Erfolge	NN
 mit	APPR
 ihrer	PPOSAT
 Electron	NN
-Beam	APPR
+Beam	NN
 Projection	NN
 Lithography	NN
 (	$(
@@ -8306,7 +8306,7 @@ lassen	VVINF
 
 Das	ART
 Projekt	NN
-PREVAIL	APPR
+PREVAIL	NN
 (	$(
 Projection	NN
 Reduction	NN
@@ -8522,7 +8522,7 @@ mehreren	PIAT
 Partnern	NN
 (	$(
 darunter	PROAV
-Applied	ART
+Applied	NN
 Materials	NN
 )	$(
 an	APPR
@@ -8557,7 +8557,7 @@ Infineon	NE
 und	KON
 Hyundai	NN
 nehmen	VVINF
-Rambus-Massenproduktion	$.
+Rambus-Massenproduktion	NN
 auf	APPR
 
 Nach	APPR
@@ -8609,7 +8609,7 @@ Intel	NE
 weiterhin	ADV
 klar	ADJD
 zu	PTKZU
-Rambus	VVINF
+Rambus	NN
 bekannte	ADJA
 ,	$,
 spezielle	ADJA
@@ -8649,7 +8649,7 @@ Auch	ADV
 der	ART
 amerikanische	ADJA
 Speicherhersteller	NN
-Micron	APPR
+Micron	NN
 ,	$,
 einer	ART
 der	ART
@@ -8669,7 +8669,7 @@ evaluieren	VVINF
 Im	APPRART
 Moment	NN
 erreichen	VVINF
-Rambus-Chips	$.
+Rambus-Chips	NN
 laut	APPR
 Wall	NE
 Street	NE
@@ -8709,7 +8709,7 @@ werden	VAINF
 Doch	KON
 weiterhin	ADV
 sind	VAFIN
-Rambus-Module	ART
+Rambus-Module	NN
 unverhältnismäßig	ADJD
 viel	ADV
 teurer	ADJD
@@ -8736,7 +8736,7 @@ Kingston	NN
 Dollar	NN
 ,	$,
 während	KOUS
-PC133-Module	ART
+PC133-Module	NN
 beim	APPRART
 gleichen	ADJA
 Modulhersteller	NN
@@ -8769,7 +8769,7 @@ derzeit	ADV
 die	ART
 billigsten	ADJA
 128-MByte	NN
-RIMMs	APPR
+RIMMs	NN
 (	$(
 RD700	NN
 von	APPR
@@ -8782,12 +8782,12 @@ Dollar	NN
 
 ALI	NN
 zeigt	VVFIN
-Athlon-DDR-Chipsatz	ART
+Athlon-DDR-Chipsatz	NN
 
 Die	ART
 Acer	NE
 Laboratories	NN
-Inc	FM
+Inc	NE
 (	$(
 ALI	NN
 )	$(
@@ -8844,12 +8844,12 @@ ALI-Ankündigung	NN
 dürfte	VMFIN
 nun	ADV
 wohl	ADV
-VIAs	APPR
+VIAs	NN
 Pläne	NN
 beschleunigen	VVINF
 ,	$,
 ebenfalls	ADV
-DDR-Chipsätze	APPR
+DDR-Chipsätze	NN
 für	APPR
 Intel-	NN
 und	KON
@@ -8873,7 +8873,7 @@ DDR-SDRAMs	NN
 ;	$.
 und	KON
 auch	ADV
-Micron	APPR
+Micron	NN
 hatte	VAFIN
 unlängst	ART
 einen	ART
@@ -8899,7 +8899,7 @@ sogenannten	ADJA
 "	$(
 First	FM
 Tier	NN
-Companies	APPR
+Companies	NN
 "	$(
 setzt	VVFIN
 jetzt	ADV
@@ -9048,7 +9048,7 @@ liefern	VVINF
 welches	PRELS
 den	ART
 Update-Zyklus	NN
-kennlich	NN
+kennlich	APPR
 macht	VVFIN
 .	$.
 
@@ -9127,7 +9127,7 @@ NT	NE
 ,	$,
 wahrscheinlich	ADJD
 auch	ADV
-Win98	APPR
+Win98	NN
 und	KON
 ein	ART
 Großteil	NN
@@ -9153,7 +9153,7 @@ erste	ADJA
 Mal	NN
 ,	$,
 daß	KOUS
-Intel-Chipsätze	ART
+Intel-Chipsätze	NN
 mit	APPR
 der	ART
 Uhrzeit	NN
@@ -9360,7 +9360,7 @@ bis	APPR
 zu	APPR
 256	CARD
 MByte	NN
-SODIMM	APPR
+SODIMM	NN
 )	$(
 ,	$,
 Chipsatz	NN
@@ -9444,7 +9444,7 @@ Prototypen	NN
 mit	APPR
 400	CARD
 MHz	NN
-Pentium-II	APPR
+Pentium-II	NN
 im	APPRART
 Slot	NN
 1	CARD
@@ -9489,7 +9489,7 @@ Das	ART
 1996	CARD
 gegründete	ADJA
 Joint-Venture	NN
-ProMOS	APPR
+ProMOS	NN
 von	APPR
 Siemenstochter	NN
 Infineon	NE
@@ -9593,7 +9593,7 @@ Millionen	NN
 DM	NN
 an	APPR
 Zuschüssen	NN
-zurückzahlen	NN
+zurückzahlen	APPR
 mußte	VMFIN
 .	$.
 
@@ -9612,7 +9612,7 @@ Labs	FM
 und	KON
 der	ART
 Universität	NN
-Berkeley	APPR
+Berkeley	NN
 meldeten	VVFIN
 jetzt	ADV
 auch	ADV
@@ -9648,7 +9648,7 @@ des	ART
 bislang	ADV
 üblichen	ADJA
 Isolators	NN
-Siliziumdioxid	APPR
+Siliziumdioxid	NN
 durch	APPR
 Kristalle	NN
 mit	APPR
@@ -9681,7 +9681,7 @@ mechanisch	ADJD
 
 Außerdem	PROAV
 verliert	VVFIN
-SIO2	ART
+SIO2	NN
 unterhalb	APPR
 einer	ART
 bestimmten	ADJA
@@ -9798,7 +9798,7 @@ der	ART
 ersten	ADJA
 mit	APPR
 Direct-Rambus-Speicher	NN
-bestückten	NN
+bestückten	APPR
 PC-Systeme	NN
 ist	VAFIN
 die	ART
@@ -9934,7 +9934,7 @@ Street	FM
 Journal	NN
 ,	$,
 dass	KOUS
-Rambus-Systeme	ART
+Rambus-Systeme	NN
 mit	APPR
 128	CARD
 MByte	NN
@@ -9960,7 +9960,7 @@ wenigen	PIDAT
 Modulhersteller	NN
 ,	$,
 etwa	ADV
-Kingston	APPR
+Kingston	NN
 ,	$,
 straft	NN
 jedoch	ADV
@@ -10113,7 +10113,7 @@ NEC-Hitachi	NN
 Infineon	NE
 )	$(
 wurde	VAFIN
-Rambus	ART
+Rambus	NN
 Inc.	FM
 nicht	PTKNEG
 eingeladen	VVPP
@@ -10122,7 +10122,7 @@ eingeladen	VVPP
 Transmeta	NE
 morpht	NN
 AMDs	NN
-64-Bit-CPU	NN
+64-Bit-CPU	APPR
 Sledgehammer	NN
 
 Transmeta	NE
@@ -10158,7 +10158,7 @@ kein	PIAT
 als	KOKOM
 eine	ART
 Art	NN
-Second	APPR
+Second	NN
 Source	FM
 -	$(
 womöglich	ADV
@@ -10228,7 +10228,7 @@ ihres	PPOSAT
 auf	APPR
 einer	ART
 Hardware/Software-Mischung	NN
-beruhenden	NN
+beruhenden	APPR
 Prozessors	NN
 unter	APPR
 Beweis	NN
@@ -10259,7 +10259,7 @@ SSE2	NN
 )	$(
 zum	APPRART
 Emulationspaket	NN
-dazugehört	NN
+dazugehört	APPR
 ,	$,
 ist	VAFIN
 noch	ADV
@@ -10279,8 +10279,8 @@ SSE2	NN
 umfassen	VVINF
 ,	$,
 da	KOUS
-Sledgehammer	ART
-erklärtermaßen	NN
+Sledgehammer	NN
+erklärtermaßen	APPR
 SSE2	NN
 unterstützen	VVINF
 soll	VMFIN
@@ -10317,7 +10317,7 @@ kann	VMFIN
 
 IBM	NE
 lizensiert	VVPP
-PicoJava	$.
+PicoJava	NN
 
 IBM	NE
 hat	VAFIN
@@ -10341,7 +10341,7 @@ führen	VVINF
 entsprechend	ADJD
 ausgerüstete	APPR
 Controller	NN
-Java-Programme	APPR
+Java-Programme	NN
 direkt	ADJD
 in	APPR
 Hardware	NN
@@ -10350,7 +10350,7 @@ aus	APPR
 
 Angepeilt	NN
 sind	VAFIN
-Einsatzbereiche	ART
+Einsatzbereiche	NN
 wie	KOKOM
 PDAs	NN
 ,	$,
@@ -10526,7 +10526,7 @@ Silk-Kupfer	NN
 Prozess	NN
 "	$(
 CMOS	NN
-9S	NN
+9S	APPR
 "	$(
 mit	APPR
 lithografisch	NN
@@ -10574,7 +10574,7 @@ Die	ART
 ersten	ADJA
 in	APPR
 CMOS	NN
-9S	NN
+9S	APPR
 produzierten	NN
 Chips	NN
 gehören	VVFIN
@@ -10758,7 +10758,7 @@ Pentium	NN
 III	CARD
 und	KON
 Whitney	NN
-vertragen	NN
+vertragen	APPR
 sich	PRF
 nicht	PTKNEG
 
@@ -10790,7 +10790,7 @@ E42	NN
 :	$.
 "	$(
 DRDY#	NN
-write	NN
+write	APPR
 with	FM
 no	NN
 Data	FM
@@ -10919,7 +10919,7 @@ dann	ADV
 wenn	KOUS
 der	ART
 MASKMOVQ-Befehl	NN
-misaligned	NN
+misaligned	APPR
 und	KON
 ein	ART
 Teil	NN
@@ -11021,7 +11021,7 @@ Einkünfte	NN
 aus	APPR
 der	ART
 Cyrix-Produktlinie	NN
-begleichen	NN
+begleichen	APPR
 .	$.
 
 National	NE
@@ -11039,7 +11039,7 @@ neuen	ADJA
 National-Strategie	NN
 "	$(
 Information	NN
-Appliances	APPR
+Appliances	NN
 "	$(
 ist	VAFIN
 und	KON
@@ -11194,7 +11194,7 @@ aller	PIDAT
 in	APPR
 der	ART
 Top500-Liste	NN
-verzeichneten	NN
+verzeichneten	APPR
 Systeme	NN
 von	APPR
 IBM	NE
@@ -11294,7 +11294,7 @@ dass	KOUS
 sich	PRF
 die	ART
 Clustersysteme	NN
-herkömmlicher	NN
+herkömmlicher	APPR
 Server	NN
 immer	ADV
 stärker	ADJD
@@ -11551,7 +11551,7 @@ Forschungsriese	NN
 nicht	PTKNEG
 mit	APPR
 Sensationsmeldungen	NN
-zurückstehen	NN
+zurückstehen	APPR
 .	$.
 
 Auch	ADV
@@ -11598,7 +11598,7 @@ Die	ART
 so	ADV
 genannten	ADJA
 SiGe	NN
-Heterostructure	APPR
+Heterostructure	NN
 Bipolar	NN
 Transistors	NN
 (	$(
@@ -11760,7 +11760,7 @@ als	KOKOM
 Low-Cost-Produkt	NN
 vom	APPRART
 Pentium-III-Coppermine	NN
-abzugrenzen	NN
+abzugrenzen	APPR
 ,	$,
 wurde	VAFIN
 einfach	ADJD
@@ -11768,7 +11768,7 @@ die	ART
 Hälfte	NN
 des	ART
 L2-Caches	NN
-abgeschaltet	NN
+abgeschaltet	APPR
 (	$(
 auf	APPR
 nunmehr	ADV
@@ -11861,7 +11861,7 @@ zuletzt	ADV
 mit	APPR
 24	CARD
 Prozent	NN
-Verkaufsrückgang	APPR
+Verkaufsrückgang	NN
 im	APPRART
 Dezember	NN
 -	$(
@@ -12033,7 +12033,7 @@ Georg	NE
 Woltman	NN
 initiierte	ADJA
 Aktion	NN
-GIMPS	APPR
+GIMPS	NN
 einen	ART
 Erfolg	NN
 bei	APPR
@@ -12050,7 +12050,7 @@ verbuchen	VVINF
 
 Das	ART
 Mersenne-Testprogramm	NN
-prim95	NN
+prim95	APPR
 (	$(
 neue	ADJA
 Version	NN
@@ -12212,7 +12212,7 @@ weitgehend	ADJD
 im	APPRART
 kostensensitiven	NN
 Consumer-Markt	NN
-operierenden	NN
+operierenden	APPR
 Direktversender	NN
 interessant	ADJD
 sein	VAINF
@@ -12237,7 +12237,7 @@ Net	NE
 Appliances	NN
 nun	ADV
 auch	ADV
-OEM-Systeme	APPR
+OEM-Systeme	NN
 ,	$,
 die	PRELS
 mit	APPR
@@ -12276,7 +12276,7 @@ sich	PRF
 gleichfalls	ADV
 an	APPR
 Dells	NN
-starkem	NN
+starkem	APPR
 Engagement	NN
 für	APPR
 Linux	NE
@@ -12358,7 +12358,7 @@ laufen	VVINF
 .	$.
 
 Wie	PWAV
-AMD-Pressesprecher	ART
+AMD-Pressesprecher	NN
 Jan	NE
 Gütter	NN
 mitteilte	VVFIN
@@ -12383,7 +12383,7 @@ die	PRELS
 auf	APPR
 eine	ART
 Upgrade-Möglichkeit	NN
-gehofft	NN
+gehofft	APPR
 hatten	VAFIN
 ,	$,
 schauen	VVFIN
@@ -12426,11 +12426,11 @@ die	ART
 anderen	ADJA
 neuen	ADJA
 AMD-Prozessoren	NN
-Duron	APPR
+Duron	NN
 (	$(
 früherer	ADJA
 Codename	NN
-Spitfire	APPR
+Spitfire	NN
 )	$(
 und	KON
 Mustang	NN
@@ -12452,7 +12452,7 @@ nötig	ADJD
 
 Hierfür	PROAV
 hat	VAFIN
-VIA	ART
+VIA	NN
 den	ART
 KZ133-Chipsatz	NN
 geplant	VVPP
@@ -12536,7 +12536,7 @@ Markt	NN
 der	ART
 sogenannten	ADJA
 Information	NN
-Appliances	APPR
+Appliances	NN
 (	$(
 Handhelds	FM
 ,	$,
@@ -12566,7 +12566,7 @@ CE	NE
 und	KON
 JavaOS	NN
 wird	VAFIN
-StrongARM	ART
+StrongARM	NN
 auch	ADV
 3COMs	APPR
 PalmOS	NN
@@ -12622,7 +12622,7 @@ nachdem	KOUS
 zwei	CARD
 Monate	NN
 zuvor	ADV
-SAT1	APPR
+SAT1	NN
 mit	APPR
 einem	ART
 ähnlichen	ADJA
@@ -12662,7 +12662,7 @@ bei	APPR
 Werbung	NN
 den	ART
 Kanal	NN
-umschaltet	NN
+umschaltet	APPR
 oder	KON
 den	ART
 Videorecorder	NN
@@ -12693,7 +12693,7 @@ S.	NE
 berichtete	VVFIN
 ,	$,
 darf	VMFIN
-IDT	ART
+IDT	NN
 den	ART
 Winchip-Prozessor	NN
 nicht	PTKNEG
@@ -12729,7 +12729,7 @@ Abmahnung	NN
 der	ART
 Anwaltkanzlei	NN
 Dr.	NN
-Weigel	APPR
+Weigel	NN
 &	KON
 Partner	NN
 aus	APPR
@@ -12928,7 +12928,7 @@ den	ART
 integrierten	ADJA
 "	$(
 Performance	NE
-Enhancing	APPR
+Enhancing	NN
 Cache	FM
 "	$(
 -	$(
@@ -13202,7 +13202,7 @@ update	NN
 Die	ART
 System	NN
 Performance	NE
-Evaluation	APPR
+Evaluation	NN
 Corporation	FM
 SPEC	NN
 hat	VAFIN
@@ -13213,8 +13213,8 @@ Verfügbarkeit	NN
 der	ART
 neuen	ADJA
 Benchmark-Suite	NN
-SPEC2000	APPR
-bekannt	ADJD
+SPEC2000	NN
+bekannt	PTKVZ
 gegeben	VVPP
 .	$.
 
@@ -13937,7 +13937,7 @@ kann	VMFIN
 
 Cyrix	NN
 darf	VMFIN
-Pentium	ART
+Pentium	NN
 II	CARD
 klonen	NN
 
@@ -13953,7 +13953,7 @@ beigelegt	VVPP
 Cyrix	NN
 darf	VMFIN
 nun	ADV
-Intel-Patente	APPR
+Intel-Patente	NN
 verwenden	VVINF
 ,	$,
 darunter	PROAV
@@ -13996,7 +13996,7 @@ Als	KOKOM
 Gegenleistung	NN
 läßt	VVFIN
 nun	ADV
-Cyrix	APPR
+Cyrix	NN
 die	ART
 Klage	NN
 vom	APPRART
@@ -14019,7 +14019,7 @@ Rechte	NN
 am	APPRART
 Pentium-II	NN
 haben	VAFIN
-National/Cyrix	ART
+National/Cyrix	NN
 mit	APPR
 dem	ART
 Deal	NN
@@ -14044,7 +14044,7 @@ Austauschabkommens	NN
 .	$.
 
 S3	NN
-kaufte	NN
+kaufte	APPR
 Exponentials	NN
 Prozessorpatente	NN
 
@@ -14056,7 +14056,7 @@ den	ART
 Patent-Nachlaß	NN
 der	ART
 Firma	NN
-Exponential	APPR
+Exponential	NN
 (	$(
 bipolarer	NN
 PowerPC	NE
@@ -14079,7 +14079,7 @@ der	ART
 Hersteller	NN
 von	APPR
 Grafik-Chips	NN
-S3	APPR
+S3	NN
 .	$.
 
 Mit	APPR
@@ -14089,7 +14089,7 @@ knapp	ADJD
 Millionen	NN
 Dollar	NN
 soll	VMFIN
-S3	ART
+S3	NN
 Mitbieter	NN
 Intel	NE
 überboten	NN
@@ -14100,7 +14100,7 @@ Unklar	ADJD
 ist	VAFIN
 ,	$,
 ob	KOUS
-S3	ART
+S3	NN
 nun	ADV
 selbst	ADV
 auf	APPR
@@ -14194,8 +14194,8 @@ beim	APPRART
 Patenteinkaufen	NN
 ,	$,
 erwarb	VVFIN
-S3	ART
-vorige	NN
+S3	NN
+vorige	APPR
 Woche	NN
 für	APPR
 40	CARD
@@ -14205,7 +14205,7 @@ Patente	NN
 vom	APPRART
 direkten	ADJA
 Konkurrenten	NN
-Cirrus	APPR
+Cirrus	NN
 .	$.
 
 Fragt	NN
@@ -14214,7 +14214,7 @@ nur	ADV
 ,	$,
 ob	KOUS
 sich	PRF
-S3	APPR
+S3	NN
 damit	PROAV
 nicht	PTKNEG
 übernommen	VVPP
@@ -14239,7 +14239,7 @@ dahin	ADV
 :	$.
 so	ADV
 mußte	VMFIN
-S3	ART
+S3	NN
 vorigen	ADJA
 Monat	NN
 15	CARD
@@ -14409,8 +14409,8 @@ verfügbar	ADJD
 
 Den	ART
 Vtune	NN
-Performance	NN
-Analyzer	APPR
+Performance	NE
+Analyzer	NN
 (	$(
 429	CARD
 US-Dollar	NN
@@ -14447,7 +14447,7 @@ C++	FM
 
 Der	ART
 Performance	NN
-Analyzer	APPR
+Analyzer	NN
 4.5	CARD
 ist	VAFIN
 nun	ADV
@@ -14522,7 +14522,7 @@ den	ART
 Verkauf	NN
 seines	PPOSAT
 Geschäftsfeldes	NN
-Cray-Vektorrechner	APPR
+Cray-Vektorrechner	NN
 an	APPR
 Tera	NN
 Computer	NN
@@ -14531,7 +14531,7 @@ abgeschlossen	VVPP
 .	$.
 
 Wie	PWAV
-SGI	ART
+SGI	NN
 meldet	VVFIN
 ,	$,
 umfasst	VVFIN
@@ -14546,7 +14546,7 @@ Cray-T90	NN
 die	PRELS
 massivparallele	NN
 Linie	NN
-Cray-T3E	APPR
+Cray-T3E	NN
 sowie	KON
 zugehörige	ADJA
 Services	NN
@@ -14558,7 +14558,7 @@ Allerdings	ADV
 liegt	VVFIN
 der	ART
 erzielte	VVFIN
-Verkauferlös	ART
+Verkauferlös	NN
 von	APPR
 58	CARD
 Millionen	NN
@@ -14589,7 +14589,7 @@ noch	ADV
 viel	ADV
 breiterer	NN
 Spalt	NN
-klafft	NN
+klafft	APPR
 zwischen	APPR
 dem	ART
 jetzigen	ADJA
@@ -14646,7 +14646,7 @@ SGI	NN
 
 Samsung	NE
 kündigt	VVFIN
-Alpha-Prozessor	ART
+Alpha-Prozessor	NN
 mit	APPR
 1,6	CARD
 GHz	NN
@@ -14660,7 +14660,7 @@ will	VMFIN
 der	ART
 koreanische	ADJA
 Samsung-Konzern	NN
-Alpha-Prozessoren	APPR
+Alpha-Prozessoren	NN
 mit	APPR
 1,4	CARD
 bis	APPR
@@ -14703,7 +14703,7 @@ AMD	NE
 abermals	ADV
 den	ART
 Schneid	NN
-abkaufen	NN
+abkaufen	APPR
 .	$.
 
 Bislang	ADV
@@ -14734,7 +14734,7 @@ Alpha-Line	NN
 in	APPR
 0,18	CARD
 µm	NN
-Prozesstechnologie	APPR
+Prozesstechnologie	NN
 ging	VVFIN
 .	$.
 
@@ -14849,7 +14849,7 @@ National	NE
 und	KON
 Motorola	NE
 verkaufen	VVINF
-Fabs	$.
+Fabs	NN
 
 Amerikanische	ADJA
 Firmen	NN
@@ -14874,7 +14874,7 @@ restlos	APPR
 
 Es	PPER
 herrscht	VVFIN
-Kauflaune	ART
+Kauflaune	NN
 .	$.
 
 Advanced	NN
@@ -14892,7 +14892,7 @@ geeinigt	VVPP
 ,	$,
 zwei	CARD
 asiatische	NN
-Chip-Fabriken	APPR
+Chip-Fabriken	NN
 (	$(
 "	$(
 Fabs	NN
@@ -14945,7 +14945,7 @@ an	APPR
 die	ART
 taiwanische	ADJA
 Chipsatz-Schmiede	NN
-VIA	APPR
+VIA	NN
 Technologies	FM
 zu	PTKZU
 veräußern	NN
@@ -15087,7 +15087,7 @@ RTL	NN
 Sat1	NN
 und	KON
 Vox	NN
-überhäuft	NN
+überhäuft	APPR
 und	KON
 der	ART
 Vertrieb	NN
@@ -15202,7 +15202,7 @@ Werbung	NN
 auf	APPR
 einen	ART
 Konkurrenzsender	NN
-umzuschalten	NN
+umzuschalten	APPR
 ,	$,
 Abschalten	NN
 ist	VAFIN
@@ -15319,12 +15319,12 @@ für	APPR
 Datenbank-Server	NN
 wichtigsten	ADJA
 Benchmark	NN
-TPC-C	APPR
+TPC-C	NN
 des	ART
 Transaction	FM
 Processing	NN
-Performance	NN
-Councils	APPR
+Performance	NE
+Councils	NN
 (	$(
 TPC	NN
 )	$(
@@ -15478,7 +15478,7 @@ hinzu	PTKVZ
 ,	$,
 so	ADV
 sind	VAFIN
-Frontend-Server	ART
+Frontend-Server	NN
 mit	APPR
 drei	CARD
 oder	KON
@@ -15508,7 +15508,7 @@ an	APPR
 
 IBM	NE
 liefert	VVFIN
-Power3-Prozessoren	ART
+Power3-Prozessoren	NN
 aus	APPR
 
 Die	ART
@@ -15560,7 +15560,7 @@ Daten	NN
 und	KON
 32	CARD
 KByte	NN
-Instruktionen	APPR
+Instruktionen	NN
 )	$(
 und	KON
 kann	VMFIN
@@ -15598,7 +15598,7 @@ auf	APPR
 den	ART
 Kupferprozeß	NN
 soll	VMFIN
-Power3	ART
+Power3	NN
 im	APPRART
 Jahre	NN
 2000/2001	CARD
@@ -15609,7 +15609,7 @@ die	ART
 
 Startup	NN
 bringt	VVFIN
-Konkurrenz-Chip	ART
+Konkurrenz-Chip	NN
 zu	PTKZU
 Intels	NE
 XScale-Prozessor	NN
@@ -15685,7 +15685,7 @@ wollten	VMFIN
 sondern	KON
 die	ART
 Firma	NN
-Alchemy	APPR
+Alchemy	NN
 Semiconductor	NE
 Inc	FM
 gründeten	NN
@@ -15693,7 +15693,7 @@ gründeten	NN
 
 Die	ART
 Alchemisten	NN
-brauten	NN
+brauten	APPR
 einen	ART
 MIPS-32-CPU-Kern	NN
 mit	APPR
@@ -15781,7 +15781,7 @@ US-Dollar	NN
 kosten	VVINF
 ,	$,
 soll	VMFIN
-Au1000	ART
+Au1000	NN
 mit	APPR
 400	CARD
 MHz	NN
@@ -16005,7 +16005,7 @@ in	APPR
 absehbarer	ADJA
 Zukunft	NN
 sehen	VVINF
-Fachleute	$.
+Fachleute	NN
 wie	KOKOM
 Chipdesigner	NN
 Robert	NE
@@ -16019,7 +16019,7 @@ Lee	NN
 von	APPR
 der	ART
 Universität	NN
-Princeton	APPR
+Princeton	NN
 aber	ADV
 nicht	PTKNEG
 in	APPR
@@ -16045,7 +16045,7 @@ Befehlssätze	NN
 Oder	KON
 wie	KOKOM
 es	PPER
-Montoye	APPR
+Montoye	NN
 leicht	ADJD
 ironisch	APPR
 ausdrückte	NN
@@ -16132,7 +16132,7 @@ alphabet	NN
 "	$(
 von	APPR
 Prozessor-Befehlssätzen	NN
-aussieht	NN
+aussieht	APPR
 ,	$,
 um	KOUI
 diese	PDAT
@@ -16234,7 +16234,7 @@ gerecht	ADJD
 "	$(
 ,	$,
 erklärte	VVFIN
-Lee	ART
+Lee	NN
 .	$.
 
 Vor	APPR
@@ -16300,7 +16300,7 @@ Patterson	NN
 von	APPR
 der	ART
 Universität	NN
-Berkely	APPR
+Berkely	NN
 ,	$,
 bekannt	ADJD
 als	KOKOM
@@ -16320,7 +16320,7 @@ schlug	VVFIN
 als	KOKOM
 eine	ART
 Lösung	NN
-Cluster-on-a-Chip	APPR
+Cluster-on-a-Chip	NN
 vor	APPR
 .	$.
 
@@ -16375,7 +16375,7 @@ setzen	VVINF
 sollte	VMFIN
 laut	APPR
 Gelsinger	NN
-echtem	NN
+echtem	APPR
 Multithreading	NN
 der	ART
 Vorzug	NN
@@ -16471,7 +16471,7 @@ Schaltkreise	NN
 "	$(
 ,	$,
 meint	VVFIN
-Gelsinger	ART
+Gelsinger	NN
 .	$.
 
 Und	KON
@@ -16516,7 +16516,7 @@ Osada	NN
 bei	APPR
 2	CARD
 Volt	NN
-Spanung	APPR
+Spanung	NN
 bis	APPR
 zu	APPR
 1,04	CARD
@@ -16677,7 +16677,7 @@ soll	VMFIN
 Weiterhin	ADV
 soll	VMFIN
 sich	PRF
-McKinley	APPR
+McKinley	NN
 durch	APPR
 eine	ART
 siebenstufige	NN
@@ -16701,7 +16701,7 @@ wird	VAFIN
 gemunkelt	VVPP
 ,	$,
 dass	KOUS
-McKinley	ART
+McKinley	NN
 mit	APPR
 sechs	CARD
 Integer-ALUs	NN
@@ -16915,7 +16915,7 @@ integrierter	ADJA
 Grafik	NN
 (	$(
 Codename	NN
-Timna	APPR
+Timna	NN
 )	$(
 auf	APPR
 das	ART
@@ -17045,7 +17045,7 @@ Lauf	NN
 
 Der	ART
 MTH-Baustein	NN
-erwies	NN
+erwies	APPR
 sich	PRF
 als	KOKOM
 instabil	NN
@@ -17155,7 +17155,7 @@ Server	NN
 Die	ART
 Standard	NN
 Performance	NE
-Evaluation	APPR
+Evaluation	NN
 Corporation	FM
 (	$(
 SPEC	NN
@@ -17356,7 +17356,7 @@ nur	ADV
 für	APPR
 100	CARD
 MHz	NN
-Frontside-Bus	APPR
+Frontside-Bus	NN
 (	$(
 FSB	NN
 )	$(
@@ -17444,7 +17444,7 @@ US-Dollar	NN
 statt	APPR
 1980	CARD
 US-Dollar	NN
-OEM-Preis	APPR
+OEM-Preis	NN
 )	$(
 .	$.
 
@@ -17483,12 +17483,12 @@ Ausführungen	NN
 in	APPR
 den	ART
 System	NN
-Compatibility	APPR
+Compatibility	NN
 Guidelines	NN
 steht	VVFIN
 ,	$,
 wo	PWAV
-Vierfach-Server	ART
+Vierfach-Server	NN
 mit	APPR
 NX-Chipsatz	NN
 explizit	ADJD
@@ -17532,7 +17532,7 @@ Serverversion	NN
 unter	APPR
 dem	ART
 Codenamen	NN
-Foster	APPR
+Foster	NN
 Anfang	NN
 2001	CARD
 auf	APPR
@@ -17580,11 +17580,11 @@ wurde	VAFIN
 hat	VAFIN
 das	ART
 Internet-Projekt	NN
-GIMPS	APPR
+GIMPS	NN
 (	$(
 Greatest	NN
 Internet	NN
-Mersenne	APPR
+Mersenne	NN
 Prime	NN
 Search	NE
 )	$(
@@ -17617,7 +17617,7 @@ Am	APPRART
 Juni	NN
 99	CARD
 fand	VVFIN
-Nayan	ART
+Nayan	NN
 Hajratwala	NN
 mit	APPR
 der	ART
@@ -17713,7 +17713,7 @@ Quad	NN
 "	$(
 Data	FM
 Rate	NN
-SRAMs	APPR
+SRAMs	NN
 ausliefern	VVINF
 
 Micron	NN
@@ -17733,7 +17733,7 @@ QDR-SRAMS	NN
 Quad	NN
 Data	FM
 Rate	NN
-SRAMs	APPR
+SRAMs	NN
 )	$(
 nun	ADV
 auf	APPR
@@ -17845,7 +17845,7 @@ dass	KOUS
 die	ART
 Speicher	NN
 gleichzeitig	ADJD
-Lese	APPR
+Lese	NN
 -	$(
 und	KON
 Schreib-Bursts	NN
@@ -17863,7 +17863,7 @@ Busse	NN
 und	KON
 wirkt	VVFIN
 sich	PRF
-Performance-steigernd	APPR
+Performance-steigernd	NN
 nur	ADV
 bei	APPR
 häufigen	NN
@@ -17910,7 +17910,7 @@ etwa	ADV
 möchte	VMFIN
 seinen	PPOSAT
 128-bittigen	NN
-L3-Bus	APPR
+L3-Bus	NN
 bei	APPR
 800	CARD
 MHz	NN
@@ -18010,7 +18010,7 @@ mit	APPR
 knapp	ADJD
 15	CARD
 Millionen	NN
-Iterationen	APPR
+Iterationen	NN
 pro	APPR
 Sekunde	NN
 )	$(
@@ -18299,7 +18299,7 @@ L2-Cache	NN
 eines	ART
 660	CARD
 MHz	NN
-Pentium	APPR
+Pentium	NN
 II	CARD
 zu	APPR
 dienen	VVINF
@@ -18324,9 +18324,9 @@ Datasheets	NN
 Intel	NE
 und	KON
 Analog	ADJD
-Devices	APPR
+Devices	NN
 präsentieren	VVINF
-Stromspar-DSP	$.
+Stromspar-DSP	NN
 
 Fast	ADV
 zwei	CARD
@@ -18339,7 +18339,7 @@ dass	KOUS
 Intel	NE
 und	KON
 Analog	ADJD
-Devices	APPR
+Devices	NN
 verkündet	VVPP
 haben	VAINF
 ,	$,
@@ -18368,7 +18368,7 @@ präsentiert	VVFIN
 
 Micro	NE
 Signal	NN
-Architecture	APPR
+Architecture	NN
 (	$(
 MSA	NN
 )	$(
@@ -18441,7 +18441,7 @@ empfehlen	VVINF
 
 Dafür	PROAV
 verwendet	VVPP
-MSA	$.
+MSA	NN
 als	KOKOM
 erster	ADJA
 DSP-Chip	NN
@@ -18463,18 +18463,18 @@ des	ART
 Prozessors	NN
 den	ART
 Softwareanforderungen	NN
-anpasst	NN
+anpasst	APPR
 -	$(
 ganz	ADV
 so	ADV
 wie	KOKOM
 es	PPER
-Transmetas	APPR
+Transmetas	NN
 LongRun	NN
 für	APPR
 die	ART
 Crusoe-Prozessoren	NN
-verrichtet	NN
+verrichtet	APPR
 .	$.
 
 Besonderen	NN
@@ -18539,7 +18539,7 @@ kaum	ADV
 Details	NN
 zu	PTKZU
 MSA	NN
-wiedergibt	NN
+wiedergibt	APPR
 ,	$,
 enthält	VVFIN
 die	ART
@@ -18563,7 +18563,7 @@ Micro-Signal-Architektur	NN
 mit	APPR
 zwei	CARD
 40-bittigen	NN
-Recheneinheiten	APPR
+Recheneinheiten	NN
 (	$(
 ALUs	NN
 )	$(
@@ -18577,11 +18577,11 @@ mit	APPR
 ×	XY
 16	CARD
 Bit	NN
-Multiplikation	APPR
+Multiplikation	NN
 und	KON
 40	CARD
 Bit	NN
-Ergebnisspeicher	APPR
+Ergebnisspeicher	NN
 )	$(
 und	KON
 einer	ART
@@ -18664,7 +18664,7 @@ rechnen	VVINF
 
 IBM	NE
 entwickelt	VVPP
-Petaflops-Computer	$.
+Petaflops-Computer	NN
 
 Nach	APPR
 einem	ART
@@ -18750,7 +18750,7 @@ wie	PWAV
 sie	PPER
 der	ART
 Begriff	NN
-Petaflops	APPR
+Petaflops	NN
 (	$(
 flops	NN
 =	NN
@@ -18775,8 +18775,8 @@ soll	VMFIN
 aus	APPR
 einer	ART
 Million	NN
-Einzelprozessoren	APPR
-bestehen	VVFIN
+Einzelprozessoren	NN
+bestehen	PTKVZ
 ,	$,
 die	PRELS
 alle	PIDAT
@@ -18976,7 +18976,7 @@ dar	PTKVZ
 .	$.
 
 Ob	KOUS
-Merloni	ART
+Merloni	NN
 nun	ADV
 auch	ADV
 einen	ART
@@ -18987,7 +18987,7 @@ entwickelt	VVPP
 der	PRELS
 die	ART
 Wäsche	NN
-entnimmt	NN
+entnimmt	APPR
 und	KON
 aufhängt	NN
 ,	$,
@@ -19037,7 +19037,7 @@ Alten	ADJA
 .	$.
 
 Takt	NN
-Dez	APPR
+Dez	NN
 99	CARD
 Jan	NE
 00533	CARD
@@ -19104,7 +19104,7 @@ die	PRELS
 die	ART
 nächste	ADJA
 Prozessorgeneration	NN
-Willamette	APPR
+Willamette	NN
 ,	$,
 aber	ADV
 auch	ADV
@@ -19148,7 +19148,7 @@ präsentiert	VVFIN
 worden	VAPP
 ,	$,
 erläuterte	VVFIN
-Intel-Sprecher	ART
+Intel-Sprecher	NN
 Peter	NE
 Green	FM
 noch	ADV
@@ -19295,7 +19295,7 @@ ISSCC	NN
 
 Rambus	NN
 stellt	VVFIN
-Speicherbus	ART
+Speicherbus	NN
 mit	APPR
 2,2	CARD
 GByte/s	NN
@@ -19314,7 +19314,7 @@ in	APPR
 San	NE
 Francisco	NE
 hat	VAFIN
-Rambus	ART
+Rambus	NN
 Details	NN
 zu	PTKZU
 einer	ART
@@ -19354,7 +19354,7 @@ Interfaces	NN
 
 Dabei	PROAV
 hat	VAFIN
-Rambus	ART
+Rambus	NN
 keine	PIAT
 bestehenden	ADJA
 Designs	NN
@@ -19410,7 +19410,7 @@ Keller	###
 Um	KOUI
 solche	PIDAT
 Fehlerquellen	NN
-auszumerzen	NN
+auszumerzen	APPR
 ,	$,
 erzeugt	NN
 Rambus	NN
@@ -19464,7 +19464,7 @@ ersten	ADJA
 Prototypen	NN
 mit	APPR
 Standard	NN
-Chip-Scale	APPR
+Chip-Scale	NN
 Packages	NN
 (	$(
 CSP	NN
@@ -19508,7 +19508,7 @@ Motorolas	NN
 Entwicklungsabteilung	NN
 laufen	VVINF
 bereits	ADV
-MRAMs	APPR
+MRAMs	NN
 (	$(
 Magnetoresistive	NN
 Random	NN
@@ -19674,7 +19674,7 @@ beibehält	APPR
 
 Somit	NN
 kann	VMFIN
-MRAM	ART
+MRAM	NN
 gleichzeitig	ADJD
 als	KOKOM
 Arbeits-	NN
@@ -19708,7 +19708,7 @@ für	APPR
 Desktop-Computer	NN
 eignet	VVFIN
 sich	PRF
-MRAM	APPR
+MRAM	NN
 vor	APPR
 allem	PIS
 für	APPR
@@ -19732,7 +19732,7 @@ ersetzen	VVINF
 .	$.
 
 Da	KOUS
-MRAM	ART
+MRAM	NN
 die	ART
 Unterscheidung	NN
 zwischen	APPR
@@ -19755,7 +19755,7 @@ oder	KON
 Einschalten	NN
 eines	ART
 Mobiltelefons	NN
-wegfallen	NN
+wegfallen	APPR
 .	$.
 
 Da	KOUS
@@ -19815,7 +19815,7 @@ sie	PPER
 etwa	ADV
 drei	CARD
 Jahre	NN
-Entwicklungsvorsprung	APPR
+Entwicklungsvorsprung	NN
 haben	VAFIN
 .	$.
 
@@ -19825,7 +19825,7 @@ auf	APPR
 der	ART
 ISSCC	NN
 bereits	ADV
-FeRAM-Bausteine	APPR
+FeRAM-Bausteine	NN
 mit	APPR
 8	CARD
 MBit	NN
@@ -19927,7 +19927,7 @@ ermöglichen	VVINF
 wären	VAFIN
 da	ADV
 nicht	PTKNEG
-Objektiv	APPR
+Objektiv	NN
 ,	$,
 Akku	NN
 und	KON
@@ -19949,7 +19949,7 @@ mit	APPR
 jeweils	ADV
 4	CARD
 KByte	NN
-Instruction-	APPR
+Instruction-	NN
 und	KON
 Daten-Cache	NN
 ,	$,
@@ -20057,7 +20057,7 @@ hinaus	APZR
 kann	VMFIN
 die	ART
 MPEG2-Einheit	NN
-Video	NN
+Video	FM
 als	KOKOM
 HDTV-Video	NN
 in	APPR
@@ -20096,7 +20096,7 @@ III	CARD
 
 Die	ART
 Spatzen	NN
-zwitscherten	NN
+zwitscherten	APPR
 es	PPER
 schon	ADV
 von	APPR
@@ -20454,7 +20454,7 @@ Athlon	NE
 besser	ADJD
 in	APPR
 Szene	NN
-setzen	VVFIN
+setzen	VVINF
 .	$.
 
 Ob	KOUS
@@ -20486,7 +20486,7 @@ Testsysteme	NN
 sind	VAFIN
 mit	APPR
 Asus	NN
-7VX-Board	NN
+7VX-Board	APPR
 und	KON
 133-MHz-Virtual-Channel-SDRAMs	NN
 bestückt	VVPP
@@ -20569,7 +20569,7 @@ Intel	NE
 in	APPR
 einer	ART
 Art	NN
-Sprungrevision	APPR
+Sprungrevision	NN
 gleich	ADJD
 die	ART
 Februar-Updates	NN
@@ -20599,7 +20599,7 @@ einen	ART
 Fehler	NN
 ,	$,
 falls	KOUS
-Javascript	ART
+Javascript	NN
 nicht	PTKNEG
 aktiviert	VVPP
 ist	VAFIN
@@ -20627,7 +20627,7 @@ faults	NN
 "	$(
 (	$(
 Fehler	NN
-N47	APPR
+N47	NN
 )	$(
 .	$.
 
@@ -20762,20 +20762,20 @@ hängen	VVINF
 bleiben	VVINF
 (	$(
 Fehler	NN
-N46	APPR
+N46	NN
 )	$(
 .	$.
 
 Prozessorhersteller	NN
-IDT	APPR
+IDT	NN
 auf	APPR
 Partnersuche	NN
 
 Wie	PWAV
-National/Cyrix	ART
+National/Cyrix	NN
 auch	ADV
 hat	VAFIN
-IDT	ART
+IDT	NN
 unter	APPR
 den	ART
 erheblich	ADJD
@@ -20797,7 +20797,7 @@ liegen	VVINF
 
 Hinzu	PTKVZ
 kamen	VVFIN
-Fertigungsschwierigkeiten	ART
+Fertigungsschwierigkeiten	NN
 beim	APPRART
 neuen	ADJA
 Winchip	NN
@@ -20840,7 +20840,7 @@ Gespräch	NN
 ,	$,
 mit	APPR
 denen	PRELS
-IDT	ART
+IDT	NN
 bereits	ADV
 einen	ART
 Fertigungsvertrag	NN
@@ -20886,7 +20886,7 @@ Daneben	PROAV
 könnten	VMFIN
 aber	ADV
 auch	ADV
-Seiteneinsteiger	APPR
+Seiteneinsteiger	NN
 wie	KOKOM
 der	ART
 Grafikchip-Hersteller	NN
@@ -21081,11 +21081,11 @@ Schon	ADV
 die	ART
 normalen	ADJA
 PC-133	NN
-SDRAMs	APPR
+SDRAMs	NN
 (	$(
 1	CARD
 GByte	NN
-Spitzen-Transferrate	APPR
+Spitzen-Transferrate	NN
 )	$(
 erwiesen	VVPP
 sich	PRF
@@ -21273,7 +21273,7 @@ Windows-Welt	NN
 ,	$,
 die	PRELS
 C-Standardfunktion	NN
-time()	NN
+time()	APPR
 ,	$,
 die	PRELS
 Milliarden-Sekunden-Marke	NN
@@ -21308,7 +21308,7 @@ insgesamt	ADV
 21	CARD
 )	$(
 Schaltsekunden	NN
-unberücksichtigt	NN
+unberücksichtigt	APPR
 ,	$,
 die	PRELS
 notwendig	ADJD
@@ -21772,18 +21772,18 @@ Gäbe	NN
 Texas	NE
 Instruments	NN
 plant	VVFIN
-DSPs	ART
+DSPs	NN
 mit	APPR
 3	CARD
 Millionen	NN
-MIPS	APPR
+MIPS	NN
 
 Während	KOUS
 IBM	NE
 sich	PRF
 mit	APPR
 Supercomputer-Projekten	NN
-anschickt	NN
+anschickt	APPR
 ,	$,
 das	PRELS
 Mooresche	NN
@@ -21827,7 +21827,7 @@ im	APPRART
 Jahre	NN
 2005	CARD
 will	VMFIN
-TI	ART
+TI	NN
 in	APPR
 0,075-µm-Technologie	NN
 mit	APPR
@@ -21915,7 +21915,7 @@ also	ADV
 2010	CARD
 ,	$,
 will	VMFIN
-TI	ART
+TI	NN
 Dutzende	NN
 von	APPR
 DSP-Cores	NN
@@ -21936,7 +21936,7 @@ dann	ADV
 insgesamt	ADV
 3	CARD
 Billionen	NN
-Instruktionen	APPR
+Instruktionen	NN
 (	$(
 3	CARD
 Tera-IPs	NN
@@ -21983,7 +21983,7 @@ Components	NN
 -	$(
 die	ART
 Entwicklerschmiede	NN
-heimste	NN
+heimste	APPR
 auch	ADV
 den	ART
 Preis	NN
@@ -21995,7 +21995,7 @@ Show	FM
 in	APPR
 der	ART
 Kategorie	NN
-Computer-Hardware-	APPR
+Computer-Hardware-	NN
 und	KON
 Software-Innovationen	NN
 2001	CARD
@@ -22100,7 +22100,7 @@ Prozessor	NN
 ,	$,
 dessen	PRELAT
 Integer-Recheneinheiten	NN
-double	NN
+double	APPR
 pumped	NN
 ,	$,
 also	ADV
@@ -22154,12 +22154,12 @@ den	ART
 Pentium	NN
 4	CARD
 hochpräzise	NN
-Taktvervielfältiger	APPR
+Taktvervielfältiger	NN
 (	$(
 PLL	NN
 ,	$,
 Phase	NN
-Locked	APPR
+Locked	NN
 Loop	NN
 )	$(
 mit	APPR
@@ -22167,7 +22167,7 @@ weniger	PIAT
 als	KOKOM
 20	CARD
 ps	NN
-Ungenauigkeit	APPR
+Ungenauigkeit	NN
 (	$(
 skew	NN
 )	$(
@@ -22190,7 +22190,7 @@ Und	KON
 über	APPR
 "	$(
 Power	NN
-Reducing	APPR
+Reducing	NN
 Microarchitectual	NN
 Techniques	NN
 "	$(
@@ -22254,7 +22254,7 @@ zu	APPR
 enttäuschen	NN
 ,	$,
 enthüllte	VVFIN
-Chefentwickler	ART
+Chefentwickler	NN
 David	NE
 Sagar	NN
 zumindest	ADV
@@ -22432,7 +22432,7 @@ umsteigen	VVINF
 "	$(
 ,	$,
 bestätigte	VVFIN
-Sagar	ART
+Sagar	NN
 gegenüber	APPR
 c't	NE
 .	$.
@@ -22473,7 +22473,7 @@ angesprochen	VVPP
 ,	$,
 hielt	VVFIN
 sich	PRF
-Sagar	APPR
+Sagar	NN
 eher	ADV
 bedeckt	ADJD
 und	KON
@@ -22574,7 +22574,7 @@ kann	VMFIN
 Da	KOUS
 wird	VAFIN
 wohl	ADV
-SOI	APPR
+SOI	NN
 bei	APPR
 Intel	NE
 nicht	PTKNEG
@@ -22587,7 +22587,7 @@ lassen	VVINF
 
 Micron	NN
 entwickelt	VVPP
-DDR-Chipsatz	$.
+DDR-Chipsatz	NN
 für	APPR
 Athlon	NE
 
@@ -22691,13 +22691,13 @@ Für	APPR
 den	ART
 AMD-Bereich	NN
 wird	VAFIN
-Micron	ART
+Micron	NN
 wohl	ADV
 die	ART
 Nachfolge	NN
 der	ART
 Firma	NN
-HotRail	APPR
+HotRail	NN
 im	APPRART
 High-End-Servermarkt	NN
 antreten	VVINF
@@ -22726,7 +22726,7 @@ geworfen	VVPP
 
 Zwar	ADV
 hat	VAFIN
-Micron	ART
+Micron	NN
 noch	ADV
 nichts	PIS
 über	APPR
@@ -22747,7 +22747,7 @@ dass	KOUS
 sich	PRF
 mehrere	PIAT
 Samurai-Chipsätze	NN
-zusammenschalten	NN
+zusammenschalten	APPR
 lassen	VVFIN
 ,	$,
 von	APPR
@@ -22788,7 +22788,7 @@ die	PRELS
 in	APPR
 halbjährlichem	NN
 Rhythmus	NN
-aufgefrischt	NN
+aufgefrischt	APPR
 wird	VAFIN
 .	$.
 
@@ -22948,7 +22948,7 @@ Telekom-Sektor	NN
 ,	$,
 der	PRELS
 Performance-treibend	NN
-wirke	NN
+wirke	APPR
 .	$.
 
 Offensichtlich	ADJD
@@ -22990,7 +22990,7 @@ Top-50	NN
 ,	$,
 so	ADV
 kann	VMFIN
-Cray	ART
+Cray	NN
 mit	APPR
 40	CARD
 Prozent	NN
@@ -23127,18 +23127,18 @@ die	ART
 Überreste	NN
 der	ART
 Firma	NN
-Fairchild	APPR
+Fairchild	NN
 unabhängig	ADJD
 voneinander	APPR
 einverleibt	VVPP
 :	$.
 
 Intergraph	NN
-kaufte	NN
+kaufte	APPR
 die	ART
 Advanced	NN
 Prozessor	NN
-Divison	APPR
+Divison	NN
 (	$(
 APD	NN
 )	$(
@@ -23152,7 +23152,7 @@ Mit	APPR
 der	ART
 APD	NN
 erhielt	VVFIN
-Intergraph	ART
+Intergraph	NN
 auch	ADV
 alle	PIDAT
 Patentrechte	NN
@@ -23303,7 +23303,7 @@ Schon	ADV
 wieder	ADV
 gibt	VVFIN
 es	PPER
-Trouble	APPR
+Trouble	NN
 mit	APPR
 der	ART
 umstrittenen	ADJA
@@ -23430,7 +23430,7 @@ MII-Forderung	NN
 grundsätzlich	ADJD
 die	ART
 PSN	NN
-abgeschaltet	NN
+abgeschaltet	APPR
 haben	VAFIN
 und	KON
 dürfen	VMFIN
@@ -23497,13 +23497,13 @@ Seriennummern	NN
 
 Wo	PWAV
 bleibt	VVFIN
-Crusoe	ART
+Crusoe	NN
 ?	$.
 
 "	$(
 Wo	PWAV
 ist	VAFIN
-Behle	ART
+Behle	NN
 ?	$.
 "	$(
 
@@ -23560,7 +23560,7 @@ IBM	NE
 mit	APPR
 dem	ART
 Notebook	NN
-ThinkPad	APPR
+ThinkPad	NN
 240	CARD
 und	KON
 FIC	NN
@@ -23649,7 +23649,7 @@ Zumindest	ADV
 der	ART
 kleine	ADJA
 Crusoe	NN
-TM3120	APPR
+TM3120	NN
 (	$(
 ohne	APPR
 die	ART
@@ -23705,7 +23705,7 @@ teuer	ADJD
 Die	ART
 taiwanische	ADJA
 Firma	NN
-TSMC	APPR
+TSMC	NN
 hatte	VAFIN
 schon	ADV
 im	APPRART
@@ -23719,7 +23719,7 @@ hergestellt	VVPP
 
 Auch	ADV
 Konkurrent	NN
-UMC	APPR
+UMC	NN
 beschäftigt	VVFIN
 sich	PRF
 mit	APPR
@@ -23745,7 +23745,7 @@ womit	PWAV
 weder	KON
 UMC	NN
 noch	ADV
-TSMC	APPR
+TSMC	NN
 dienen	VVINF
 können	VMINF
 .	$.
@@ -23974,7 +23974,7 @@ Patentrechtstreit	NN
 schlecht	ADJD
 für	APPR
 Intergraph	NN
-aussieht	NN
+aussieht	APPR
 ,	$,
 musste	VMFIN
 der	ART
@@ -24018,7 +24018,7 @@ die	PRELS
 dem	ART
 Chip-Giganten	NN
 Machtmissbrauch	NN
-unterstellte	NN
+unterstellte	APPR
 und	KON
 ihn	PPER
 verpflichtete	APPR
@@ -24083,7 +24083,7 @@ Intel	NE
 wie	KOKOM
 ein	ART
 Kartenhaus	NN
-zusammengebrochen	NN
+zusammengebrochen	APPR
 .	$.
 
 Übrig	NN
@@ -24239,7 +24239,7 @@ wie	KOKOM
 PDAs	NN
 oder	KON
 Surf-Terminals	NN
-zuwenden	NN
+zuwenden	APPR
 .	$.
 
 Der	ART
@@ -24516,7 +24516,7 @@ mobilen	ADJA
 Abspielgeräten	NN
 ein	ART
 Riesenmarkt	NN
-vorausgesagt	NN
+vorausgesagt	APPR
 wird	VAFIN
 ,	$,
 legen	VVFIN
@@ -24541,7 +24541,7 @@ einer	ART
 Allianz	NN
 mit	APPR
 Analog	ADJD
-Devices	APPR
+Devices	NN
 mit	APPR
 einer	ART
 besonders	ADV
@@ -24594,7 +24594,7 @@ sehen	VVINF
 Mit	APPR
 RealAudio-8	NN
 bietet	VVFIN
-TI	ART
+TI	NN
 dann	ADV
 so	ADV
 gut	ADJD
@@ -24622,7 +24622,7 @@ Die	ART
 DSPs	NN
 der	ART
 TMS	NN
-320C5000-Serie	NN
+320C5000-Serie	APPR
 sind	VAFIN
 schon	ADV
 erfolgreich	ADJD
@@ -24729,7 +24729,7 @@ kann	VMFIN
 
 Gigahertz-Athlon	NN
 zwingt	VVFIN
-KryoTech	ART
+KryoTech	NN
 zur	APPRART
 Preissenkung	NN
 
@@ -24761,7 +24761,7 @@ zu	PTKZU
 können	VMINF
 ,	$,
 hat	VAFIN
-KryoTech	ART
+KryoTech	NN
 die	ART
 Preise	NN
 für	APPR
@@ -24810,7 +24810,7 @@ bezahlt	VVPP
 Der	ART
 Compaq	NE
 Presario	NN
-5900Z-1GHz	NN
+5900Z-1GHz	APPR
 etwa	ADV
 kostet	VVFIN
 dort	ADV
@@ -24827,7 +24827,7 @@ SDRAM	NE
 ,	$,
 20	CARD
 GByte	NN
-Harddisk	APPR
+Harddisk	NN
 ,	$,
 40x	NN
 CDROM	NN
@@ -24869,12 +24869,12 @@ lärmende	NN
 Tiefkühlgerät	NN
 von	APPR
 KryoTech	NN
-erwärmen	NN
+erwärmen	APPR
 .	$.
 
 Allerdings	ADV
 verspricht	VVFIN
-KryoTech	ART
+KryoTech	NN
 einen	ART
 Upgrade-Pfad	NN
 auf	APPR
@@ -25018,7 +25018,7 @@ den	ART
 aktuellen	ADJA
 Buchungen	NN
 sprach	VVFIN
-National-Chef	ART
+National-Chef	NN
 Brian	NN
 Halla	NN
 von	APPR
@@ -25033,7 +25033,7 @@ das	ART
 vierte	ADJA
 Quartal	NN
 erwartet	VVPP
-Halla	$.
+Halla	NN
 zunächst	ADV
 aber	ADV
 einen	ART
@@ -25074,7 +25074,7 @@ sind	VAFIN
 der	ART
 133	CARD
 MHz	NN
-Front-Side	APPR
+Front-Side	NN
 Bus	NN
 und	KON
 die	ART
@@ -25108,7 +25108,7 @@ finden	VVINF
 
 Und	KON
 auch	ADV
-Vias	APPR
+Vias	NN
 Chipsatz	NN
 Apollo	NE
 Pro+	NN
@@ -25118,7 +25118,7 @@ erst	ADV
 etwas	ADV
 mit	APPR
 PC133	NN
-anfangen	NN
+anfangen	APPR
 ,	$,
 wenn	KOUS
 auch	ADV
@@ -25276,7 +25276,7 @@ fallen	VVFIN
 so	ADV
 Intels	NE
 Vizepräsident	NN
-Detkin	APPR
+Detkin	NN
 .	$.
 
 Doch	KON
@@ -25306,7 +25306,7 @@ gegen	APPR
 die	ART
 damalige	ADJA
 Cyrix-Schmiede	NN
-SGS-Thomson	APPR
+SGS-Thomson	NN
 geklagt	VVPP
 ...	$.
 und	KON
@@ -25414,7 +25414,7 @@ Frühjahr	NN
 auf	APPR
 der	ART
 ISSCC	NN
-1-GBit-Muster	NN
+1-GBit-Muster	APPR
 auf	APPR
 Basis	NN
 bestehender	ADJA
@@ -25422,7 +25422,7 @@ Technologien	NN
 vorgestellt	VVPP
 (	$(
 Codename	NN
-Zeus	APPR
+Zeus	NN
 )	$(
 ,	$,
 die	PRELS
@@ -25462,7 +25462,7 @@ neue	ADJA
 so	ADV
 genannte	ADJA
 vertikale	NN
-Transistorzellen	APPR
+Transistorzellen	NN
 (	$(
 VTC	NN
 )	$(
@@ -25477,7 +25477,7 @@ beanspruchen	VVINF
 als	KOKOM
 bisherige	ADJA
 planare	NN
-Zellen	APPR
+Zellen	NN
 (	$(
 PTC	NN
 )	$(
@@ -25577,7 +25577,7 @@ vorgestellt	VVPP
 
 Zunächst	ADV
 sind	VAFIN
-Stand-alone-DRAMs	ART
+Stand-alone-DRAMs	NN
 geplant	VVPP
 und	KON
 zwar	ADV
@@ -25586,7 +25586,7 @@ DDR-SDRAMs	NN
 (	$(
 gegebenenfalls	ADV
 auch	ADV
-DDR-2	APPR
+DDR-2	NN
 )	$(
 .	$.
 
@@ -25634,7 +25634,7 @@ geplant	VVPP
 
 Beim	APPRART
 Rambus	NN
-scheiden	NN
+scheiden	APPR
 sich	PRF
 allerdings	ADV
 die	ART
@@ -25716,7 +25716,7 @@ G4	XY
 mit	APPR
 der	ART
 Bezeichnung	NN
-MPC7450	APPR
+MPC7450	NN
 ,	$,
 von	APPR
 uns	PPER
@@ -25730,7 +25730,7 @@ Dieser	PDS
 in	APPR
 einem	ART
 Kupferprozess	NN
-gefertigte	NN
+gefertigte	APPR
 Chip	NN
 hat	VAFIN
 nicht	PTKNEG
@@ -25852,7 +25852,7 @@ nunmehr	ADV
 auf	APPR
 vier	CARD
 aufgestockten	NN
-AltiVec-Einheiten	APPR
+AltiVec-Einheiten	NN
 kann	VMFIN
 er	PPER
 mit	APPR
@@ -26094,7 +26094,7 @@ und	KON
 die	ART
 Samsung/Compaq-Tochter	NN
 API	NN
-Prozessor-Designs	APPR
+Prozessor-Designs	NN
 für	APPR
 Taktfrequenzen	NN
 jenseits	APPR
@@ -26112,7 +26112,7 @@ legte	VVFIN
 ein	ART
 neues	ADJA
 64bittiges	NN
-PowerPC-Design	APPR
+PowerPC-Design	NN
 vor	APPR
 ,	$,
 das	PRELS
@@ -26361,12 +26361,12 @@ und	KON
 gegen	APPR
 den	ART
 Chiphersteller	NN
-VIA	APPR
+VIA	NN
 sowie	KON
 gegen	APPR
 die	ART
 Firmen	NN
-FIC	APPR
+FIC	NN
 und	KON
 Everex	NN
 ,	$,
@@ -26393,7 +26393,7 @@ Handelsgesetze	NN
 
 Intel	NE
 hat	VAFIN
-VIA	ART
+VIA	NN
 bereits	ADV
 in	APPR
 drei	CARD
@@ -26552,7 +26552,7 @@ der	ART
 Itanium	NN
 (	$(
 Codename	NN
-Merced	APPR
+Merced	NN
 )	$(
 mit	APPR
 Taktfrequenzen	NN
@@ -26587,7 +26587,7 @@ lassen	VVINF
 auf	APPR
 133	CARD
 MHz	NN
-Double	APPR
+Double	NN
 Data	FM
 Rate	NN
 schließen	VVINF
@@ -26596,7 +26596,7 @@ schließen	VVINF
 Ob	KOUS
 der	ART
 Datentransfer	NN
-64-	NN
+64-	APPR
 oder	KON
 128-bittig	NN
 (	$(
@@ -26685,7 +26685,7 @@ X-Box	NE
 mit	APPR
 einem	ART
 AMD-Athlon-Prozessor	NN
-bestücken	NN
+bestücken	APPR
 .	$.
 
 Wie	PWAV
@@ -26789,7 +26789,7 @@ kommen	VVINF
 
 Intel	NE
 bekämpft	VVPP
-Lieferengpässe	$.
+Lieferengpässe	NN
 
 Rund	ADV
 6	CARD
@@ -27004,7 +27004,7 @@ geben	VVINF
 Bug	FM
 in	APPR
 Intel-Chip	NN
-erzwingt	NN
+erzwingt	APPR
 große	ADJA
 Umtauschaktion	NN
 
@@ -27018,7 +27018,7 @@ dem	PRELS
 so	ADV
 genannten	ADJA
 Memory	NN
-Translator	APPR
+Translator	NN
 Hub	NN
 (	$(
 MTH	NN
@@ -27049,7 +27049,7 @@ es	PPER
 sei	VAFIN
 der	ART
 Baustein	NN
-rauschempfindlich	NN
+rauschempfindlich	APPR
 und	KON
 könne	VMFIN
 das	ART
@@ -27067,7 +27067,7 @@ auf	APPR
 schätzungsweise	ADV
 1	CARD
 Millionen	NN
-Motherboards	APPR
+Motherboards	NN
 zu	PTKZU
 finden	VVINF
 .	$.
@@ -27091,7 +27091,7 @@ mit	APPR
 preisgünstigeren	NN
 konventionellen	NN
 SDRAMs	NN
-umzugehen	NN
+umzugehen	APPR
 .	$.
 
 Der	ART
@@ -27102,7 +27102,7 @@ nicht	PTKNEG
 betroffen	VVPP
 ,	$,
 sodass	KOUS
-Rambus-Systeme	ART
+Rambus-Systeme	NN
 mit	APPR
 dem	ART
 Bug	NN
@@ -27196,7 +27196,7 @@ beim	APPRART
 Umtausch	NN
 auf	APPR
 Rambus-Bestückung	NN
-umsteigen	VVFIN
+umsteigen	VVINF
 und	KON
 den	ART
 Kunden	NN
@@ -27253,7 +27253,7 @@ Pentium-Prozessors	NN
 
 Intels	NE
 Dreamboy-Striptease	NN
-klemmt	NN
+klemmt	APPR
 
 Viele	PIS
 Online-Dienste	NN
@@ -27280,7 +27280,7 @@ gemacht	VVPP
 ,	$,
 um	KOUI
 damit	PROAV
-Open-Source-Programmierern	ART
+Open-Source-Programmierern	NN
 die	ART
 Softwareentwicklung	NN
 für	APPR
@@ -27393,7 +27393,7 @@ um	APPR
 die	ART
 taiwanische	ADJA
 Chipschmiede	NN
-SiS	APPR
+SiS	NN
 geworden	VAPP
 ,	$,
 doch	KON
@@ -27444,8 +27444,8 @@ Wie	PWAV
 Intels	NE
 Whitney	NN
 hat	VAFIN
-SiS	ART
-630/540	NN
+SiS	NN
+630/540	APPR
 einen	ART
 3-D-Grafikadapter	NN
 (	$(
@@ -27461,7 +27461,7 @@ und	KON
 
 Darüberhinaus	PROAV
 bietet	VVFIN
-SiS	ART
+SiS	NN
 10/100-MBit-Ethernet	NN
 und	KON
 unterstützt	VVFIN
@@ -27729,13 +27729,13 @@ als	KOKOM
 Alternative	NN
 zum	APPRART
 Merced	NN
-warmhalten	NN
+warmhalten	APPR
 will	VMFIN
 .	$.
 
 Intel	NE
 will	VMFIN
-Chipherstellung	ART
+Chipherstellung	NN
 drastisch	ADJD
 verbilligen	APPR
 
@@ -27914,7 +27914,7 @@ dann	ADV
 der	ART
 erste	ADJA
 64-Bit-Prozessor	NN
-Merced	APPR
+Merced	NN
 fertig	ADJD
 sein	VAINF
 ,	$,
@@ -27928,7 +27928,7 @@ für	APPR
 die	ART
 nächste	ADJA
 64-Bit-Generation	NN
-McKinley	APPR
+McKinley	NN
 ein	ART
 Shrink	NN
 auf	APPR
@@ -27963,7 +27963,7 @@ Dresdener	NN
 Werk	NN
 liegt	VVFIN
 auch	ADV
-AMDs	APPR
+AMDs	NN
 neue	ADJA
 Fabrik	NN
 für	APPR
@@ -28027,7 +28027,7 @@ geplanten	ADJA
 64-Prozessors	NN
 mit	APPR
 Codenamen	NN
-Sledgehammer	APPR
+Sledgehammer	NN
 .	$.
 
 Überrascht	NN
@@ -28040,7 +28040,7 @@ dass	KOUS
 die	ART
 hauseigene	NN
 Multimedia-Entwicklung	NN
-3Dnow!	NN
+3Dnow!	APPR
 in	APPR
 der	ART
 Dokumentation	NN
@@ -28187,7 +28187,7 @@ auch	ADV
 zugunsten	APPR
 von	APPR
 SSE	NN
-gekippt	NN
+gekippt	APPR
 .	$.
 
 Ansonsten	ADV
@@ -28247,7 +28247,7 @@ Bit	NN
 (	$(
 z.	APPRART
 B.	NN
-AL	APPR
+AL	NN
 ,	$,
 AX	NN
 ,	$,
@@ -28289,7 +28289,7 @@ zusätzlich	ADJD
 auch	ADV
 als	KOKOM
 Zwei-Byte-Opcodes	NN
-vorkommen	NN
+vorkommen	APPR
 .	$.
 
 Weiterhin	ADV
@@ -28345,7 +28345,7 @@ Programmierer	NN
 die	ART
 beiden	PIDAT
 Segmentregister	NN
-FS	APPR
+FS	NN
 und	KON
 GS	NN
 zur	APPRART
@@ -28447,7 +28447,7 @@ auf	APPR
 die	ART
 zusätzlichen	ADJA
 Register	NN
-R8	APPR
+R8	NN
 bis	APPR
 R15	NN
 oder	KON
@@ -28471,7 +28471,7 @@ Opcodes	NN
 aus	APPR
 Kompatibilitätsgründen	NN
 wieder	ADV
-Inc/Dec	APPR
+Inc/Dec	NN
 zugeordnet	VVPP
 sein	VAINF
 müssen	VMFIN
@@ -28547,7 +28547,7 @@ Spitzenperformance	NN
 bringen	VVINF
 ,	$,
 wohingegen	PWAV
-Itanium	ART
+Itanium	NN
 ,	$,
 Intels	NE
 eigenem	ADJA
@@ -28588,7 +28588,7 @@ diese	PDAT
 auch	ADV
 für	APPR
 AMDs	NN
-64-Bit-Modus	NN
+64-Bit-Modus	APPR
 x86-64	NN
 programmieren	NN
 (	$(
@@ -28602,7 +28602,7 @@ wollen	VMFIN
 
 Siehe	VVIMP
 auch	ADV
-Sledgehammer	APPR
+Sledgehammer	NN
 mit	APPR
 Intel	NE
 SSE2	NN
@@ -28625,7 +28625,7 @@ haben	VAFIN
 die	ART
 für	APPR
 AMDs	NN
-64-Bit-Prozessor	NN
+64-Bit-Prozessor	APPR
 Sledgehammer	NN
 verantwortlichen	ADJA
 Projektleiter	NN
@@ -28660,7 +28660,7 @@ einer	ART
 zu	APPR
 Intels	NE
 SSE2	NN
-kompatiblen	NN
+kompatiblen	APPR
 Einheit	NN
 gekippt	APPR
 haben	VAFIN
@@ -28772,7 +28772,7 @@ noch	ADV
 die	ART
 AMD-eigene	NN
 Multimedia-Einheit	NN
-3Dnow!	NN
+3Dnow!	APPR
 unterstützen	VVINF
 ,	$,
 wie	PWAV
@@ -28803,12 +28803,12 @@ davon	PROAV
 ausgehen	VVINF
 ,	$,
 dass	KOUS
-SSE2	ART
+SSE2	NN
 sowohl	KON
 3Dnow!	NN
 als	KOKOM
 auch	ADV
-MMX	APPR
+MMX	NN
 vollständig	ADJD
 ersetzen	VVINF
 wird	VAFIN
@@ -28870,11 +28870,11 @@ eines	ART
 der	ART
 wohl	ADV
 längsten	ADJD
-Buchprojekte	APPR
+Buchprojekte	NN
 aller	PIDAT
 Zeiten	NN
 langsam	ADJD
-Gestalt	APPR
+Gestalt	NN
 an	APPR
 .	$.
 
@@ -28890,7 +28890,7 @@ DNA	NN
 )	$(
 seine	PPOSAT
 Trilogie	NN
-Hitchhiker's	APPR
+Hitchhiker's	NN
 Guide	FM
 to	FM
 the	FM
@@ -28910,7 +28910,7 @@ nahezu	ADV
 Jahren	NN
 ihr	PPOSAT
 viertes	NN
-Bein	APPR
+Bein	NN
 .	$.
 
 Das	ART
@@ -29082,7 +29082,7 @@ Jahr	NN
 2004	CARD
 den	ART
 Subband	NN
-4A	NN
+4A	APPR
 fertiggestellt	VVPP
 zu	PTKZU
 haben	VAINF
@@ -29091,7 +29091,7 @@ haben	VAINF
 Bis	APPR
 zum	APPRART
 Band	NN
-4C	NN
+4C	APPR
 dürfte	VMFIN
 es	PPER
 bis	APPR
@@ -29131,7 +29131,7 @@ Knuth-Homepage	NN
 Im	APPRART
 Herbst	NN
 will	VMFIN
-Knuth	ART
+Knuth	NN
 eine	ART
 Deutschlandreise	NN
 unternehmen	VVINF
@@ -29141,7 +29141,7 @@ seinen	PPOSAT
 neuen	ADJA
 virtuellen	ADJA
 64-Bit-Prozessor	NN
-MMIX	APPR
+MMIX	NN
 vorstellen	VVINF
 ,	$,
 in	APPR
@@ -29252,7 +29252,7 @@ vornehmlich	ADV
 auf	APPR
 den	ART
 Notebook-Markt	NN
-zielen	NN
+zielen	APPR
 .	$.
 
 Intel	NE
@@ -29361,7 +29361,7 @@ Vorzeichen	NN
 weiterarbeiten	APPR
 (	$(
 Fehler	NN
-E56	APPR
+E56	NN
 )	$(
 .	$.
 
@@ -29482,7 +29482,7 @@ MHz	NN
 
 Intel	NE
 will	VMFIN
-Pentium-III-Prozessoren	ART
+Pentium-III-Prozessoren	NN
 mit	APPR
 niedrigerer	NN
 Core-Spannungen	NN
@@ -29496,7 +29496,7 @@ Auf	APPR
 dem	ART
 Internationalen	ADJA
 Electron	NN
-Devices	APPR
+Devices	NN
 Meeting	NN
 (	$(
 IEDM	NN
@@ -29589,7 +29589,7 @@ achten	ADJA
 Mal	NN
 in	APPR
 Folge	NN
-US-Patentmeister	APPR
+US-Patentmeister	NN
 
 Nach	APPR
 der	ART
@@ -29597,7 +29597,7 @@ von	APPR
 der	ART
 kommerziellen	ADJA
 Patentdatenbank	NN
-IFI	APPR
+IFI	NN
 veröffentlichten	ADJA
 "Ranking"-Liste	NN
 führt	VVFIN
@@ -29899,7 +29899,7 @@ als	KOKOM
 denen	PDS
 des	ART
 Konkurrenten	NN
-Coppermine	APPR
+Coppermine	NN
 .	$.
 
 Die	ART
@@ -29907,7 +29907,7 @@ Abhilfe	NN
 mit	APPR
 Namen	NN
 Codename	NN
-Thunderbird	APPR
+Thunderbird	NN
 ist	VAFIN
 jedoch	ADV
 schon	ADV
@@ -29949,7 +29949,7 @@ in	APPR
 Dresden	NN
 mit	APPR
 Kupfer-Interconnects	NN
-gefertigte	NN
+gefertigte	APPR
 Chip	NN
 soll	VMFIN
 aber	ADV
@@ -29979,7 +29979,7 @@ Sommer	NN
 will	VMFIN
 Intel	NE
 ja	ADV
-Coppermines	APPR
+Coppermines	NN
 mit	APPR
 bis	APPR
 zu	APPR
@@ -30012,7 +30012,7 @@ bei	APPR
 der	ART
 neuen	ADJA
 Benchmark-Suite	NN
-SPEC-CPU2000	APPR
+SPEC-CPU2000	NN
 einem	ART
 800-MHz-Pentium	NN
 III	CARD
@@ -30058,8 +30058,8 @@ etwa	ADV
 bis	APPR
 15	CARD
 Prozent	NN
-Vorsprung	APPR
-herausarbeiten	NN
+Vorsprung	NN
+herausarbeiten	APPR
 .	$.
 
 Berücksichtigt	VVPP
@@ -30098,7 +30098,7 @@ Coppermine-System	NN
 (	$(
 256	CARD
 MByte	NN
-RD800	APPR
+RD800	NN
 )	$(
 um	APPR
 mehr	ADV
@@ -30108,9 +30108,9 @@ zwei	CARD
 .	$.
 
 Auch	ADV
-Mobil-Prozessor	APPR
+Mobil-Prozessor	NN
 Dixon	NN
-numeriert	NN
+numeriert	APPR
 
 c't-Leser	NN
 ,	$,
@@ -30137,7 +30137,7 @@ auch	ADV
 beim	APPRART
 neuen	ADJA
 Notebook-Prozessor	NN
-Dixon	APPR
+Dixon	NN
 eine	ART
 Seriennummer	NN
 angezeigt	VVPP
@@ -30295,7 +30295,7 @@ das	ART
 Zusammengehen	NN
 mit	APPR
 General	NN
-Instruments	APPR
+Instruments	NN
 ergeben	VVFIN
 haben	VAINF
 .	$.
@@ -30342,7 +30342,7 @@ Dollar	NN
 Anderes	NN
 dagegen	PROAV
 musste	VMFIN
-Motorolas	ART
+Motorolas	NN
 Handy-Sparte	NN
 vermelden	VVINF
 :	$.
@@ -30389,7 +30389,7 @@ Risks	NN
 "	$(
 ,	$,
 tauchen	VVFIN
-Verbindlichkeiten	ART
+Verbindlichkeiten	NN
 mit	APPR
 der	ART
 Abwicklung	NN
@@ -30583,7 +30583,7 @@ Komponenten	NN
 bei	APPR
 denen	PRELS
 es	PPER
-Lieferengpässe	APPR
+Lieferengpässe	NN
 gegeben	VVPP
 habe	VAFIN
 ,	$,
@@ -30686,7 +30686,7 @@ knapp	ADJD
 über	APPR
 30	CARD
 Millionen	NN
-Motorola-Aktien	APPR
+Motorola-Aktien	NN
 ,	$,
 während	KOUS
 im	APPRART
@@ -30695,7 +30695,7 @@ sonst	ADV
 rund	ADV
 5	CARD
 Millionen	NN
-Motorola-Papiere	APPR
+Motorola-Papiere	NN
 täglich	ADJD
 den	ART
 Besitzer	NN
@@ -30773,8 +30773,8 @@ der	ART
 so	ADV
 genannten	ADJA
 Information	NN
-Appliances	APPR
-adressiert	NN
+Appliances	NN
+adressiert	APPR
 :	$.
 
 WebPads	NN
@@ -30817,7 +30817,7 @@ PCI-	NN
 Interrupt-	NN
 und	KON
 Power	NN
-Managment	APPR
+Managment	NN
 Controller	NN
 .	$.
 
@@ -30996,7 +30996,7 @@ enormen	ADJA
 Wachstumsmarkts	NN
 für	APPR
 Information	NN
-Appliances	APPR
+Appliances	NN
 von	APPR
 allen	PIDAT
 Seiten	NN
@@ -31037,7 +31037,7 @@ soll	VMFIN
 Intels	NE
 Dreamboy	NN
 zeigt	VVFIN
-Feinheiten	ART
+Feinheiten	NN
 
 Nun	ADV
 ist	VAFIN
@@ -31132,7 +31132,7 @@ sechsfach	NN
 assoziativ	NN
 ,	$,
 unterstützt	VVFIN
-Write	ART
+Write	NN
 Back	FM
 Modus	NN
 und	KON
@@ -31140,14 +31140,14 @@ Write	NN
 Allocation	NN
 und	KON
 besitzt	VVFIN
-Cachelines	ART
+Cachelines	NN
 von	APPR
 64	CARD
 Byte	NN
 .	$.
 
 Gleitkommaoperationen	NN
-gehen	VVFIN
+gehen	VVINF
 grundsätzlich	ADJD
 am	APPRART
 L1-Cache	NN
@@ -31158,7 +31158,7 @@ werden	VAFIN
 mit	APPR
 9	CARD
 Takten	NN
-Latenzzeit	APPR
+Latenzzeit	NN
 )	$(
 vom	APPRART
 L2-Cache	NN
@@ -31303,7 +31303,7 @@ und	KON
 
 Offenbar	ADJD
 kennt	VVFIN
-Itanium	ART
+Itanium	NN
 auch	ADV
 ein	ART
 spezielles	ADJA
@@ -31457,7 +31457,7 @@ dem	ART
 TPG-Chef	NN
 David	NE
 Bonderman	NN
-handelseinig	NN
+handelseinig	APPR
 zu	PTKZU
 sein	VAINF
 ,	$,
@@ -31523,7 +31523,7 @@ Fall	NN
 begrüßen	VVINF
 die	ART
 Analysten	NN
-Motorolas	APPR
+Motorolas	NN
 Absicht	NN
 ,	$,
 sich	PRF
@@ -31704,8 +31704,8 @@ eine	ART
 mit	APPR
 100	CARD
 MHz	NN
-Frontside-Bus	APPR
-nachschieben	NN
+Frontside-Bus	NN
+nachschieben	APPR
 .	$.
 
 Im	APPRART
@@ -31774,7 +31774,7 @@ DDR	NN
 (	$(
 Bildquelle	NN
 :	$.
-InQuest	ART
+InQuest	NN
 )	$(
 
 In	APPR
@@ -31804,7 +31804,7 @@ in	APPR
 0,13-µm-Struktur	NN
 (	$(
 Codename	NN
-Tualatin	APPR
+Tualatin	NN
 )	$(
 aufgeführt	VVPP
 .	$.
@@ -31854,7 +31854,7 @@ Athlon	NE
 Der	ART
 zugehörige	ADJA
 Chipsatz	NN
-Almador	APPR
+Almador	NN
 ist	VAFIN
 für	APPR
 SDRAM	NE
@@ -31862,7 +31862,7 @@ und	KON
 -	$(
 so	ADV
 schätzt	VVFIN
-InQuest-Analyst	ART
+InQuest-Analyst	NN
 Bert	NN
 McComas	NN
 -	$(
@@ -31885,7 +31885,7 @@ zunächst	ADV
 nur	ADV
 für	APPR
 Serverbereiche	NN
-einzuplanen	NN
+einzuplanen	APPR
 .	$.
 
 Der	ART
@@ -31900,7 +31900,7 @@ und	KON
 der	ART
 nächsten	ADJA
 Chipsatz-Version	NN
-Brookdale	APPR
+Brookdale	NN
 auf	APPR
 ,	$,
 der	PRELS
@@ -31910,7 +31910,7 @@ sowohl	KON
 SDRAM	NE
 als	KOKOM
 auch	ADV
-DDR-SDRAM	APPR
+DDR-SDRAM	NN
 unterstützt	VVFIN
 ,	$,
 der	PRELS
@@ -31981,7 +31981,7 @@ den	ART
 Weg	NN
 bereitenden	APPR
 Karren	NN
-vorausfahren	NN
+vorausfahren	APPR
 .	$.
 
 Intel	NE
@@ -32021,7 +32021,7 @@ in	APPR
 0,13-µm-Ausführung	NN
 (	$(
 Codename	NN
-Northwood	APPR
+Northwood	NN
 ,	$,
 ab	APPR
 Mitte	NN
@@ -32111,7 +32111,7 @@ Gerüchten	NN
 ,	$,
 der	PRELS
 FSB	NN
-liefe	NN
+liefe	APPR
 mit	APPR
 100	CARD
 und	KON
@@ -32178,7 +32178,7 @@ SSE-Befehl	NN
 Movntq	NN
 bei	APPR
 offenbar	ADJD
-Double	APPR
+Double	NN
 Pumped	NN
 FSB	NN
 lässt	VVFIN
@@ -32249,7 +32249,7 @@ S3-Submission	NN
 (	$(
 File	FM
 Nr.	NN
-333-45346	NN
+333-45346	APPR
 )	$(
 vom	APPRART
 7.	ADJA
@@ -32283,7 +32283,7 @@ erhöhen	VVINF
 und	KON
 insbesondere	ADV
 auch	ADV
-Akquirierungen	APPR
+Akquirierungen	NN
 durchführen	VVFIN
 .	$.
 
@@ -32321,7 +32321,7 @@ Börsenzulassung	NN
 unter	APPR
 dem	ART
 Kürzel	NN
-TMTA	APPR
+TMTA	NN
 bei	APPR
 der	ART
 SEC	NE
@@ -32372,7 +32372,7 @@ nach	APPR
 der	ART
 S3-Submission	NN
 gab	VVFIN
-AMDs	ART
+AMDs	NN
 Kurs	NN
 im	APPRART
 Rahmen	NN
@@ -32557,7 +32557,7 @@ stellen	VVINF
 "	$(
 ,	$,
 sagte	VVFIN
-Eckelmann	ART
+Eckelmann	NN
 .	$.
 
 Die	ART
@@ -32623,7 +32623,7 @@ stellen	VVINF
 "	$(
 ,	$,
 sagte	VVFIN
-Eckelmann	ART
+Eckelmann	NN
 .	$.
 
 Ziel	NN
@@ -32693,7 +32693,7 @@ Die	ART
 neuen	ADJA
 Breitband-Technologien	NN
 werden	VAFIN
-Inhalte-Anbietern	ART
+Inhalte-Anbietern	NN
 völlig	ADJD
 neue	ADJA
 Aussichten	NN
@@ -32704,7 +32704,7 @@ eröffnen	VVINF
 "	$(
 ,	$,
 sagte	VVFIN
-Eckelmann	ART
+Eckelmann	NN
 .	$.
 
 Der	ART
@@ -32751,7 +32751,7 @@ Nachfolge-Forum	NN
 der	ART
 1996	CARD
 gegründeten	NN
-MDI	APPR
+MDI	NN
 ,	$,
 die	PRELS
 Standards	NN
@@ -32840,8 +32840,8 @@ Pentium-III-Katmai-System	NN
 weiterhin	ADV
 vom	APPRART
 Fehler	NN
-E56	APPR
-bedroht	ADJD
+E56	NN
+bedroht	VVPP
 oder	KON
 bereits	ADV
 ein	ART
@@ -32871,7 +32871,7 @@ KByte	NN
 sie	PPER
 gibt	VVFIN
 zusätzlich	ADJD
-Microcode-ID	APPR
+Microcode-ID	NN
 und	KON
 Platform-ID	NN
 aus	APPR
@@ -32900,12 +32900,12 @@ Januar	NN
 einen	ART
 weiteren	ADJA
 Rechenfehler	NN
-E59	APPR
+E59	NN
 "	$(
 MOVD	NN
 or	FM
 CVTSI2SS	NN
-following	NN
+following	APPR
 zeroing	NN
 instruction	NN
 can	FM
@@ -33023,7 +33023,7 @@ Taktfrequenz	NN
 und	KON
 128	CARD
 KByte	NN
-L1-	APPR
+L1-	NN
 sowie	KON
 256	CARD
 KByte	NN
@@ -33035,7 +33035,7 @@ Lowcost-Version	NN
 Duron	NN
 (	$(
 Codename	NN
-Spitfire	APPR
+Spitfire	NN
 )	$(
 mit	APPR
 700	CARD
@@ -33044,7 +33044,7 @@ und	KON
 ebenfalls	ADV
 128	CARD
 KByte	NN
-L1-	APPR
+L1-	NN
 ,	$,
 aber	ADV
 nur	ADV
@@ -33057,7 +33057,7 @@ Der	ART
 kleinere	ADJA
 L2-Cache	NN
 ergibt	VVFIN
-Sinn	ART
+Sinn	NN
 ,	$,
 wenn	KOUS
 er	PPER
@@ -33067,7 +33067,7 @@ genannter	ADJA
 Exclusive	NN
 oder	KON
 Victim	NN
-Cache	NN
+Cache	FM
 wie	KOKOM
 beispielsweise	ADV
 beim	APPRART
@@ -33081,7 +33081,7 @@ zur	APPRART
 Computex	NN
 dürften	VMFIN
 auch	ADV
-Sockel-A-Boards	APPR
+Sockel-A-Boards	NN
 mit	APPR
 VIAs	NN
 neuem	ADJA
@@ -33107,7 +33107,7 @@ Slot	NN
 A	FM
 als	KOKOM
 auch	ADV
-Socket	APPR
+Socket	NN
 A	FM
 unterstützen	VVINF
 soll	VMFIN
@@ -33143,7 +33143,7 @@ soll	VMFIN
 der	ART
 ALI-Chipsatz	NN
 bereits	ADV
-DDR266-SDRAMs	APPR
+DDR266-SDRAMs	NN
 unterstützen	VVINF
 .	$.
 
@@ -33183,7 +33183,7 @@ geplanten	ADJA
 Samuel-1/2-Prozessoren	NN
 (	$(
 ehemals	ADV
-IDT	APPR
+IDT	NN
 Winchips	NN
 )	$(
 entgegenkommt	NN
@@ -33209,7 +33209,7 @@ kürzlich	ADV
 erst	ADV
 hat	VAFIN
 sich	PRF
-Micron	APPR
+Micron	NN
 zum	APPRART
 Thema	NN
 AMD	NE
@@ -33227,7 +33227,7 @@ Samurai-Chipssatz	NN
 unter	APPR
 dem	ART
 Namen	NN
-Scimitar	APPR
+Scimitar	NN
 an	APPR
 AMDs	NN
 Thunderbird	NN
@@ -33246,7 +33246,7 @@ und	KON
 Video	NN
 von	APPR
 Analog	ADJD
-Devices	APPR
+Devices	NN
 
 Der	ART
 in	APPR
@@ -33254,7 +33254,7 @@ Massachusetts	NE
 ansässigen	ADJA
 Firma	NN
 Analog	ADJD
-Devices	APPR
+Devices	NN
 (	$(
 ADI	NN
 )	$(
@@ -33276,7 +33276,7 @@ Intel	NE
 entwickelten	ADJA
 Micro	NE
 Signal	NN
-Architecture	APPR
+Architecture	NN
 (	$(
 MSA	NN
 )	$(
@@ -33318,7 +33318,7 @@ anpasst	APPR
 so	ADV
 wie	KOKOM
 es	PPER
-LongRun	APPR
+LongRun	NN
 bei	APPR
 den	ART
 Crusoe-	NN
@@ -33491,7 +33491,7 @@ im	APPRART
 Auftrag	NN
 für	APPR
 Analog	ADJD
-Devices	APPR
+Devices	NN
 fertigen	ADJA
 wird	VAFIN
 ,	$,
@@ -33516,7 +33516,7 @@ Nur	ADV
 den	ART
 Preis	NN
 kann	VMFIN
-ADI	ART
+ADI	NN
 schon	ADV
 angeben	VVINF
 :	$.
@@ -33539,7 +33539,7 @@ Stück	NN
 
 Infineon	NE
 präsentiert	VVFIN
-Tricore-Processor	ART
+Tricore-Processor	NN
 2.0	CARD
 
 Auf	APPR
@@ -33588,7 +33588,7 @@ erzielen	VVINF
 Gefertigt	NN
 in	APPR
 Infineons	NN
-0,13-µm-Prozess	NN
+0,13-µm-Prozess	APPR
 benötigt	VVFIN
 der	ART
 Kern	NN
@@ -33740,7 +33740,7 @@ IBM	NE
 das	ART
 gemeinsame	ADJA
 Design-Center	NN
-Somerset	APPR
+Somerset	NN
 in	APPR
 Austin	NN
 ,	$,
@@ -33777,7 +33777,7 @@ damit	KOUS
 es	PPER
 nicht	PTKNEG
 zu	PTKZU
-Inkompatibilitäten	VVINF
+Inkompatibilitäten	NN
 kommt	VVFIN
 .	$.
 
@@ -33997,7 +33997,7 @@ Toshiba	NE
 in	APPR
 dieser	PDAT
 Zeit	NN
-Flat-Panel-Displays	APPR
+Flat-Panel-Displays	NN
 ,	$,
 Speicher	NN
 ,	$,
@@ -34031,8 +34031,8 @@ im	APPRART
 Speicher-	NN
 und	KON
 Display-Bereich	NN
-vorhergesagt	NN
-werden	VAFIN
+vorhergesagt	APPR
+werden	VAINF
 .	$.
 
 Ob	KOUS
@@ -34077,7 +34077,7 @@ zurück	PTKVZ
 
 Nachdem	KOUS
 sich	PRF
-Hyundai	APPR
+Hyundai	NN
 der	ART
 Klage	NN
 von	APPR
@@ -34098,7 +34098,7 @@ SDRAM-Patente	NN
 abzuerkennen	APPR
 ,	$,
 schlägt	VVFIN
-Rambus	ART
+Rambus	NN
 nun	ADV
 auf	APPR
 breiter	ADJA
@@ -34152,7 +34152,7 @@ Wegen	APPR
 der	ART
 SDRAM-Patente	NN
 liegt	VVFIN
-Rambus	ART
+Rambus	NN
 mit	APPR
 fast	ADV
 allen	PIDAT
@@ -34203,7 +34203,7 @@ IBM	NE
 ,	$,
 mit	APPR
 denen	PRELS
-Rambus	ART
+Rambus	NN
 derzeit	ADV
 über	APPR
 Lizenzgebühren	NN
@@ -34212,7 +34212,7 @@ verhandelt	VVPP
 
 DDR-SDRAM	NN
 hängt	VVFIN
-Rambus	ART
+Rambus	NN
 ab	APPR
 
 Nach	APPR
@@ -34288,7 +34288,7 @@ Micron	NN
 auch	ADV
 die	ART
 Chipsätze	NN
-gefertigt	NN
+gefertigt	APPR
 hat	VAFIN
 .	$.
 
@@ -34749,7 +34749,7 @@ IBM	NE
 mit	APPR
 51	CARD
 GHz	NN
-Pentium-III-Server	APPR
+Pentium-III-Server	NN
 
 Eine	ART
 unglaubliche	NN
@@ -34760,7 +34760,7 @@ Europa	NE
 für	APPR
 die	ART
 Serverlinie	NN
-eServer	NN
+eServer	APPR
 xSeries	NN
 200	CARD
 im	APPRART
@@ -34847,7 +34847,7 @@ einfach	ADJD
 nur	ADV
 der	ART
 Druckfehlerteufel	NN
-zugeschlagen	NN
+zugeschlagen	APPR
 ?	$.
 
 Neue	ADJA
@@ -34997,7 +34997,7 @@ sein	PPOSAT
 erstes	ADJA
 ARM-basiertes	NN
 Produkt	NN
-MX1	APPR
+MX1	NN
 für	APPR
 die	ART
 DragonBall-Familie	NN
@@ -35088,8 +35088,8 @@ in	APPR
 0,13µm	NN
 mit	APPR
 Kupfer-Interconnect	NN
-gefertig	NN
-werden	VAFIN
+gefertig	APPR
+werden	VAINF
 und	KON
 Taktraten	NN
 von	APPR
@@ -35123,7 +35123,7 @@ Core	NN
 mit	APPR
 seiner	PPOSAT
 siebenstufigen	NN
-Pipeline	APPR
+Pipeline	NN
 hat	VAFIN
 Motorola	NE
 offenbar	ADJD
@@ -35152,7 +35152,7 @@ die	PRELS
 unter	APPR
 anderem	PIS
 auch	ADV
-DSP-Funktionalität	APPR
+DSP-Funktionalität	NN
 und	KON
 SIMD	NN
 bieten	VVINF
@@ -35163,7 +35163,7 @@ DSP-APU	NN
 soll	VMFIN
 1600	CARD
 Millionen	NN
-Multiply-Add-Operationen	APPR
+Multiply-Add-Operationen	NN
 pro	APPR
 Sekunde	NN
 durchführen	VVFIN
@@ -35239,7 +35239,7 @@ führend	ADJD
 )	$(
 ist	VAFIN
 auch	ADV
-MIPS	APPR
+MIPS	NN
 .	$.
 
 Auf	APPR
@@ -35247,7 +35247,7 @@ dem	ART
 Embedded	FM
 Forum	NN
 stellte	VVFIN
-MIPS	ART
+MIPS	NN
 Technologies	FM
 sowohl	KON
 neue	ADJA
@@ -35290,7 +35290,7 @@ erreicht	VVPP
 er	PPER
 584	CARD
 Dhrystone	NN
-MIPs	APPR
+MIPs	NN
 .	$.
 
 Der	ART
@@ -35322,7 +35322,7 @@ verbrauchen	VVINF
 Der	ART
 32-Bit-Kollege	NN
 MIPS32	NN
-4KE	NN
+4KE	APPR
 ist	VAFIN
 bei	APPR
 340	CARD
@@ -35459,7 +35459,7 @@ bis	APPR
 zu	APPR
 256	CARD
 Bit	NN
-Datenbreite	APPR
+Datenbreite	NN
 .	$.
 
 Er	PPER
@@ -35554,7 +35554,7 @@ einem	ART
 Philips-Ableger	NN
 entwickelten	ADJA
 Media-Prozessor	NN
-Trimedia	APPR
+Trimedia	NN
 1310	CARD
 in	APPR
 den	ART
@@ -35566,7 +35566,7 @@ integrieren	VVINF
 Gefertigt	NN
 in	APPR
 Nationals	NN
-0,13-µm-Prozess	NN
+0,13-µm-Prozess	APPR
 soll	VMFIN
 er	PPER
 dann	ADV
@@ -35642,7 +35642,7 @@ zuversichtlich	ADJD
 bereits	ADV
 gegen	APPR
 Jahresende	NN
-Kupfer-Athlons	APPR
+Kupfer-Athlons	NN
 "	$(
 backen	NN
 "	$(
@@ -35687,7 +35687,7 @@ Bundes	NN
 und	KON
 des	ART
 Landes	NN
-Sachsen	APPR
+Sachsen	NN
 in	APPR
 knapp	ADJD
 zwei	CARD
@@ -35733,7 +35733,7 @@ verdoppeln	VVINF
 
 Intel	NE
 verzögert	VVFIN
-MMX-Prozessor	ART
+MMX-Prozessor	NN
 P55C	NN
 
 Anläßlich	APPR
@@ -35751,7 +35751,7 @@ daß	KOUS
 die	ART
 nächste	ADJA
 Pentium-Generation	NN
-P55C	APPR
+P55C	NN
 entgegen	PTKVZ
 ursprünglichen	###
 Plänen	###
@@ -35906,7 +35906,7 @@ gehen	VVFIN
 mußte	VMFIN
 ,	$,
 weil	KOUS
-Cyrix	ART
+Cyrix	NN
 es	PPER
 bislang	ADV
 nicht	PTKNEG
@@ -35929,7 +35929,7 @@ verkaufen	VVINF
 
 Insbesondere	ADV
 macht	VVFIN
-Cyrix	ART
+Cyrix	NN
 der	ART
 Preiskampf	NN
 mit	APPR
@@ -36070,7 +36070,7 @@ erst	ADV
 kürzlich	ADV
 eingeführten	ADJA
 MHz-Spitzenreiters	NN
-K6-2/500	APPR
+K6-2/500	NN
 bleibt	VVFIN
 bei	APPR
 167	CARD
@@ -36078,7 +36078,7 @@ Dollar	NN
 .	$.
 
 Etwas	NN
-moderater	NN
+moderater	APPR
 fällt	VVFIN
 die	ART
 Reduzierung	NN
@@ -36145,7 +36145,7 @@ für	APPR
 die	ART
 klagende	ADJA
 Firma	NN
-Intergraph	APPR
+Intergraph	NN
 noch	ADV
 recht	ADJD
 gut	ADJD
@@ -36154,11 +36154,11 @@ aus	APPR
 
 Da	KOUS
 hatte	VAFIN
-Richer	ART
+Richer	NN
 Nelson	NN
 vom	APPRART
 US	NN
-District	APPR
+District	NN
 Court	FM
 in	APPR
 Alabama	NN
@@ -36263,7 +36263,7 @@ terminierten	NN
 Verfahren	NN
 erhofft	VVFIN
 sich	PRF
-Intergraph	APPR
+Intergraph	NN
 ,	$,
 einen	ART
 großen	ADJA
@@ -36415,7 +36415,7 @@ herauskommen	VVFIN
 .	$.
 
 Revolutionäres	NN
-x86-Design	NN
+x86-Design	APPR
 
 Der	ART
 geheimnisvolle	NN
@@ -36479,7 +36479,7 @@ nur	ADV
 einen	ART
 "	$(
 Memory	NN
-controller	NN
+controller	APPR
 for	FM
 a	FM
 microprocessor	NN
@@ -36640,7 +36640,7 @@ gehörende	ADJA
 Tochter	NN
 Alpha	NE
 Processors	NN
-Inc	FM
+Inc	NE
 (	$(
 API	NN
 )	$(
@@ -36698,7 +36698,7 @@ fließen	VVINF
 ,	$,
 der	PRELS
 Linux-Entwicklern	NN
-anreizen	NN
+anreizen	APPR
 soll	VMFIN
 ,	$,
 für	APPR
@@ -36732,7 +36732,7 @@ Jahren	NN
 
 Das	ART
 Vorquartal	NN
-Q3/98	APPR
+Q3/98	NN
 war	VAFIN
 mit	APPR
 1	CARD
@@ -36774,7 +36774,7 @@ Prozent	NN
 über	APPR
 dem	ART
 Vergleichsquartal	NN
-Q4/97	APPR
+Q4/97	NN
 im	APPRART
 Vorjahr	NN
 .	$.
@@ -36917,7 +36917,7 @@ fest	PTKVZ
 und	KON
 wies	VVFIN
 damit	PROAV
-Intergraphs	ART
+Intergraphs	NN
 Klage	NN
 gegen	APPR
 Intel	NE
@@ -36991,7 +36991,7 @@ jedoch	ADV
 unterdessen	ADV
 um	APPR
 Verschiebung	NN
-gebeten	NN
+gebeten	APPR
 ,	$,
 um	KOUI
 sich	PRF
@@ -37004,7 +37004,7 @@ können	VMINF
 
 AMD	NE
 korrigiert	VVPP
-Benchmarkangaben	$.
+Benchmarkangaben	NN
 
 Nachdem	KOUS
 c't	NE
@@ -37091,11 +37091,11 @@ Blick	NN
 auf	APPR
 Intels	NE
 Vtune-Seite	NN
-straft	NN
+straft	APPR
 diese	PDAT
 Behauptung	NN
 sofort	ADV
-Lügen	APPR
+Lügen	NN
 :	$.
 
 Dort	ADV
@@ -37106,7 +37106,7 @@ seit	APPR
 etwa	ADV
 vier	CARD
 Wochen	NN
-Vtune	APPR
+Vtune	NN
 4.5	CARD
 ordern	VVINF
 oder	KON
@@ -37204,7 +37204,7 @@ sich	PRF
 hingegen	ADV
 die	ART
 AMD-Werte	NN
-reproduzieren	NN
+reproduzieren	APPR
 -	$(
 sie	PPER
 liefen	VVFIN
@@ -37477,7 +37477,7 @@ Intels	NE
 Easy	NN
 PC	NN
 versteckt	VVPP
-MS-DOS	$.
+MS-DOS	NN
 
 Mit	APPR
 der	ART
@@ -37639,7 +37639,7 @@ auf	APPR
 dem	ART
 neuen	ADJA
 Motherboard-Format	NN
-FlexATX	APPR
+FlexATX	NN
 und	KON
 verfügen	VVFIN
 außer	APPR
@@ -37708,7 +37708,7 @@ Schnittstellen	NN
 ,	$,
 und	KON
 sogar	ADV
-PS/2	APPR
+PS/2	NN
 und	KON
 MIDI	NN
 sollen	VMFIN
@@ -37765,7 +37765,7 @@ und	KON
 Microsoft	NE
 vor	APPR
 allem	PIS
-Erstkäufer	APPR
+Erstkäufer	NN
 .	$.
 
 Diese	PDS
@@ -38166,7 +38166,7 @@ kaufte	APPR
 Intel	NE
 die	ART
 Netzwerkfirma	NN
-Trillium	APPR
+Trillium	NN
 für	APPR
 300	CARD
 Millionen	NN
@@ -38198,8 +38198,8 @@ seit	APPR
 Jahren	NN
 im	APPRART
 Bereich	NN
-Embbeded	APPR
-Systems	NN
+Embbeded	NN
+Systems	FM
 tätig	ADJD
 .	$.
 
@@ -38244,7 +38244,7 @@ haben	VAINF
 
 Später	ADJD
 war	VAFIN
-Ziatech	ART
+Ziatech	NN
 die	ART
 treibende	NN
 Kraft	NN
@@ -38258,7 +38258,7 @@ wie	KOKOM
 STD32	NN
 und	KON
 insbesondere	ADV
-CompactPCI	APPR
+CompactPCI	NN
 ,	$,
 einer	ART
 robusteren	NN
@@ -38368,7 +38368,7 @@ Spielen	NN
 und	KON
 vor	APPR
 allem	PIS
-Optimierungen	APPR
+Optimierungen	NN
 für	APPR
 den	ART
 Pentium	NN
@@ -38488,7 +38488,7 @@ der	ART
 beiden	PIDAT
 südkoreanischen	ADJA
 Firmen	NN
-LG	APPR
+LG	NN
 und	KON
 Hyundai	NN
 endgültig	ADJD
@@ -38514,7 +38514,7 @@ gekommende	$.
 Einigungsvertrag	NN
 ,	$,
 wonach	PWAV
-Hyundai	ART
+Hyundai	NN
 für	APPR
 2,1	CARD
 Milliarden	NN
@@ -38555,7 +38555,7 @@ Vereinigung	NN
 unter	APPR
 dem	ART
 Namen	NN
-Hyundai	APPR
+Hyundai	NN
 Microelectronics	NE
 statt	APPR
 ,	$,
@@ -38582,7 +38582,7 @@ die	ART
 DRAM-Herstellung	NN
 ,	$,
 wo	PWAV
-Hyundai	ART
+Hyundai	NN
 Microelectronics	NE
 mit	APPR
 mehr	PIAT
@@ -38628,7 +38628,7 @@ in	APPR
 Zukunft	NN
 aber	ADV
 auch	ADV
-SRAMs	APPR
+SRAMs	NN
 ,	$,
 Flashes	NN
 und	KON
@@ -38734,7 +38734,7 @@ III/Coppermine	NN
 alle	PIDAT
 Preise	NN
 :	$.
-OEM-Preise	ART
+OEM-Preise	NN
 ab	APPR
 1000	CARD
 Stück	NN
@@ -38857,7 +38857,7 @@ verbesserte	ADJA
 Version	NN
 der	ART
 Multimedia-Erweiterung	NN
-MMX	APPR
+MMX	NN
 und	KON
 soll	VMFIN
 in	APPR
@@ -38866,7 +38866,7 @@ nächste	ADJA
 Pentium-II-Generation	NN
 (	$(
 Codename	NN
-Katmai	APPR
+Katmai	NN
 )	$(
 eingebaut	VVPP
 werden	VAINF
@@ -38936,7 +38936,7 @@ unterstützt	VVPP
 
 Jede	PIDAT
 Menge	NN
-PowerPCs	APPR
+PowerPCs	NN
 
 IBM	NE
 und	KON
@@ -38995,7 +38995,7 @@ erwartet	VVPP
 ein	ART
 für	APPR
 Serverbetrieb	NN
-optimierter	NN
+optimierter	APPR
 PowerPC	NE
 604	CARD
 mit	APPR
@@ -39040,8 +39040,8 @@ erzielen	VVINF
 Für	APPR
 Desktops	NN
 sind	VAFIN
-PowerPCs	ART
-603e	NN
+PowerPCs	NN
+603e	APPR
 mit	APPR
 300	CARD
 MHz	NN
@@ -39223,7 +39223,7 @@ Geräte	NN
 sollen	VMFIN
 ab	APPR
 Spätsommer	NN
-lieferbar	NN
+lieferbar	APPR
 sein	VAINF
 .	$.
 
@@ -39352,17 +39352,17 @@ der	ART
 Übersetzer	NN
 das	ART
 CPU	NN
-Stepping	APPR
+Stepping	NN
 mit	APPR
 CPU-Stufen	NN
-übersetzte	NN
+übersetzte	APPR
 ,	$,
 dürfte	VMFIN
 bei	APPR
 vielen	PIDAT
 Anwendern	NN
-Rätsel	APPR
-aufwerfen	NN
+Rätsel	NN
+aufwerfen	APPR
 .	$.
 
 Athlon	NE
@@ -39380,7 +39380,7 @@ FAZ	NN
 von	APPR
 der	ART
 Firma	NN
-TechConsult	APPR
+TechConsult	NN
 GmbH	NN
 durchgeführten	ADJA
 Umfrage	NN
@@ -39419,7 +39419,7 @@ Prozent	NN
 .	$.
 
 Weit	NN
-abgeschlagen	NN
+abgeschlagen	APPR
 folgt	VVFIN
 das	ART
 erste	ADJA
@@ -39500,7 +39500,7 @@ wie	KOKOM
 etwa	ADV
 der	ART
 Mediamarkt	NN
-befanden	NN
+befanden	APPR
 .	$.
 
 In	APPR
@@ -39605,7 +39605,7 @@ solche	PIDAT
 für	APPR
 die	ART
 AMD-Prozessoren	NN
-K6	APPR
+K6	NN
 und	KON
 Athlon	NE
 bietet	VVFIN
@@ -39614,7 +39614,7 @@ bietet	VVFIN
 AMD	NE
 hat	VAFIN
 bereits	ADV
-SPEC-Werte	APPR
+SPEC-Werte	NN
 mit	APPR
 Vorversionen	NN
 des	ART
@@ -39747,8 +39747,8 @@ Alpha-Prozessor	NN
 unter	APPR
 dem	ART
 Codenamen	NN
-EV7	APPR
-bekannt	ADJD
+EV7	NN
+bekannt	PTKVZ
 )	$(
 mit	APPR
 gewaltigen	ADJA
@@ -39758,7 +39758,7 @@ auf	APPR
 
 128	CARD
 KByte	NN
-L1-	APPR
+L1-	NN
 und	KON
 1,5	CARD
 MByte	NN
@@ -39847,7 +39847,7 @@ nächsten	ADJA
 32-Bit-Architektur	NN
 (	$(
 Codename	NN
-Willamette	APPR
+Willamette	NN
 )	$(
 .	$.
 
@@ -39876,7 +39876,7 @@ L1-	NN
 und	KON
 L2-Caches	NN
 soll	VMFIN
-Foster	ART
+Foster	NN
 mehr	ADV
 als	KOKOM
 ein	ART
@@ -39892,7 +39892,7 @@ nur	ADV
 mit	APPR
 integriertem	ADJA
 unified	NN
-L1-Cache	APPR
+L1-Cache	NN
 daher	PROAV
 ,	$,
 dem	PRELS
@@ -39953,7 +39953,7 @@ Mitte	NN
 
 Sein	PPOSAT
 Nachfolger	NN
-McKinley	APPR
+McKinley	NN
 soll	VMFIN
 Ende	NN
 2001	CARD
@@ -39975,7 +39975,7 @@ die	ART
 Namen	NN
 der	ART
 McKinley-Nachfolger	NN
-gelüftet	NN
+gelüftet	APPR
 :	$.
 
 Madison	NN
@@ -39990,7 +39990,7 @@ Variante	NN
 
 AltiVec	NE
 nimmt	VVFIN
-Gestalt	ART
+Gestalt	NN
 an	APPR
 
 Motorola	NE
@@ -40063,7 +40063,7 @@ MHz	NN
 
 Der	ART
 voll	ADJD
-Multiprozessor-taugliche	APPR
+Multiprozessor-taugliche	NN
 G4	XY
 wird	###
 Motorolas	###
@@ -40284,7 +40284,7 @@ Mit	APPR
 einem	ART
 sogenannten	ADJA
 Memory	NN
-Translation	APPR
+Translation	NN
 Hub	NN
 lassen	VVINF
 sich	PRF
@@ -40295,7 +40295,7 @@ statt	APPR
 der	ART
 RIMM-Module	NN
 auch	ADV
-SDRAMs	APPR
+SDRAMs	NN
 (	$(
 PC100	NN
 )	$(
@@ -40405,7 +40405,7 @@ dabei	PROAV
 einige	PIAT
 andere	ADJA
 bietet	VVFIN
-PC-Engine	ART
+PC-Engine	NN
 gegen	APPR
 eine	ART
 Lizenzgebühr	NN
@@ -40415,7 +40415,7 @@ an	APPR
 Als	KOKOM
 Assembler	NN
 ist	VAFIN
-A386	ART
+A386	NN
 vorgesehen	VVPP
 .	$.
 
@@ -40473,7 +40473,7 @@ Zusammenspiel	NN
 mit	APPR
 der	ART
 PC-Hardware	NN
-aufzeigen	NN
+aufzeigen	APPR
 .	$.
 
 Auch	ADV
@@ -40492,7 +40492,7 @@ bei	APPR
 der	ART
 Festplattenfunktion	NN
 Return	NN
-drive	NN
+drive	APPR
 parameter	NN
 .	$.
 
@@ -40516,7 +40516,7 @@ API	NN
 (	$(
 Alpha	NE
 Processor	NN
-Inc	FM
+Inc	NE
 )	$(
 ,	$,
 daß	KOUS
