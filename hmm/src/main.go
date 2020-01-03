@@ -256,6 +256,57 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 	return resultTag
 }
 
+// Backward algorithm, not working!
+func (model hmm) backwardAlgorithm(phrase []string) []string {
+
+	//
+	// Init
+	//
+
+	initResults := make(probabilityMap)
+
+	for s := range model.tagProbability {
+		initResults[s] = 1
+	}
+
+	beta := make([]probabilityMap, len(phrase))
+	beta[len(phrase)-1] = initResults
+
+	//
+	// repeat, for k = 1 to k = t - 1 and for all s ∈ S
+	// t = len(phrase)
+	//
+
+	for k := len(phrase) - 2; k > 0; k++ {
+
+		result := make(probabilityMap)
+
+		for s := range model.transitionMatrix {
+
+			val := float(0)
+
+			for q := range model.transitionMatrix {
+
+				eVal := float(0)
+
+				if val := model.words[phrase[k+1]]; val {
+					eVal = model.emissionsMatrix[q][phrase[k+1]]
+				} else {
+					eVal = model.tagProbabilityHeuristic(q, phrase[k+1])
+				}
+
+				val += beta[k+1][q] * model.transitionMatrix[q][s] * eVal
+			}
+
+			result[s] = val
+		}
+
+		beta[k+1] = result
+	}
+
+	return nil
+}
+
 func evaluate(model hmm) {
 
 	content, err := ioutil.ReadFile("hdt-10001-12000-test.tags")
