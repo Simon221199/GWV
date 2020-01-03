@@ -11,7 +11,32 @@ type float float64
 type probabilityMap map[string]float
 type matrix map[string]probabilityMap
 
-func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) matrix {
+// Build map with prior Probabilities π : S --> R+
+func priorProbabilities(sentencesTags [][]string) probabilityMap {
+
+	startTagsCount := make(map[string]int)
+	for inx := range sentencesTags {
+		tag := sentencesTags[inx][0]
+		startTagsCount[tag]++
+	}
+
+	priorProbabilities := make(probabilityMap)
+	for tag, count := range startTagsCount {
+		priorProbabilities[tag] = float(count) / float(len(sentencesTags))
+	}
+
+	return priorProbabilities
+}
+
+// Build map with transition probabilities T: S x S --> R+
+func transitionMatrix(tagsCount map[string]int, sentencesTags [][]string) matrix {
+
+	//
+	// "Implement a hidden markov model where the probability distribution
+	// of Word[i] only depends on the state of Tag[i] and Tag[i] only depends on Tag[i-1]..."
+	//
+	// This function calculates that Tag[i] only depends on Tag[i-1]
+	//
 
 	transitionCount := make(map[string]map[string]int)
 	for tag := range tagsCount {
@@ -27,12 +52,16 @@ func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) mat
 		}
 	}
 
-	// init transition matrix
+	//
+	// Init transition matrix
+	//
+
 	transitionMatrix := make(matrix)
 	for tag := range tagsCount {
 		transitionMatrix[tag] = make(probabilityMap)
 	}
 
+	// Calculate probabilities
 	for tag, data := range transitionCount {
 
 		sum := 0
@@ -49,7 +78,8 @@ func transitionMatrixMap(tagsCount map[string]int, sentencesTags [][]string) mat
 	return transitionMatrix
 }
 
-func emissionMatrixMap(sentencesWords [][]string, sentencesTags [][]string) matrix {
+// Build map with emission probabilities E: S x O --> R+
+func emissionMatrix(sentencesWords [][]string, sentencesTags [][]string) matrix {
 
 	emissionCount := make(map[string]map[string]int)
 
@@ -95,12 +125,15 @@ type hmm struct {
 	transitionMatrix   matrix
 }
 
-// Word is not in model.words
+// Make sure that your tagger can cope with input that includes words that are not in the training data.
+// This gets called if word is not in model.words
 func (model hmm) tagProbabilityHeuristic(tag, word string) float {
 
-	numReg := regexp.MustCompile(`^[0-9,.:]+$`)
+	//
+	// Word looks like a number!
+	//
 
-	// word looks like a number!
+	numReg := regexp.MustCompile(`^[0-9,.:]+$`)
 	if numReg.MatchString(word) {
 
 		if tag == "CARD" {
@@ -110,9 +143,11 @@ func (model hmm) tagProbabilityHeuristic(tag, word string) float {
 		return float(0)
 	}
 
-	nn := regexp.MustCompile(`^[A-Z]`)
+	//
+	// Word looks like a noun!
+	//
 
-	// word looks like a noun!
+	nn := regexp.MustCompile(`^[A-Z]`)
 	if nn.MatchString(word) || strings.Contains(word, "-") {
 
 		if tag == "NN" {
@@ -122,14 +157,22 @@ func (model hmm) tagProbabilityHeuristic(tag, word string) float {
 		return float(0)
 	}
 
+	//
+	// Take default probability for tag
+	//
+
 	return model.tagProbability[tag]
 }
 
+// Create a function that takes a list of words (possibly from the command line) and
+// uses filtering to produce a corresponding list of PoS tags.
 func (model hmm) forwardAlgorithm(phrase []string) []string {
 
-	// phrase --> Observation
-	startWord := phrase[0]
+	//
+	// Init Forward algorithm
+	//
 
+	startWord := phrase[0]
 	initResults := make(probabilityMap)
 
 	for s := range model.transitionMatrix {
@@ -142,11 +185,13 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 		initResults[s] = model.priorProbabilities[s] * model.emissionsMatrix[s][startWord]
 	}
 
-	// fmt.Println("startWord", startWord)
-	// fmt.Println("initResults", initResults)
-
 	aResults := make([]probabilityMap, len(phrase))
 	aResults[0] = initResults
+
+	//
+	// repeat, for k = 1 to k = t - 1 and for all s ∈ S
+	// t = len(phrase)
+	//
 
 	for k := 0; k < len(phrase)-1; k++ {
 
@@ -174,7 +219,9 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 		aResults[k+1] = result
 	}
 
-	// fmt.Println("aResults", aResults[ 2 ])
+	//
+	// Select best tag for every word in phrase
+	//
 
 	resultTag := make([]string, len(phrase))
 
@@ -186,7 +233,7 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 		bestScore := float(0)
 
 		for tag, score := range result {
-			if score > bestScore {
+			if bestScore < score {
 				bestScore = score
 				bestTag = tag
 			}
@@ -194,6 +241,10 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 
 		resultTag[inx] = bestTag
 	}
+
+	//
+	// aggregate
+	//
 
 	// aggregate := 0.0
 	// for _, a := range aResults[len(phrase)-1] {
@@ -205,37 +256,62 @@ func (model hmm) forwardAlgorithm(phrase []string) []string {
 	return resultTag
 }
 
-func priorProbabilitiesList(sentencesTags [][]string) probabilityMap {
+func evaluate(model hmm) {
 
-	startTagsCount := make(map[string]int)
-	for inx := range sentencesTags {
-		tag := sentencesTags[inx][0]
-		startTagsCount[tag]++
+	content, err := ioutil.ReadFile("hdt-10001-12000-test.tags")
+	if err != nil {
+		panic(err)
 	}
 
-	priorProbabilities := make(probabilityMap)
-	for tag, count := range startTagsCount {
-		priorProbabilities[tag] = float(count) / float(len(sentencesTags))
+	text := strings.TrimSpace(string(content))
+	text = strings.Trim(text, "\n")
+	trainSentences := strings.Split(text, "\n\n")
+
+	trainPhrases := make([][]string, len(trainSentences))
+
+	for inx, sentence := range trainSentences {
+
+		lines := strings.Split(sentence, "\n")
+		trainPhrases[inx] = make([]string, len(lines))
+
+		for iny, line := range lines {
+
+			wordTag := strings.Split(line, "\t")
+			trainPhrases[inx][iny] = wordTag[0]
+		}
 	}
 
-	return priorProbabilities
+	evalText := ""
+
+	for inx, phrase := range trainPhrases {
+
+		fmt.Printf("\rEval phrase: %d/%d", len(trainPhrases), inx+1)
+
+		tags := model.forwardAlgorithm(phrase)
+
+		// fmt.Println("phrase", phrase)
+		// fmt.Println("tags", tags)
+
+		for iny := range phrase {
+			evalText += phrase[iny] + "\t" + tags[iny] + "\n"
+		}
+
+		evalText += "\n"
+	}
+
+	fmt.Println()
+
+	err = ioutil.WriteFile("results.tags", []byte(evalText), 0755)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func main() {
 
-	// word := "2,99"
 	//
-	// var digitCheck = regexp.MustCompile(`^[0-9,.:]+$`)
+	// Train with hdt-1-10000-train.tags
 	//
-	// if digitCheck.MatchString(word) {
-	// 	fmt.Printf("%q looks like a number.\n", word)
-	// } else {
-	// 	fmt.Printf("%q looks NOT like a number.\n", word)
-	// }
-	//
-	// if 1 > 0 {
-	// 	return
-	// }
 
 	content, err := ioutil.ReadFile("hdt-1-10000-train.tags")
 	if err != nil {
@@ -284,11 +360,11 @@ func main() {
 		tagProbability[tag] = float(count) / float(tagsSum)
 	}
 
-	priorProbabilities := priorProbabilitiesList(sentencesTags)
+	priorProbabilities := priorProbabilities(sentencesTags)
 	fmt.Println("priorProbabilities", priorProbabilities)
 
-	emissionsMatrix := emissionMatrixMap(sentencesWords, sentencesTags)
-	transitionMatrix := transitionMatrixMap(tagsCount, sentencesTags)
+	emissionsMatrix := emissionMatrix(sentencesWords, sentencesTags)
+	transitionMatrix := transitionMatrix(tagsCount, sentencesTags)
 
 	// fmt.Println("emissionsMatrix", emissionsMatrix)
 	// fmt.Println("transitionMatrix", transitionMatrix)
@@ -301,55 +377,11 @@ func main() {
 		transitionMatrix:   transitionMatrix,
 	}
 
-	content, err = ioutil.ReadFile("hdt-10001-12000-test.tags")
-	if err != nil {
-		panic(err)
-	}
+	//
+	// Build results.tags
+	//
 
-	text = strings.TrimSpace(string(content))
-	text = strings.Trim(text, "\n")
-	trainSentences := strings.Split(text, "\n\n")
-
-	trainPhrases := make([][]string, len(trainSentences))
-
-	for inx, sentence := range trainSentences {
-
-		lines := strings.Split(sentence, "\n")
-		trainPhrases[inx] = make([]string, len(lines))
-
-		for iny, line := range lines {
-
-			wordTag := strings.Split(line, "\t")
-			trainPhrases[inx][iny] = wordTag[0]
-		}
-	}
-
-	evalText := ""
-
-	fmt.Printf("Total phrases: %d\n", len(trainPhrases))
-
-	for inx, phrase := range trainPhrases {
-
-		fmt.Printf("\rProcessing phrase: %d", inx+1)
-
-		tags := model.forwardAlgorithm(phrase)
-
-		// fmt.Println("phrase", phrase)
-		// fmt.Println("tags", tags)
-
-		for iny := range phrase {
-			evalText += phrase[iny] + "\t" + tags[iny] + "\n"
-		}
-
-		evalText += "\n"
-	}
-
-	fmt.Println()
-
-	err = ioutil.WriteFile("results.tags", []byte(evalText), 0755)
-	if err != nil {
-		panic(err)
-	}
+	evaluate(model)
 
 	// Fail Sentences
 	// phrase := "Sie begründeten ihren Pessimismus unter anderem mit dem Umsatzrückgang nach den Attentaten am 11. September ."
@@ -362,6 +394,7 @@ func main() {
 
 	// phraseParts := strings.Split(phrase, " ")
 	// tags := model.forwardAlgorithm(phraseParts)
+	// tags := model.viterbiAlgorithm(phraseParts)
 	// fmt.Println(phraseParts)
 	// fmt.Println(tags)
 

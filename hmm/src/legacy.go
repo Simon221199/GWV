@@ -1,50 +1,107 @@
 package main
 
-func transitionMatrix(tagsCount map[string]int, sentencesTags [][]string) (map[string]int, [][]float32) {
+import "fmt"
 
-	inx := 0
-	tagIndex := make(map[string]int)
+func (model hmm) viterbiAlgorithm(phrase []string) []string {
 
-	for tag := range tagsCount {
-		tagIndex[tag] = inx
-		inx++
+	alpha := make([]probabilityMap, len(phrase))
+	pred := make([]map[string]*string, len(phrase))
+
+	alpha[0] = make(probabilityMap)
+	pred[0] = make(map[string]*string)
+
+	for s := range model.tagProbability {
+
+		eVal := float(0)
+
+		if val := model.words[phrase[0]]; val {
+			eVal = model.emissionsMatrix[s][phrase[0]]
+		} else {
+			eVal = model.tagProbabilityHeuristic(s, phrase[0])
+		}
+
+		alpha[0][s] = model.priorProbabilities[s] * eVal
+		pred[0][s] = nil
 	}
 
-	transitionCount := make([][]int, len(tagIndex))
-	for inx := range transitionCount {
-		transitionCount[inx] = make([]int, len(tagIndex))
-	}
+	fmt.Println("alpha", alpha[0])
 
-	for _, tags := range sentencesTags {
-		for inx := 1; inx < len(tags); inx++ {
-			preTag := tags[inx-1]
-			tag := tags[inx]
+	for k := 0; k < len(phrase)-1; k++ {
 
-			preTagIndex := tagIndex[preTag]
-			tagIndex := tagIndex[tag]
+		alpha[k+1] = make(probabilityMap)
+		pred[k+1] = make(map[string]*string)
 
-			transitionCount[preTagIndex][tagIndex]++
+		for s := range model.tagProbability {
+
+			alphaMax := float(0)
+			var predMax *string
+
+			for q := range model.tagProbability {
+
+				alphaQ := alpha[k][q] * model.transitionMatrix[q][s]
+
+				if alphaMax < alphaQ {
+					alphaMax = alphaQ
+					predMax = &q
+				}
+			}
+
+			eVal := float(0)
+
+			if val := model.words[phrase[k+1]]; val {
+				eVal = model.emissionsMatrix[s][phrase[k+1]]
+			} else {
+				eVal = model.tagProbabilityHeuristic(s, phrase[k+1])
+			}
+
+			alpha[k+1][s] = alphaMax * eVal
+			pred[k+1][s] = predMax
 		}
 	}
 
-	// init transition matrix
-	transitionMatrix := make([][]float32, len(tagIndex))
-	for inx := range transitionMatrix {
-		transitionMatrix[inx] = make([]float32, len(tagIndex))
-	}
+	terminalState := "###"
+	best := float(0)
 
-	for inx, data := range transitionCount {
+	for s, score := range alpha[len(phrase)-1] {
 
-		sum := 0
-
-		for _, val := range data {
-			sum += val
-		}
-
-		for iny, val := range data {
-			transitionMatrix[inx][iny] = float32(val) / float32(sum)
+		if best < score {
+			terminalState = s
+			best = score
 		}
 	}
 
-	return tagIndex, transitionMatrix
+	if terminalState == "###" {
+		panic("terminalState == ###")
+	}
+
+	// fmt.Println("terminalState", terminalState)
+	// fmt.Println("alpha", alpha[ len(phrase)-1 ])
+	// fmt.Println("pred", pred)
+
+	tags := make([]*string, len(phrase))
+	tags[len(phrase)-1] = &terminalState
+
+	for inx := len(phrase) - 2; inx > 0; inx-- {
+		tag := pred[inx][*tags[inx+1]]
+
+		if tag == nil {
+			continue
+		}
+
+		tags[inx] = tag
+	}
+
+	xxx := make([]string, len(phrase))
+
+	for inx, val := range tags {
+
+		if val == nil {
+			xxx[inx] = "###"
+			continue
+		}
+
+		xxx[inx] = *val
+	}
+
+	return xxx
 }
