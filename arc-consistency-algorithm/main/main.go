@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/patrickz98/arc-consistency-algorithm/cartesian"
-	"github.com/patrickz98/arc-consistency-algorithm/set"
 	"strings"
 )
 
@@ -11,163 +9,207 @@ import (
 // 	variable1 string
 // }
 
-type toDoElem struct {
-	variable  string
-	constrain string
+type arc struct {
+	variable   string
+	constraint constraint
 }
 
-func matchedConstrains(variable string, constrains *set.Set) *set.Set {
+type set map[string]bool
 
-	scopes := set.New()
+type constraint struct {
+	aVariable string
+	aChar     int
+	dVariable string
+	dChar     int
+}
 
-	constrains.Do(func(value interface{}) {
+func (con constraint) check(wordA, wordD string) bool {
 
-		constrain := value.(string)
+	return wordA[con.aChar] == wordD[con.dChar]
 
-		if strings.Contains(constrain, variable) {
-			scopes.Insert(constrain)
+}
+
+func (con constraint) getScope() []string {
+	return []string{con.aVariable, con.dVariable}
+}
+
+func (con constraint) has(search string) bool {
+
+	for _, variable := range con.getScope() {
+		if variable == search {
+			return true
 		}
-	})
+	}
 
-	return scopes
+	return false
 }
 
-func scope(constrain string) (variables []string) {
+func (con constraint) getOther(except string) string {
 
-	parts := strings.Split(constrain, " ")
-
-	return []string{parts[0], parts[2]}
+	if except == con.aVariable {
+		return con.dVariable
+	} else {
+		return con.aVariable
+	}
 }
 
-func toSlice(dom *set.Set) []interface{} {
+func newSet(variables ...string) set {
 
-	vars := make([]interface{}, 0)
+	set := make(map[string]bool)
 
-	dom.Do(func(val interface{}) {
-		elem := val.(int)
-		vars = append(vars, elem)
-	})
+	for _, variable := range variables {
+		set[variable] = true
+	}
 
-	return vars
+	return set
+}
+
+func eq(aaa, bbb map[string]bool) bool {
+
+	if len(aaa) != len(bbb) {
+		return false
+	}
+
+	for key1 := range aaa {
+		if _, ok := bbb[key1]; !ok {
+			return false
+		}
+	}
+
+	return true
 }
 
 func GAC() {
 
-	variables := set.New("A", "B", "C", "D", "E")
+	variables := []string{
+		"add", "ado", "age", "ago", "aid", "ail", "aim", "air", "and", "any",
+		"ape", "apt", "arc", "are", "ark", "arm", "art", "ash", "ask", "auk",
+		"awe", "awl", "aye", "bad", "bag", "ban", "bat", "bee", "boa", "ear",
+		"eel", "eft", "far", "fat", "fit", "lee", "oaf", "rat", "tar", "tie",
+	}
 
-	dom := make(map[string]*set.Set)
-	dom["A"] = set.New(1, 2, 3, 4)
-	dom["B"] = set.New(1, 2, 4)
-	dom["C"] = set.New(1, 3, 4)
-	dom["D"] = set.New(1, 2, 3, 4)
-	dom["E"] = set.New(1, 2, 3, 4)
+	dom := make(map[string]set)
+	// dom["A0"] = newSet("bee")
+	dom["A0"] = newSet(variables...)
+	dom["A1"] = newSet(variables...)
+	dom["A2"] = newSet(variables...)
+	// dom["A2"] = newSet("art")
+	dom["D0"] = newSet(variables...)
+	dom["D1"] = newSet(variables...)
+	dom["D2"] = newSet(variables...)
 
-	constrains := set.New("A != B", "A == D", "E < A", "B != D", "C < D", "E < D", "B != C", "E < B", "E < C")
+	constraints := make(map[constraint]bool, 0)
 
-	todo := set.New()
+	for inx := 0; inx < 3; inx++ {
 
-	variables.Do(func(val1 interface{}) {
+		a := fmt.Sprintf("A%d", inx)
 
-		variable := val1.(string)
-		scopes := matchedConstrains(variable, constrains)
+		for iny := 0; iny < 3; iny++ {
 
-		scopes.Do(func(val2 interface{}) {
-			constrain := val2.(string)
-			todo.Insert(toDoElem{variable, constrain})
-		})
-	})
+			d := fmt.Sprintf("D%d", iny)
 
-	todo.Do(func(val interface{}) {
-		elem := val.(toDoElem)
-		fmt.Printf("var=%s, const=(%s)\n", elem.variable, elem.constrain)
-	})
+			fmt.Printf("%s[%d] = %s[%d]\n", a, iny, d, inx)
+			constrain := constraint{
+				aVariable: a,
+				aChar:     iny,
+				dVariable: d,
+				dChar:     inx,
+			}
 
-	GAC2(variables, dom, constrains, todo)
+			constraints[constrain] = true
+		}
+	}
+
+	todo := make(map[arc]bool)
+
+	for constraint := range constraints {
+
+		for _, X := range constraint.getScope() {
+			nArc := arc{
+				variable:   X,
+				constraint: constraint,
+			}
+
+			todo[nArc] = true
+		}
+	}
+
+	fmt.Println(todo)
+
+	GAC2(variables, dom, constraints, todo)
+
+	for X, vars := range dom {
+		fmt.Println()
+		fmt.Println(X)
+
+		for word := range vars {
+			fmt.Println(word)
+		}
+		// fmt.Println(vars)
+	}
 }
 
-func GAC2(variables *set.Set, dom map[string]*set.Set, constrains *set.Set, todo *set.Set) {
+func GAC2(variables []string, dom map[string]set, constraints map[constraint]bool, todo map[arc]bool) {
 
-	for todo.Len() > 0 {
-		elem := todo.Get().(toDoElem)
-		todo.Remove(elem)
+	for elem := range todo {
 
-		fmt.Println("variable: " + elem.variable)
-		fmt.Println("constrain: " + elem.constrain)
+		delete(todo, elem)
 
-		nd := set.New()
+		yk := elem.constraint.getOther(elem.variable)
 
-		doms := make([][]interface{}, 0)
-		// doms = append(doms, toSlice(dom[ elem.variable ]))
+		// fmt.Println("variable: " + elem.variable)
+		// fmt.Println("yk:       " + yk)
+		// fmt.Println("constrain: " + elem.constraint)
 
-		ys := scope(elem.constrain)
+		nd := make(set)
 
-		for _, scpe := range ys {
+		for word1 := range dom[elem.variable] {
+			for word2 := range dom[yk] {
 
-			fmt.Printf("doms: %s\n", scpe)
-			doms = append(doms, toSlice(dom[scpe]))
-		}
+				var wordA string
+				var wordD string
 
-		fmt.Printf("len(doms): %d\n", len(doms))
-
-		allCombinations := cartesian.Iter(doms...)
-
-		for combination := range allCombinations {
-
-			var1 := 0
-			var2 := 0
-
-			for inx, part := range combination {
-
-				if inx == 0 {
-					var1 = part.(int)
+				if strings.HasPrefix(elem.variable, "A") {
+					wordA = word1
+					wordD = word2
+				} else {
+					wordA = word2
+					wordD = word1
 				}
 
-				if inx == 1 {
-					var2 = part.(int)
-				}
-			}
-
-			fmt.Printf("%d, %d\n", var1, var2)
-
-			if strings.Contains(elem.constrain, "!=") {
-				if var1 != var2 {
-					nd.Insert(var1)
-				}
-			}
-
-			if strings.Contains(elem.constrain, "==") {
-				if var1 == var2 {
-					nd.Insert(var1)
-				}
-			}
-
-			if strings.Contains(elem.constrain, "<") {
-				if var1 < var2 {
-					nd.Insert(var1)
-				}
-			}
-
-			if strings.Contains(elem.constrain, ">") {
-				if var1 > var2 {
-					nd.Insert(var1)
+				if elem.constraint.check(wordA, wordD) {
+					nd[word1] = true
 				}
 			}
 		}
 
-		fmt.Println(nd)
-		fmt.Printf("done.")
-
-		if dom[elem.variable].SubsetOf(nd) && nd.SubsetOf(dom[elem.variable]) {
+		// ND == dom[X]
+		if eq(dom[elem.variable], nd) {
 			continue
 		}
 
-		fmt.Printf("dom[X] != nd\n")
+		dom[elem.variable] = nd
 
+		for constraint := range constraints {
+
+			if constraint == elem.constraint {
+				continue
+			}
+
+			if constraint.has(elem.variable) {
+				nArc := arc{
+					variable:   constraint.getOther(elem.variable),
+					constraint: constraint,
+				}
+
+				todo[nArc] = true
+			}
+		}
 	}
-
 }
 
 func main() {
+
 	fmt.Println("Hello")
 
 	GAC()
