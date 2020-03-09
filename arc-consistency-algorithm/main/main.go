@@ -89,7 +89,7 @@ func GAC() {
 	}
 
 	dom := make(map[string]set)
-	// dom["A0"] = newSet("bee")
+	// dom["A0"] = newSet("eel")
 	dom["A0"] = newSet(variables...)
 	dom["A1"] = newSet(variables...)
 	dom["A2"] = newSet(variables...)

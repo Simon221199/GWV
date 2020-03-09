@@ -115,15 +115,15 @@ while:
 				A = a
 			}
 
-			c[clause.h] = A
-
 			fmt.Printf("Added <%s, {%s}>\n", clause.h, A.toString())
 
 			if clause.h == "false" {
 				foundConflicts++
 				// break while
 
-				falses = append(falses, clause.set)
+				falses = append(falses, A)
+			} else {
+				c[clause.h] = A
 			}
 
 			if foundConflicts >= conflictCount {
@@ -132,7 +132,7 @@ while:
 		}
 	}
 
-	bytes, _ := json.MarshalIndent(c["false"], "", "    ")
+	bytes, _ := json.MarshalIndent(falses, "", "    ")
 	fmt.Println(string(bytes))
 }
 
@@ -140,76 +140,76 @@ func main() {
 
 	fmt.Println("hallo")
 
-	// knowledgeBase := []hornClause{
-	//
-	// 	//
-	// 	// observations
-	// 	//
-	// 	{"up_s1", set{}},
-	// 	{"up_s2", set{}},
-	// 	{"up_s3", set{}},
-	// 	{"dark_l1", set{}},
-	// 	{"dark_l2", set{}},
-	//
-	// 	//
-	// 	// knowledge
-	// 	//
-	// 	{"light_l1", set{}},
-	// 	{"light_l2", set{}},
-	// 	{"live_outside", set{}},
-	// 	{"live_l1", set{"live_w0": true}},
-	// 	{"live_w0", set{"live_w1": true, "up_s2": true, "ok_s2": true}},
-	// 	{"live_w0", set{"live_w2": true, "down_s2": true, "ok_s2": true}},
-	// 	{"live_w1", set{"live_w3": true, "up_s1": true, "ok_s1": true}},
-	// 	{"live_w2", set{"live_w3": true, "down_s1": true, "ok_s1": true}},
-	// 	{"live_l2", set{"live_w4": true}},
-	// 	{"live_w4", set{"live_w3": true, "up_s3": true, "ok_s3": true}},
-	// 	{"live_p1", set{"live_w3": true}},
-	// 	{"live_w3", set{"live_w5": true, "ok_cb1": true}},
-	// 	{"live_p2", set{"live_w6": true}},
-	// 	{"live_w6", set{"live_w5": true, "ok_cb2": true}},
-	// 	{"live_w5", set{"live_outside": true}},
-	// 	{"lit_l1", set{"light_l1": true, "live_l1": true, "ok_l1": true}},
-	// 	{"lit_l2", set{"light_l2": true, "live_l2": true, "ok_l2": true}},
-	// 	{"false", set{"dark_l1": true, "lit_l1": true}},
-	// 	{"false", set{"dark_l2": true, "lit_l2": true}},
-	// }
-	//
-	// assumables := set{
-	// 	"ok_cb1": true,
-	// 	"ok_cb2": true,
-	// 	"ok_s1": true,
-	// 	"ok_s2": true,
-	// 	"ok_s3": true,
-	// 	"ok_l1": true,
-	// 	"ok_l2": true,
-	// }
-
 	knowledgeBase := []hornClause{
 
 		//
 		// observations
 		//
-
-		{"gardener_dirty", set{}},
-		{"gardener_not_dirty", set{}},
-		{"gardener_working", set{}},
-		{"butler_working", set{}},
+		{"up_s1", set{}},
+		{"up_s2", set{}},
+		{"up_s3", set{}},
+		{"dark_l1", set{}},
+		{"dark_l2", set{}},
 
 		//
-		// rules
+		// knowledge
 		//
-
-		{"gardener_dirty", set{"gardener_working": true}},
-		{"butler_dirty", set{"butler_working": true}},
-		{"false", set{"gardener_dirty": true, "gardener_not_dirty": true}},
-		{"false", set{"butler_dirty": true, "butler_not_dirty": true}},
+		{"light_l1", set{}},
+		{"light_l2", set{}},
+		{"live_outside", set{}},
+		{"live_l1", set{"live_w0": true}},
+		{"live_w0", set{"live_w1": true, "up_s2": true, "ok_s2": true}},
+		{"live_w0", set{"live_w2": true, "down_s2": true, "ok_s2": true}},
+		{"live_w1", set{"live_w3": true, "up_s1": true, "ok_s1": true}},
+		{"live_w2", set{"live_w3": true, "down_s1": true, "ok_s1": true}},
+		{"live_l2", set{"live_w4": true}},
+		{"live_w4", set{"live_w3": true, "up_s3": true, "ok_s3": true}},
+		{"live_p1", set{"live_w3": true}},
+		{"live_w3", set{"live_w5": true, "ok_cb1": true}},
+		{"live_p2", set{"live_w6": true}},
+		{"live_w6", set{"live_w5": true, "ok_cb2": true}},
+		{"live_w5", set{"live_outside": true}},
+		{"lit_l1", set{"light_l1": true, "live_l1": true, "ok_l1": true}},
+		{"lit_l2", set{"light_l2": true, "live_l2": true, "ok_l2": true}},
+		{"false", set{"dark_l1": true, "lit_l1": true}},
+		{"false", set{"dark_l2": true, "lit_l2": true}},
 	}
 
 	assumables := set{
-		"gardener_working": true,
-		"butler_working":   true,
+		"ok_cb1": true,
+		"ok_cb2": true,
+		"ok_s1":  true,
+		"ok_s2":  true,
+		"ok_s3":  true,
+		"ok_l1":  true,
+		"ok_l2":  true,
 	}
+
+	// knowledgeBase := []hornClause{
+	//
+	// 	//
+	// 	// observations
+	// 	//
+	//
+	// 	{"gardener_dirty", set{}},
+	// 	{"gardener_not_dirty", set{}},
+	// 	{"gardener_working", set{}},
+	// 	{"butler_working", set{}},
+	//
+	// 	//
+	// 	// rules
+	// 	//
+	//
+	// 	{"gardener_dirty", set{"gardener_working": true}},
+	// 	{"butler_dirty", set{"butler_working": true}},
+	// 	{"false", set{"gardener_dirty": true, "gardener_not_dirty": true}},
+	// 	{"false", set{"butler_dirty": true, "butler_not_dirty": true}},
+	// }
+	//
+	// assumables := set{
+	// 	"gardener_working": true,
+	// 	"butler_working":   true,
+	// }
 
 	// knowledgeBase := []hornClause{
 	// 	{"false", set{"a": true}},
