@@ -140,50 +140,50 @@ func main() {
 
 	fmt.Println("hallo")
 
-	knowledgeBase := []hornClause{
-
-		//
-		// observations
-		//
-		{"up_s1", set{}},
-		{"up_s2", set{}},
-		{"up_s3", set{}},
-		{"dark_l1", set{}},
-		{"dark_l2", set{}},
-
-		//
-		// knowledge
-		//
-		{"light_l1", set{}},
-		{"light_l2", set{}},
-		{"live_outside", set{}},
-		{"live_l1", set{"live_w0": true}},
-		{"live_w0", set{"live_w1": true, "up_s2": true, "ok_s2": true}},
-		{"live_w0", set{"live_w2": true, "down_s2": true, "ok_s2": true}},
-		{"live_w1", set{"live_w3": true, "up_s1": true, "ok_s1": true}},
-		{"live_w2", set{"live_w3": true, "down_s1": true, "ok_s1": true}},
-		{"live_l2", set{"live_w4": true}},
-		{"live_w4", set{"live_w3": true, "up_s3": true, "ok_s3": true}},
-		{"live_p1", set{"live_w3": true}},
-		{"live_w3", set{"live_w5": true, "ok_cb1": true}},
-		{"live_p2", set{"live_w6": true}},
-		{"live_w6", set{"live_w5": true, "ok_cb2": true}},
-		{"live_w5", set{"live_outside": true}},
-		{"lit_l1", set{"light_l1": true, "live_l1": true, "ok_l1": true}},
-		{"lit_l2", set{"light_l2": true, "live_l2": true, "ok_l2": true}},
-		{"false", set{"dark_l1": true, "lit_l1": true}},
-		{"false", set{"dark_l2": true, "lit_l2": true}},
-	}
-
-	assumables := set{
-		"ok_cb1": true,
-		"ok_cb2": true,
-		"ok_s1":  true,
-		"ok_s2":  true,
-		"ok_s3":  true,
-		"ok_l1":  true,
-		"ok_l2":  true,
-	}
+	// knowledgeBase := []hornClause{
+	//
+	// 	//
+	// 	// observations
+	// 	//
+	// 	{"up_s1", set{}},
+	// 	{"up_s2", set{}},
+	// 	{"up_s3", set{}},
+	// 	{"dark_l1", set{}},
+	// 	{"dark_l2", set{}},
+	//
+	// 	//
+	// 	// knowledge
+	// 	//
+	// 	{"light_l1", set{}},
+	// 	{"light_l2", set{}},
+	// 	{"live_outside", set{}},
+	// 	{"live_l1", set{"live_w0": true}},
+	// 	{"live_w0", set{"live_w1": true, "up_s2": true, "ok_s2": true}},
+	// 	{"live_w0", set{"live_w2": true, "down_s2": true, "ok_s2": true}},
+	// 	{"live_w1", set{"live_w3": true, "up_s1": true, "ok_s1": true}},
+	// 	{"live_w2", set{"live_w3": true, "down_s1": true, "ok_s1": true}},
+	// 	{"live_l2", set{"live_w4": true}},
+	// 	{"live_w4", set{"live_w3": true, "up_s3": true, "ok_s3": true}},
+	// 	{"live_p1", set{"live_w3": true}},
+	// 	{"live_w3", set{"live_w5": true, "ok_cb1": true}},
+	// 	{"live_p2", set{"live_w6": true}},
+	// 	{"live_w6", set{"live_w5": true, "ok_cb2": true}},
+	// 	{"live_w5", set{"live_outside": true}},
+	// 	{"lit_l1", set{"light_l1": true, "live_l1": true, "ok_l1": true}},
+	// 	{"lit_l2", set{"light_l2": true, "live_l2": true, "ok_l2": true}},
+	// 	{"false", set{"dark_l1": true, "lit_l1": true}},
+	// 	{"false", set{"dark_l2": true, "lit_l2": true}},
+	// }
+	//
+	// assumables := set{
+	// 	"ok_cb1": true,
+	// 	"ok_cb2": true,
+	// 	"ok_s1":  true,
+	// 	"ok_s2":  true,
+	// 	"ok_s3":  true,
+	// 	"ok_l1":  true,
+	// 	"ok_l2":  true,
+	// }
 
 	// knowledgeBase := []hornClause{
 	//
@@ -229,6 +229,47 @@ func main() {
 	// 	"g": true,
 	// 	"h": true,
 	// }
+
+	knowledgeBase := []hornClause{
+
+		// {"starter_noise", set{}},
+		// {"fuel_pump_noise", set{}},
+		// {"engine_noise", set{}},
+		{"no_starter_noise", set{}},
+		{"no_fuel_pump_noise", set{}},
+		{"no_engine_noise", set{}},
+
+		//
+		// rules
+		//
+
+		{"battery", set{"battery_ok": true}},
+		{"ignition_key", set{"ignition_key_ok": true, "battery": true}},
+		{"efr", set{"efr_ok": true, "ignition_key": true, "battery": true}},
+		{"starter", set{"starter_ok": true, "ignition_key": true}},
+		{"starter_noise", set{"starter": true}},
+		{"fuel_tank", set{"fuel_tank_ok": true}},
+		{"fuel_pump", set{"fuel_pump_ok": true, "efr": true, "fuel_tank": true}},
+		{"fuel_pump_noise", set{"fuel_pump": true}},
+		{"filter", set{"filter_ok": true, "fuel_pump": true}},
+		{"engine", set{"engine_ok": true, "starter": true, "filter": true}},
+		{"engine_noise", set{"engine": true}},
+
+		{"false", set{"starter_noise": true, "no_starter_noise": true}},
+		{"false", set{"fuel_pump_noise": true, "no_fuel_pump_noise": true}},
+		{"false", set{"engine_noise": true, "no_engine_noise": true}},
+	}
+
+	assumables := set{
+		"battery_ok":      true,
+		"ignition_key_ok": true,
+		"efr_ok":          true,
+		"starter_ok":      true,
+		"engine_ok":       true,
+		"filter_ok":       true,
+		"fuel_pump_ok":    true,
+		"fuel_tank_ok":    true,
+	}
 
 	proveBottomUp(knowledgeBase, assumables)
 }
